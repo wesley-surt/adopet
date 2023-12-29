@@ -1,0 +1,53 @@
+@media screen and (min-width: 0) {
+    .conteiner {
+        margin-top: 2.6rem;
+        gap: 1.4rem;
+    }
+
+    .secao2__texto {
+        margin: 0 auto;
+        width: 14rem;
+    }
+
+    .forma2 {
+        top: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .secao2__texto, .botao {
+        width: 16rem;
+    }
+
+    .forma2 {
+        top: 21%;
+    }
+
+    .forma2 img {
+        width: 5rem;
+    }
+
+    .conteiner {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .secao2__texto {
+        width: 30rem;
+    }
+
+    .ilustracao img {
+        width: 18rem;
+    }
+
+    .conteiner {
+        gap: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .conteiner {
+        margin-top: -2rem;
+    }
+}

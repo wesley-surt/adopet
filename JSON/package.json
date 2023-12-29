@@ -1,0 +1,20 @@
+{
+  "name": "ado-pet",
+  "version": "1.0.0",
+  "description": "site para adoção de animais",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesley-surt/ado-pet.git"
+  },
+  "author": "@wesley_surt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesley-surt/ado-pet/issues"
+  },
+  "homepage": "https://github.com/wesley-surt/ado-pet#readme",
+  "type": "module"
+}

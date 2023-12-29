@@ -1,0 +1,3 @@
+[DOM] Input elements should have autocomplete attributes (suggested: "current-password"):
+ (More info: https://www.chromium.org/developers/design-documents/create-amazing-password-forms) 
+<input type=​"password" class=​"campo__input" placeholder=​"Insira sua senha" id=​"senha" name=​"senha">​

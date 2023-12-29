@@ -1,0 +1,56 @@
+@media screen and (min-width: 0) {
+    .conteiner {
+        margin-top: 1.5rem;
+        margin-bottom: 7rem;
+    }
+
+    .forma2 {
+        background: url(../../imagens/Forma\ 2\ -\ invertida.png) center / cover no-repeat;
+        top: 42%;
+        left: 0;
+        width: 4.3rem;
+        height: 24.8rem;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .conteiner {
+        margin-top: 2.5rem;
+    }
+    
+    .forma2 {
+        background: url(../../imagens/Forma\ 2.png) center / cover no-repeat;
+        top: 28%;
+        right: 0;
+        left:auto;
+        width: 5.3rem;
+        height: 30.8rem;
+    }
+
+    .imagem--patas img {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .forma2 {
+        top: 21%;
+    }
+
+    .conteiner {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    #email, #nome, .alerta {
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .conteiner {
+        margin-top: -2rem;
+        margin-bottom: 11rem;
+    }
+}

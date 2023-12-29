@@ -1,0 +1,5 @@
+tela inicial - azul: #3772FF;
+outras letas, input formulario - branco: #FFFFFF;
+input, card animal, formulario - Cinza claro: #F6F6F6;
+botão - coral (vermelho-rosado): #FC7071;
+rodapé - verde-bebe: #36D6AD;

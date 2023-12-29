@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/generico/base/reset.css">
+    <link rel="stylesheet" href="../css/generico/base/body.css">
+    <link rel="stylesheet" href="../css/generico/base/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base_responsiva/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base/rodape.css">
+    <link rel="stylesheet" href="../css/generico/base/conteiner.css">
+    <link rel="stylesheet" href="../css/generico/componentes/botao/botao.css">
+    <link rel="stylesheet" href="../css/generico/componentes/formulario/form_perfil-mensagem.css">
+    <link rel="stylesheet" href="../css/generico/componentes/campo-label-input/campo-label-input_perfil-mensagem.css">
+    <link rel="stylesheet" href="../css/generico/componentes/estilizacao_de_erros/style_erros.css">
+    <link rel="stylesheet" href="../css/generico/componentes/janela/janela.css">
+    <link rel="stylesheet" href="../css/generico_responsivo/componente_responsivo/janela_rsponsiva/janela_responsiva.css">
+    <link rel="stylesheet" href="../css/pagina/style_mensagem.css">
+    <link rel="stylesheet" href="../css/pagina_responsiva/responsivo_mensagem.css">
+    <link rel="stylesheet" href="../css/pagina/style_perfil-mensagem.css">
+    <link rel="stylesheet" href="../css/pagina_responsiva/responsivo_perfil-mensagem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title class="pagina" aria-valuetext="mensagem">mensagem</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="imagem--forma1"><img src="../image/Forma 1.png"></div>
+
+        <nav class="navegacao--conteiner">
+            <div class="navegacao">
+                <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>
+
+                <ul class="navegacao__lista">
+
+                    <li class="item"><a class="item__imagem--casa" href="inicio.html"><img src="../image/Casa.png" alt="Botão para voltar ao início da página"></a></li>
+                    <li class="item"><a class="item__imagem--mensagem" href="#"><img src="../image/Mensagens.png"></a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="imagem--usuario"></div>
+
+    </header>
+
+    <div class="forma2"></div>
+
+    <main>
+        <article class="conteiner">
+            <div>
+                <section class="secao1">
+
+                    <p class="secao1__texto">
+                        Envie uma mensagem para a pessoa ou instituição que está cuidando do animal.
+                    </p>
+
+                </section>
+                
+                <section class="secao2">
+                    <form class="formulario">
+                        <div data-campo class="campo">
+
+                            <label data-label class="campo__label" for="nome">Nome</label>
+                            <input data-input="nome" class="campo__input" type="text" name="nome" id="nome" 
+                            pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required placeholder="Insira seu nome completo">
+
+                            <span data-alerta class="alerta"></span>
+                        </div>
+
+                        <div data-campo class="campo">
+                            
+                            <label data-label class="campo__label" for="telefone">Telefone</label>
+                            <input data-input="telefone" class="campo__input" type="tel" name="telefone" id="telefone" 
+                            pattern="^(\d{2})\s*(\d{5}[-_\s]*\d{4})$" required placeholder="Insira seu telefone e/ou whatsapp">
+
+                            <span data-alerta class="alerta"></span>
+                        </div>
+
+                        <div data-campo class="campo">
+                            
+                            <label data-label class="campo__label" for="nome_do_animal">Nome do animal</label>
+                            <input data-input="nomeDoAnimal" class="campo__input" type="text" name="nomeDoAnimal" id="nome_do_animal" 
+                            pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required placeholder="Por qual animal você se interessou">
+
+                            <span data-alerta class="alerta"></span>
+                        </div>
+
+                        <div data-campo class="campo">
+                            
+                            <label data-label class="campo__label" for="mensagem">Mensagem</label>
+                            <textarea class="campo__textarea" cols="40" rows="11" type="textarea" name="mensagem" id="mensagem"
+                            pattern="^(\s*\.*[a-zA-Z\w\d]{2,}\.*\s*)+$" required placeholder="Escreva sua mensagem"></textarea>
+
+                        </div>
+                    </form>
+
+                    <button onclick="redirecionaController.redireciona()" class="botao" type="submit" name="botao" id="botao">Enviar</button>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <div class="secao4">
+
+        <footer class="rodape">
+            <p>2022 - Desenvolvido pelo @wesley-surt.</p>
+        </footer>
+
+    </div>
+
+    <div class="janela">
+
+        <span class="janela__pop-up">
+            
+            <p class="pop-up__texto">
+                Preencha corretamente todos os campos para continuar.
+            </p>
+        
+            <p onclick="janela.remove()" id="pop-up__botao">OK</p>
+        </span>
+    </div>
+
+    <script src="../js/helper/AlertaHelper.js"></script>
+    <script src="../js/helper/ValidacaoHelper.js"></script>
+    <script src="../js/modules/Mensagem.js"></script>
+    <script src="../js/modules/Janela.js"></script>
+    <script src="../js/view/ListaErros.js"></script>
+    <script src="../js/view/ListaMensagens.js"></script>
+    <script src="../js/view/MensagemView.js"></script>
+    <script src="../js/service/RedirecionaFactory.js"></script>
+    <script src="../js/controllers/RedirecionaController.js"></script>
+    <script type="module" src="../js/controllers/perfilEhMensagemController.js"></script>
+    <script>
+        var janela = new Janela();
+        var redirecionaController = new RedirecionaController();
+    </script>
+    
+</body>
+</html>

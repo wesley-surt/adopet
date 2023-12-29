@@ -1,0 +1,4 @@
+tela inicial, botão e rodapé - branco: #FFFFFF;
+outras telas, label mensagem e perfil - azul: #3772FF;
+card animal, placeholder de perfil, label de login e cadastro - cinza: #737380;
+placeholder de mensagem, login e cadastro - cinza-claro: #BCBCBC;

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/generico/base/reset.css">
+    <link rel="stylesheet" href="../css/generico/base/body.css">
+    <link rel="stylesheet" href="../css/generico/base/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base_responsiva/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base/rodape.css">
+    <link rel="stylesheet" href="../css/generico/base_responsiva/rodape_animais.css">
+    <link rel="stylesheet" href="../css/generico/base/conteiner.css">
+    <link rel="stylesheet" href="../css/pagina/style_animais.css">
+    <link rel="stylesheet" href="../css/pagina_responsiva/responsivo_animais.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title class="pagina" aria-valuetext="animais">animais</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="imagem--forma1"><img src="../image/Forma 1.png"></div>
+    
+        <nav class="navegacao--conteiner">
+            <div class="navegacao">
+                <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>
+
+                <ul class="navegacao__lista">
+
+                    <li class="item"><a class="item__imagem--casa" href="inicio.html"><img src="../image/Casa.png" alt="Botão para voltar ao início da página"></a></li>
+                    <li class="item"><a class="item__imagem--mensagem" href="#"><img src="../image/Mensagens.png"></a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="forma2"></div>
+        <div class="imagem--usuario"></div>
+
+    </header>
+
+    <main>
+        <article class="conteiner">
+            <section class="secao1">
+
+                <p class="secao1__texto">Olá! Veja os amigos disponíveis para adoção!</p>
+                
+                <div class="campo_de_busca">
+                    <label class="label_filtro">Filtrar por região</label>
+
+                    <select class="filtrar" data-campoFiltro onchange="animaisController.filtra();">
+
+                        <option>Mostrar Todos</option>
+                        <option>Rio de Janeiro (RJ)</option>
+                        <option>Nova Iguaçu (RJ)</option>
+                        <option>Duque de Caxias (RJ)</option>
+                        <option>São Gonçalo (RJ)</option>
+
+                    </select>
+                    
+                </div>
+            </section>
+
+
+            <section class="secao2">
+
+                <div class="catalogo">
+
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Dunga.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Dunga</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">2 anos</li>
+                                        <li class="porte">Porte pequeno</li>
+                                        <li class="comportamento">Calmo e educado</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Rio de Janeiro (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Felícia.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Felícia</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">3 meses</li>
+                                        <li class="porte">Porte pequeno</li>
+                                        <li class="comportamento">Ativa e carinhosa</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Nova Iguaçu (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/sirius.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Sirius</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">6 meses</li>
+                                        <li class="porte">Porte grande</li>
+                                        <li class="comportamento">Ativo e educado</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Duque de Caxias (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Fiona.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Fiona</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">3 anos</li>
+                                        <li class="porte">Porte pequeno</li>
+                                        <li class="comportamento">Calma e carinhosa</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>São Gonçalo (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Sid.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Sid</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">8 meses</li>
+                                        <li class="porte">Porte médio/grande</li>
+                                        <li class="comportamento">Brincalhão e amável</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Rio de Janeiro (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Yoda.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Yoda</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">1 ano</li>
+                                        <li class="porte">Porte médio</li>
+                                        <li class="comportamento">Ativo e carinhoso</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Nova Iguaçu (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Lua.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Lua</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">6 meses</li>
+                                        <li class="porte">Porte médio</li>
+                                        <li class="comportamento">Ativa e carinhosa</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Duque de Caxias (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Amora.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Amora</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">45 dias</li>
+                                        <li class="porte">Porte grande</li>
+                                        <li class="comportamento">Calma e carinhosa</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>São Gonçalo (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="card" data-card>
+                        <div class="conteiner--card">
+
+                            <div class="imagem_do_pet">
+                                <img src="../image/Zelda.png">
+                            </div>
+                            
+                            <div class="conteudo_do_pet">
+                                <div class="info_do_pet">
+
+                                    <p class="nome_do_pet">Zelda</p>
+
+                                    <ul class="descricao_do_pet">
+
+                                        <li class="idade">5 meses</li>
+                                        <li class="porte">Porte médio</li>
+                                        <li class="comportamento">Ativo e amável</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="info_da_regiao">
+
+                                    <p class="estado" data-estado>Rio de Janeiro (RJ)</p>
+
+                                    <a class="icone_chamada--link" href="#">
+                                        <img src="../image/ícone mensagem.svg">
+                                        <p>Falar com responsável</p>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <div class="secao4">
+        <footer class="rodape">
+            <p>2022 - Desenvolvido pelo @wesley-surt.</p>
+        </footer>
+    </div>
+
+    <script src="../js/controllers/AnimaisController.js"></script>
+    <script>
+        let animaisController = new AnimaisController();
+    </script>
+</body>
+</html>

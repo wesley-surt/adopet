@@ -1,0 +1,21 @@
+.formulario__texto {
+    color: #737380;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.grupo_foto {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grupo_foto img {
+    width: 8rem;
+}
+
+.grupo_foto___texto {
+    color: #FC7071;
+    font-size: .75rem;
+    margin-top: .5rem;
+}
