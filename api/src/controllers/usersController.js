@@ -48,6 +48,19 @@ class UsersController {
             telephone,
         } = req.body;
 
+        console.log(
+            email,
+            name,
+            password,
+            confirmPassword,
+            about,
+            state,
+            city,
+            photo
+        );
+
+        console.log(req.body);
+
         validateField(email, `Email is required - ${email}`, res);
         validateField(name, `ERROR: Name is required - ${name}`, res);
         validateField(
