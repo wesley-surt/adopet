@@ -7,17 +7,28 @@ import { validateField } from "../utils/validate-field.js";
 const secret = environment.SECRET_KEY;
 
 class UsersController {
-    static login = async (req, res) => {
+    static login = async (req, res, next) => {
         const { email, password } = req.body;
+
+        console.log(email);
+        console.log(password);
 
         validateField(email, `Email is required - ${email}`, res);
         validateField(password, `Password is required - ${password}`, res);
 
         const user = await users.findOne({ email: email });
-        validateField(user, "User not find.", res);
+        validateField(user, "User not find.", res, next);
 
         const checkPassword = await bcrypt.compare(password, user.password);
-        validateField(checkPassword, "Invalid password.", res);
+
+        console.log(checkPassword);
+
+        const validPassword = validateField(
+            checkPassword,
+            "Invalid password.",
+            res,
+            next
+        );
 
         try {
             const userId = user._id;
@@ -28,7 +39,7 @@ class UsersController {
                 secret
             );
 
-            res.status(200).json({ token, userId });
+            if (validPassword) res.status(200).json({ token, userId });
         } catch (err) {
             console.log(err);
             res.status(500).json({ message: "Server error. Try again later" });
@@ -47,19 +58,6 @@ class UsersController {
             photo,
             telephone,
         } = req.body;
-
-        console.log(
-            email,
-            name,
-            password,
-            confirmPassword,
-            about,
-            state,
-            city,
-            photo
-        );
-
-        console.log(req.body);
 
         validateField(email, `Email is required - ${email}`, res);
         validateField(name, `ERROR: Name is required - ${name}`, res);
@@ -108,6 +106,28 @@ class UsersController {
         } catch (err) {
             console.log(err);
             res.status(200).json({ error: err.message });
+        }
+    };
+
+    static update = async (req, res) => {
+        const { user, id } = req.body;
+        const { photo, name, city, about, telephone, state } = user;
+
+        try {
+            user.findByIdAndUpdate(id, {
+                photo,
+                name,
+                city,
+                about,
+                telephone,
+                state,
+            })
+                .then((profile) => res.status(200).json({ profile }))
+                .catch((err) => {
+                    throw new Error(err.message);
+                });
+        } catch (err) {
+            console.log(err.message);
         }
     };
 

@@ -1,5 +1,5 @@
 export class Http {
-    static post(url, options) {
+    static request(url, options) {
         const promiseCallback = (resolve, reject) => {
             fetch(url, options)
                 .then((response) => response.json())
