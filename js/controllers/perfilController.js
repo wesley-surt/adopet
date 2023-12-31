@@ -5,7 +5,12 @@ function fillnAllFields() {
 }
 
 function handleUser(userStorage) {
-    document.getElementById("foto").setAttribute("src", `${userStorage.photo}`);
+    document
+        .getElementById("foto")
+        .setAttribute(
+            "src",
+            `${userStorage.photo || "../../image/Usuario.png"}`
+        );
     document.getElementById("nome").innerHTML = userStorage.name;
     document.getElementById("telefone").innerHTML = userStorage.telephone;
     document.getElementById("cidade").innerHTML = userStorage.city;

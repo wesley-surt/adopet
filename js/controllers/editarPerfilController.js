@@ -11,7 +11,7 @@ button.onclick = (e) => {
             name: document.getElementById("nome").value || "",
             city: document.getElementById("cidade").value || "",
             state: document.getElementById("uf").value || "",
-            telephone: document.getElementById("sobre").value || "",
+            telephone: document.getElementById("telefone").value || "",
             about: document.getElementById("sobre").value || "",
         },
         id: StorageService.get("userId"),
@@ -20,3 +20,23 @@ button.onclick = (e) => {
     console.log(body);
     User.update(body);
 };
+
+function fillnAllFields() {
+    handleUser(StorageService.get("user"));
+}
+
+function handleUser(userStorage) {
+    document
+        .getElementById("foto")
+        .setAttribute(
+            "src",
+            `${userStorage.photo || "../../image/Usuario.png"}`
+        );
+    document.getElementById("nome").value = userStorage.name;
+    document.getElementById("telefone").value = userStorage.telephone;
+    document.getElementById("cidade").value = userStorage.city;
+    document.getElementById("uf").value = userStorage.state;
+    document.getElementById("sobre").value = userStorage.about;
+}
+
+fillnAllFields();
