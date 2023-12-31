@@ -1,8 +1,8 @@
-import { Http } from "./Http.js";
+import { HttpService } from "./HttpService.js";
 
 export class ImgurAPIService {
     static save(body) {
-        return Http.request(
+        return HttpService.request(
             "https://api.imgur.com/3/image",
             this.options(body)
         );

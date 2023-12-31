@@ -1,4 +1,4 @@
-import { User } from "../entities/User.js";
+import { RequestionBackendService } from "../service/RequestionBackendService.js";
 
 var inputs = document.querySelectorAll("[data-input]");
 
@@ -22,5 +22,5 @@ button.onclick = () => {
     };
 
     console.log(body);
-    User.login(body);
+    RequestionBackendService.login(body);
 };

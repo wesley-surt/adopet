@@ -1,5 +1,5 @@
-import { User } from "../entities/User.js";
 import { letraMaiusculaHelper } from "../helper/inputEmMaiusculo.js";
+import { RequestionBackendService } from "../service/RequestionBackendService.js";
 
 var inputs = document.querySelectorAll("[data-input]");
 var inputNome = document.getElementById("nome");
@@ -37,5 +37,12 @@ botao.onclick = (e) => {
     };
 
     console.log(body);
-    User.register(body);
+    RequestionBackendService.register("users/register", body)
+        .then(() => (window.location = "login.html"))
+        .catch((err) => {
+            console.error(err.message);
+            alert(
+                "Falha ao tentar cadastrar. Tente novamente mais tarde ou contate nossa equipe técnica."
+            );
+        });
 };

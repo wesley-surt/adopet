@@ -1,5 +1,5 @@
-import { User } from "../entities/User.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
+import { RequestionBackendService } from "../service/RequestionBackendService.js";
 import { StorageService } from "../service/StorageService.js";
 
 const button = document.getElementById("botao");
@@ -18,8 +18,17 @@ button.onclick = (e) => {
         id: StorageService.get("userId"),
     };
 
-    console.log(body);
-    User.update(body);
+    RequestionBackendService.update("users/update", body)
+        .then((user) => {
+            StorageService.set("user", user);
+            window.location = "perfil.html";
+        })
+        .catch((err) => {
+            alert(
+                "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+            );
+            console.error(err.message);
+        });
 };
 
 function fillnAllFields() {
@@ -33,22 +42,17 @@ function handleUser(userStorage) {
             "src",
             `${userStorage.photo || "../../image/Usuario.png"}`
         );
-    document.getElementById("nome").value = userStorage.name;
-    document.getElementById("telefone").value = userStorage.telephone;
-    document.getElementById("cidade").value = userStorage.city;
-    document.getElementById("uf").value = userStorage.state;
-    document.getElementById("sobre").value = userStorage.about;
+    document.getElementById("nome").value = userStorage.name || "";
+    document.getElementById("telefone").value = userStorage.telephone || "";
+    document.getElementById("cidade").value = userStorage.city || "";
+    document.getElementById("uf").value = userStorage.state || "";
+    document.getElementById("sobre").value = userStorage.about || "";
 }
-
-fillnAllFields();
 
 const file = document.getElementById("file");
 file.onchange = () => {
     const data = new FormData();
     data.append("image", file.files[0]);
-
-    console.log(file.files[0]);
-    console.log(data);
 
     ImgurAPIService.save(data)
         .then((res) => {
@@ -60,3 +64,5 @@ file.onchange = () => {
         })
         .catch(console.error);
 };
+
+fillnAllFields();
