@@ -27,7 +27,8 @@ inputs.forEach((input) => {
 });
 
 const botao = document.getElementById("botao");
-botao.onclick = () => {
+botao.onclick = (e) => {
+    e.preventDefault();
     const body = {
         email: document.getElementById("email").value || "",
         name: document.getElementById("nome").value || "",

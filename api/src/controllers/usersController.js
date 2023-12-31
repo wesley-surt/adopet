@@ -21,8 +21,6 @@ class UsersController {
 
         const checkPassword = await bcrypt.compare(password, user.password);
 
-        console.log(checkPassword);
-
         const validPassword = validateField(
             checkPassword,
             "Invalid password.",
@@ -114,18 +112,28 @@ class UsersController {
         const { photo, name, city, about, telephone, state } = user;
 
         try {
-            user.findByIdAndUpdate(id, {
-                photo,
-                name,
-                city,
-                about,
-                telephone,
-                state,
-            })
-                .then((profile) => res.status(200).json({ profile }))
-                .catch((err) => {
-                    throw new Error(err.message);
-                });
+            users.findByIdAndUpdate(
+                id,
+                {
+                    photo,
+                    name,
+                    city,
+                    about,
+                    telephone,
+                    state,
+                },
+                { new: true, select: "-password" },
+                (err, user) => {
+                    if (err) {
+                        throw new Error(err.message);
+                    } else res.status(200).json(user);
+                }
+            );
+
+            //.then((user) => res.status(200).json({ user }))
+            //.catch((err) => {
+            //    throw new Error(err.message);
+            //});
         } catch (err) {
             console.log(err.message);
         }

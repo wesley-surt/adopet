@@ -21,6 +21,24 @@ export class User {
             });
     }
 
+    static update(body) {
+        this.put("update", body)
+            .then((user) => {
+                StorageService.set("user", user);
+                //window.location = "animais.html";
+            })
+            .catch((err) => {
+                alert(
+                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                );
+                console.error(err.message);
+            });
+    }
+
+    static get(id) {
+        return this.get(id);
+    }
+
     static post(uri, body) {
         const url = "http://localhost:3000/users";
 
@@ -30,6 +48,31 @@ export class User {
                 "Content-type": "application/json",
             },
             body: JSON.stringify(body),
+        });
+    }
+
+    static put(uri, body) {
+        const url = "http://localhost:3000/users";
+
+        return Http.request(`${url}/${uri}`, {
+            method: "PUT",
+            headers: {
+                "x-access-token": `${StorageService.get("token")}`,
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(body),
+        });
+    }
+
+    static get(id) {
+        const url = "http://localhost:3000/users";
+
+        return Http.request(`${url}/${id}`, {
+            method: "GET",
+            headers: {
+                "x-access-token": `${StorageService.get("token")}`,
+                "Content-type": "application/json",
+            },
         });
     }
 }

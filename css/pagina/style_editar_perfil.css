@@ -13,3 +13,13 @@
 .grupo_foto img {
     width: 8rem;
 }
+
+.grupo_foto___texto {
+    color: #fc7071;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+#file {
+    display: none;
+}
