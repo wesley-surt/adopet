@@ -35,6 +35,10 @@ export class User {
             });
     }
 
+    static get(id) {
+        return this.get(id);
+    }
+
     static post(uri, body) {
         const url = "http://localhost:3000/users";
 
@@ -57,6 +61,18 @@ export class User {
                 "Content-type": "application/json",
             },
             body: JSON.stringify(body),
+        });
+    }
+
+    static get(id) {
+        const url = "http://localhost:3000/users";
+
+        return Http.request(`${url}/${id}`, {
+            method: "GET",
+            headers: {
+                "x-access-token": `${StorageService.get("token")}`,
+                "Content-type": "application/json",
+            },
         });
     }
 }

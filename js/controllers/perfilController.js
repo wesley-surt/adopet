@@ -1,22 +1,19 @@
-import { User } from "../entities/User.js";
 import { StorageService } from "../service/StorageService.js";
 
+function fillnAllFields() {
+    handleUser(StorageService.get("user"));
+}
+
+function handleUser(userStorage) {
+    document.getElementById("foto").setAttribute("src", `${userStorage.photo}`);
+    document.getElementById("nome").innerHTML = userStorage.name;
+    document.getElementById("telefone").innerHTML = userStorage.telephone;
+    document.getElementById("cidade").innerHTML = userStorage.city;
+    document.getElementById("uf").innerHTML = userStorage.state;
+    document.getElementById("sobre").innerHTML = userStorage.about;
+}
+
 const button = document.getElementById("botao");
-button.onclick = (e) => {
-    e.preventDefault();
+button.onclick = () => (window.location = "editar-perfil.html");
 
-    const body = {
-        user: {
-            photo: document.getElementById("foto").value || "",
-            name: document.getElementById("nome").value || "",
-            city: document.getElementById("cidade").value || "",
-            state: document.getElementById("uf").value || "",
-            telephone: document.getElementById("sobre").value || "",
-            about: document.getElementById("sobre").value || "",
-        },
-        id: StorageService.get("userId"),
-    };
-
-    console.log(body);
-    User.update(body);
-};
+fillnAllFields();
