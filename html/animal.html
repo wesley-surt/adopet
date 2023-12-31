@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/generico/base/reset.css">
+    <link rel="stylesheet" href="../css/generico/base/body.css">
+    <link rel="stylesheet" href="../css/generico/base/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base_responsiva/cabecalho.css">
+    <link rel="stylesheet" href="../css/generico/base/rodape.css">
+    <link rel="stylesheet" href="../css/generico/base/conteiner.css">
+    <link rel="stylesheet" href="../css/generico/componentes/botao/botao.css">
+    <link rel="stylesheet" href="../css/generico/componentes/formulario/form_perfil-mensagem.css">
+    <link rel="stylesheet" href="../css/generico/componentes/campo-label-input/campo-label-input_animal.css">
+    <link rel="stylesheet" href="../css/generico/componentes/janela/janela.css">
+    <link rel="stylesheet" href="../css/generico_responsivo/componente_responsivo/janela_rsponsiva/janela_responsiva.css">
+    <link rel="stylesheet" href="../css/pagina/style_editar_perfil.css">
+    <link rel="stylesheet" href="../css/pagina/style_perfil-mensagem.css">
+    <link rel="stylesheet" href="../css/pagina_responsiva/responsivo_animal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title class="pagina" aria-valuetext="perfil">animal</title>
+</head>
+
+<body>
+    
+    <header class="cabecalho">
+        <div class="imagem--forma1"><img src="../image/Forma 1.png"></div>
+    
+        <nav class="navegacao--conteiner">
+            <div class="navegacao">
+                <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>
+
+                <ul class="navegacao__lista">
+
+                    <li class="item"><a class="item__imagem--casa" href="inicio.html"><img src="../image/Casa.png" alt="Botão para voltar ao início da página"></a></li>
+                    <li class="item"><a class="item__imagem--mensagem" href="#"><img src="../image/Mensagens.png"></a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="imagem--ellipse"></div>
+
+    </header>
+    
+    <div class="forma2"></div>
+
+    </main>
+        <article class="conteiner">
+            <div>
+                <section class="secao1">
+
+                    <p class="secao1__texto">
+                        Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.
+                    </p>
+
+                </section>
+
+                <section class="secao2">
+                    <form class="formulario" action="GET">
+                        <p class="formulario__texto">Perfil Pet</p>
+
+                        <div class="campo">
+                            <label data-label class="campo__label" for="foto">Foto</label>
+
+                            <label class="grupo_foto" for="file">
+                                <input type="file" name="file" id="file">
+                                <img class="grupo_foto___img" src="" name="foto" id="foto">
+                            </label>
+                        </div>
+
+                        <div data-campo class="campo">
+                            <label data-label class="campo__label" for="nome">Nome</label>
+                            <input data-input="nome" class="campo__input" type="text" name="nome" id="nome"
+                            pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required placeholder="Insira seu nome">
+
+                            <span data-alerta class="alerta"></span>
+                        </div>
+
+                        <div class="grupo--campo grupo--campo_idade">
+                            <span data-campo class="campo">
+                                <label data-label class="campo__label" for="idade">Idade</label>
+                                <span class="grupo--idade">
+                                    <input data-input="idade" class="campo__input" type="number" name="idade" id="idade" required placeholder="Digite a idade">
+
+                                    <select data-input="medida" class="campo__input" id="medida" name="medida" required>
+                                        <option value="dias">dias</option>
+                                        <option value="meses" selected>meses</option>
+                                        <option value="anos">anos</option>
+                                    </select>
+                                </span>
+    
+                                <span data-alerta class="alerta"></span>
+                            </span>
+    
+                            <span data-campo class="campo campo--porte">
+                                <label data-label class="campo__label" for="porte">Porte</label>
+                                <select data-input="porte" class="campo__input" id="porte" name="porte" required>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio" selected>Médio</option>
+                                    <option value="medio/grande">Medio/Grande</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+    
+                                <span data-alerta class="alerta"></span>
+                            </span>
+                        </div>
+
+                        <div data-campo class="campo">
+                            <label data-label class="campo__label" for="comportamento1">Comportamento</label>
+                            <div class="grupo--comportamento">
+                                <select data-input="comportamento" class="campo__input comportamento" id="comportamento1" name="comportamento" required>
+                                    <option disabled selected>--Selecionar--</option>
+                                    <option value="Amoroso(a)">Amoroso(a)</option>
+                                    <option value="Carinhoso(a)">Carinhoso(a)</option>
+                                    <option value="Amigável">Amigável</option>
+                                    <option value="Dócil">Dócil</option>
+                                </select>
+
+                                <select data-input="comportamento" class="campo__input comportamento" id="comportamento2" name="comportamento" required>
+                                    <option disabled selected>--Selecionar--</option>
+                                    <option value="Amoroso(a)">Amoroso(a)</option>
+                                    <option value="Carinhoso(a)">Carinhoso(a)</option>
+                                    <option value="Amigável">Amigável</option>
+                                    <option value="Dócil">Dócil</option>
+                                </select>
+                            </div>
+
+                            <span data-alerta class="alerta"></span>
+                        </div>
+
+                        <div class="grupo--campo grupo--campo_regiao">
+                            <div data-campo class="campo">
+                                <label data-label class="campo__label" for="cidade">Cidade</label>
+                                <input data-input="cidade" class="campo__input" type="text" name="cidade" id="cidade"
+                                pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required placeholder="Digite sua cidade">
+    
+                                <span data-alerta class="alerta"></span>
+                            </div>
+    
+                            <div data-campo class="campo">
+                                <label data-label class="campo__label" for="uf">UF</label>
+                                <input data-input="uf" class="campo__input" type="text" name="uf" id="uf"
+                                pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required placeholder="Digite aqui seu uf">
+    
+                                <span data-alerta class="alerta"></span>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="sobre">UF</label>
+                            <textarea class="campo__textarea" cols="40" rows="11" type="textarea" 
+                            name="sobre" id="sobre" placeholder="Conte algo sobre seu pet"></textarea>
+
+                        </div>
+                    </form>
+                <button class="botao" type="submit" name="botao" id="botao">Salvar</button>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <div class="secao4">
+
+        <footer class="rodape">
+            <p>2022 - Desenvolvido pelo @wesley-surt.</p>
+        </footer>
+
+    </div>
+
+    <div class="janela">
+
+        <span class="janela__pop-up">
+
+            <p class="pop-up__texto">
+                Preencha corretamente todos os campos para continuar.
+            </p>
+        
+            <p onclick="janela.remove()" id="pop-up__botao">OK</p>
+        </span>
+    </div>
+    <script src="../js/helper/AlertaHelper.js"></script>
+    <script src="../js/helper/ValidacaoHelper.js"></script>
+    <script src="../js/modules/Mensagem.js"></script>
+    <script src="../js/modules/Janela.js"></script>
+    <script src="../js/view/ListaErros.js"></script>
+    <script src="../js/view/ListaMensagens.js"></script>
+    <script src="../js/view/MensagemView.js"></script>
+    <script src="../js/service/RedirecionaFactory.js"></script>
+    <script src="../js/controllers/RedirecionaController.js"></script>
+    <script type="module" src="../js/controllers/perfilEhMensagemController.js"></script>
+    <script type="module" src="../js/controllers/editarPerfilController.js"></script>
+    <script>
+        var janela = new Janela();
+        var redirecionaController = new RedirecionaController();
+    </script>
+
+</body>
+</html>
