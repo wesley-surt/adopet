@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="referrer" content="no-referrer">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,9 +68,10 @@
                         <div class="campo">
                             <label data-label class="campo__label" for="foto">Foto</label>
 
-                            <div class="grupo_foto">
-                                <img class="grupo_foto___img" src="../image/Ellipse 2.png" name="foto" id="foto">
-                            </div>
+                            <label class="grupo_foto" for="file">
+                                <input type="file" name="file" id="file">
+                                <img class="grupo_foto___img" src="" name="foto" id="foto">
+                            </label>
                         </div>
 
                         <div data-campo class="campo">
