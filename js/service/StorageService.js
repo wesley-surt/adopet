@@ -19,6 +19,6 @@ export class StorageService {
     }
 
     static exists(key) {
-        return !!this.get(key);
+        return !!localStorage.getItem(key);
     }
 }

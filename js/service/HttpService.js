@@ -18,6 +18,7 @@ export class HttpService {
         return this.request(`${url}/${path}`, {
             method: "POST",
             headers: {
+                "x-access-token": `${StorageService.get("token")}`,
                 "Content-type": "application/json",
             },
             body: JSON.stringify(body),
