@@ -35,8 +35,8 @@ export class AnimalEntities {
             });
     }
 
-    static get() {
-        return RequestionBackendService.get(`animals`);
+    static get(path) {
+        return RequestionBackendService.get(`animals${path}`);
     }
 
     static create() {

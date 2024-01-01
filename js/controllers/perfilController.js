@@ -1,4 +1,6 @@
 import { StorageService } from "../service/StorageService.js";
+import { AnimalEntities } from "../entities/AnimalEntities.js";
+import { AnimalView } from "../view/AnimalView.js";
 
 function fillnAllFields() {
     handleUser(StorageService.get("user"));
@@ -18,7 +20,20 @@ function handleUser(userStorage) {
     document.getElementById("sobre").innerHTML = userStorage.about || "";
 }
 
+fillnAllFields();
+
 const button = document.getElementById("botao");
 button.onclick = () => (window.location = "editar-perfil.html");
 
-fillnAllFields();
+const list = document.getElementById("catalogo");
+const view = new AnimalView(list);
+const userId = StorageService.get("user")._id;
+console.log(userId);
+AnimalEntities.get(`/query?userId=${userId}`)
+    .then((animals) => view.loadCard(animals))
+    .catch((err) => {
+        alert(
+            "Ocorreu algum erro ao carregar esta pagina. Tente novamente mais tarde ou contate nossa equipe técnica."
+        );
+        console.error(err);
+    });

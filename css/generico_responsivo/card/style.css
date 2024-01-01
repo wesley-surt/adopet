@@ -1,0 +1,17 @@
+@media screen and (min-width: 0) {
+    .catalogo {
+        width: 23rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalogo {
+        width: 46.8rem;
+    }
+}
+
+@media screen and (min-width: 1133px) {
+    .catalogo {
+        width: 70.6rem;
+    }
+}

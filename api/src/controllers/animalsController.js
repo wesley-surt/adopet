@@ -55,10 +55,10 @@ export class AnimalsController {
     };
 
     static searchByUserId = async (req, res) => {
-        const { profileId } = req.query;
+        const { userId } = req.query;
 
         animals
-            .find({ profileId: profileId }, {})
+            .find({ userId: userId }, {})
             .then((animals) => res.status(200).json(animals))
             .catch((err) => res.status(500).json({ message: err }));
     };

@@ -28,7 +28,7 @@ export class AnimalView {
                                 </div>
 
                                 <div class="info_da_regiao">
-                                    <p class="estado" data-estado>${animal.city} (${animal.state})</p>
+                                    <p class="estado_do_pet" data-estado>${animal.city} (${animal.state})</p>
 
                                     <a class="icone_chamada--link" href="#">
                                         <img src="../image/ícone mensagem.png">
