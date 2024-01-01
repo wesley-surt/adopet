@@ -1,12 +1,26 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../service/StorageService.js";
 // Caso os campos não estejam todos preenchidos ao clicar em salvar, deve aparecer um popup alertando o usuario de que deve completar os campos. Deve checar tambem se a foto está no localstorage.
-const button = document.getElementById("btn-salvar");
-button.onclick = (e) => {
+const buttonSave = document.getElementById("btn-salvar");
+buttonSave.onclick = (e) => {
     e.preventDefault();
 
     const body = AnimalEntities.create();
-    AnimalEntities.register(body);
+    if (StorageService.get("animal")) {
+        body.id = StorageService.get("animal")._id;
+        AnimalEntities.uptade(body);
+    } else {
+        body.userId = StorageService.get("userId");
+        AnimalEntities.register(body);
+    }
+};
+
+const buttonDelete = document.getElementById("btn-deletar");
+buttonDelete.onclick = (e) => {
+    e.preventDefault();
+
+    const id = StorageService.get("animal")._id;
+    AnimalEntities.delete(id);
 };
 
 function fillnAllFields() {

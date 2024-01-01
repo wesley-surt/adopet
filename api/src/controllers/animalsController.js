@@ -5,7 +5,7 @@ export class AnimalsController {
     static getAllAnimals = async (req, res) => {
         try {
             const allAnimals = await animals.find();
-            if (allAnimals) res.status(200).json({ allAnimals });
+            if (allAnimals) res.status(200).json(allAnimals);
         } catch (err) {
             res.status(500).json({
                 message: "Server error",
@@ -54,7 +54,7 @@ export class AnimalsController {
             .catch((err) => res.status(500).json({ message: err }));
     };
 
-    static searchByProfileId = async (req, res) => {
+    static searchByUserId = async (req, res) => {
         const { profileId } = req.query;
 
         animals
@@ -177,8 +177,7 @@ export class AnimalsController {
     };
 
     static update = (req, res) => {
-        const { id } = req.params;
-        const { animal } = req.body;
+        const { animal, id } = req.body;
 
         animals
             .findByIdAndUpdate(id, animal)

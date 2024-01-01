@@ -5,10 +5,7 @@ import { StorageService } from "../service/StorageService.js";
 export class AnimalEntities {
     static register(body) {
         RequestionBackendService.register("animals/register", body)
-            .then((animal) => {
-                window.location = "perfil.html";
-                console.log(animal);
-            })
+            .then((animal) => (window.location = "perfil.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -17,9 +14,30 @@ export class AnimalEntities {
             });
     }
 
-    static uptade(body) {}
+    static uptade(body) {
+        RequestionBackendService.update("animals/update", body)
+            .then((animal) => (window.location = "perfil.html"))
+            .catch((err) => {
+                alert(
+                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                );
+                console.error(err.message);
+            });
+    }
 
-    static delete(animalId) {}
+    static delete(animalId) {
+        RequestionBackendService.delete(`animals/${animalId}`)
+            .then((animal) => (window.location = "perfil.html"))
+            .catch((err) => {
+                alert(
+                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                );
+            });
+    }
+
+    static get() {
+        return RequestionBackendService.get(`animals`);
+    }
 
     static create() {
         return {
@@ -37,7 +55,6 @@ export class AnimalEntities {
                 characteristics2:
                     document.getElementById("comportamento2").value || "",
             },
-            userId: StorageService.get("userId"),
         };
     }
 
