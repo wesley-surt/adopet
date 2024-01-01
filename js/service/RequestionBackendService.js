@@ -10,7 +10,6 @@ export class RequestionBackendService {
 
                 this.get(`users/${data.userId}`).then((user) => {
                     StorageService.set("user", user);
-                    console.log("entrei get dentro do login");
                 });
 
                 window.location = "animais.html";
@@ -30,9 +29,10 @@ export class RequestionBackendService {
     }
 
     static get(path) {
-        console.log(path);
         return HttpService.get(path);
     }
 
-    static delete() {}
+    static delete(path) {
+        return HttpService.delete(path);
+    }
 }

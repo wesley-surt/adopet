@@ -39,11 +39,20 @@ export class HttpService {
     }
 
     static get(path) {
-        console.log(path);
         const url = "http://localhost:3000";
-        console.log("entrei no http service");
         return this.request(`${url}/${path}`, {
             method: "GET",
+            headers: {
+                "x-access-token": `${StorageService.get("token")}`,
+                "Content-type": "application/json",
+            },
+        });
+    }
+
+    static delete(path) {
+        const url = "http://localhost:3000";
+        return this.request(`${url}/${path}`, {
+            method: "DELETE",
             headers: {
                 "x-access-token": `${StorageService.get("token")}`,
                 "Content-type": "application/json",

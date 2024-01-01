@@ -16,7 +16,9 @@ export class AnimalEntities {
 
     static uptade(body) {
         RequestionBackendService.update("animals/update", body)
-            .then(() => (window.location = "perfil.html"))
+            .then(() => {
+                window.location = "perfil.html";
+            })
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -37,7 +39,6 @@ export class AnimalEntities {
     }
 
     static get(path) {
-        console.log(path);
         return RequestionBackendService.get(`animals${path}`);
     }
 

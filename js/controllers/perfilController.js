@@ -28,11 +28,10 @@ button.onclick = () => (window.location = "editar-perfil.html");
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
 const userId = StorageService.get("user")._id;
-console.log(userId);
 AnimalEntities.get(`/query?userId=${userId}`)
     .then((animals) => {
-        view.loadCard(animals);
-        addEventsToCards();
+        console.log(animals.length > 0);
+        handlesRegisteredAnimals.call(this, animals);
     })
     .catch((err) => {
         alert(
@@ -43,15 +42,28 @@ AnimalEntities.get(`/query?userId=${userId}`)
 
 function addEventsToCards() {
     const cards = document.querySelectorAll(".card");
-    console.log(cards);
     cards.forEach((c) => {
-        console.log(c);
-
         c.addEventListener("click", () => {
             const animalId = c.querySelector(".animal-id").textContent;
-            console.log(animalId);
             StorageService.set("animalId", animalId);
             window.location = "animal.html";
         });
     });
+}
+
+function handlesRegisteredAnimals(animals) {
+    view.loadCard(animals);
+    addEventsToCards();
+
+    const fragment = new DocumentFragment();
+    const h3 = document.createElement("h3");
+    h3.classList.add("titulo-animais-cadastrado");
+
+    if (animals.length > 0) h3.innerHTML = "Animais cadastrados";
+    else h3.innerHTML = "Você ainda não cadastrou animais para adoção";
+
+    fragment.append(h3);
+    const togglesTitleElement = document.getElementById("alterna-titulo");
+    const firstChild = togglesTitleElement.firstChild;
+    togglesTitleElement.insertBefore(fragment, firstChild);
 }
