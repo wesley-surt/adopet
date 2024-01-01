@@ -6,8 +6,8 @@ buttonSave.onclick = (e) => {
     e.preventDefault();
 
     const body = AnimalEntities.create();
-    if (StorageService.get("animal")) {
-        body.id = StorageService.get("animal")._id;
+    if (StorageService.get("animalId")) {
+        body.id = StorageService.get("animalId");
         AnimalEntities.uptade(body);
     } else {
         body.userId = StorageService.get("userId");
