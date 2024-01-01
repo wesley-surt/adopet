@@ -5,7 +5,7 @@ import { StorageService } from "../service/StorageService.js";
 export class AnimalEntities {
     static register(body) {
         RequestionBackendService.register("animals/register", body)
-            .then((animal) => (window.location = "perfil.html"))
+            .then(() => (window.location = "perfil.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -16,7 +16,7 @@ export class AnimalEntities {
 
     static uptade(body) {
         RequestionBackendService.update("animals/update", body)
-            .then((animal) => (window.location = "perfil.html"))
+            .then(() => (window.location = "perfil.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -27,15 +27,17 @@ export class AnimalEntities {
 
     static delete(animalId) {
         RequestionBackendService.delete(`animals/${animalId}`)
-            .then((animal) => (window.location = "perfil.html"))
+            .then(() => (window.location = "perfil.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
                 );
+                console.error(err);
             });
     }
 
     static get(path) {
+        console.log(path);
         return RequestionBackendService.get(`animals${path}`);
     }
 
@@ -58,15 +60,19 @@ export class AnimalEntities {
         };
     }
 
-    static fillForm(animalStorage) {
-        document
-            .getElementById("foto")
-            .setAttribute("src", `${animalStorage.photo}`);
-        document.getElementById("nome").value = animalStorage.name;
-        document.getElementById("telefone").value = animalStorage.telephone;
-        document.getElementById("cidade").value = animalStorage.city;
-        document.getElementById("uf").value = animalStorage.state;
-        document.getElementById("sobre").value = animalStorage.about;
+    static fillForm(animal) {
+        document.getElementById("foto").setAttribute("src", `${animal.photo}`);
+        document.getElementById("nome").value = animal.name;
+        document.getElementById("idade").value = animal.age;
+        document.getElementById("cidade").value = animal.city;
+        document.getElementById("uf").value = animal.state;
+        document.getElementById("sobre").value = animal.about;
+        document.getElementById("medida").value = animal.measure;
+        document.getElementById("porte").value = animal.size;
+        document.getElementById("comportamento1").value =
+            animal.characteristics1;
+        document.getElementById("comportamento2").value =
+            animal.characteristics2;
     }
 
     static savePhoto() {

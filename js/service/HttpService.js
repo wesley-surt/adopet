@@ -39,6 +39,7 @@ export class HttpService {
     }
 
     static get(path) {
+        console.log(path);
         const url = "http://localhost:3000";
         console.log("entrei no http service");
         return this.request(`${url}/${path}`, {

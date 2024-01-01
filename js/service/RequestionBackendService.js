@@ -30,8 +30,7 @@ export class RequestionBackendService {
     }
 
     static get(path) {
-        console.log("entrei no get do requestion");
-
+        console.log(path);
         return HttpService.get(path);
     }
 

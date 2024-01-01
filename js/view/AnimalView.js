@@ -37,7 +37,7 @@ export class AnimalView {
                                 </div>
                             </div>
                         </div>
-                        <span id="identificador" style="display: none;">${animal._id}</span>
+                        <span class="animal-id" style="display: none;">${animal._id}</span>
                     </section>
                 `;
                 })
@@ -46,7 +46,6 @@ export class AnimalView {
     }
 
     loadCard(list) {
-        console.log(this.template(list));
         this._elemente.innerHTML = this.template(list);
     }
 }

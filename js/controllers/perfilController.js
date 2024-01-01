@@ -30,10 +30,28 @@ const view = new AnimalView(list);
 const userId = StorageService.get("user")._id;
 console.log(userId);
 AnimalEntities.get(`/query?userId=${userId}`)
-    .then((animals) => view.loadCard(animals))
+    .then((animals) => {
+        view.loadCard(animals);
+        addEventsToCards();
+    })
     .catch((err) => {
         alert(
             "Ocorreu algum erro ao carregar esta pagina. Tente novamente mais tarde ou contate nossa equipe técnica."
         );
         console.error(err);
     });
+
+function addEventsToCards() {
+    const cards = document.querySelectorAll(".card");
+    console.log(cards);
+    cards.forEach((c) => {
+        console.log(c);
+
+        c.addEventListener("click", () => {
+            const animalId = c.querySelector(".animal-id").textContent;
+            console.log(animalId);
+            StorageService.set("animalId", animalId);
+            window.location = "animal.html";
+        });
+    });
+}

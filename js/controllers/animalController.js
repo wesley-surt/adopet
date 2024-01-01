@@ -15,27 +15,40 @@ buttonSave.onclick = (e) => {
     }
 };
 
-const buttonDelete = document.getElementById("btn-deletar");
-buttonDelete.onclick = (e) => {
-    e.preventDefault();
-
-    const id = StorageService.get("animal")._id;
-    AnimalEntities.delete(id);
-};
-
 function fillnAllFields() {
     // Se não houver um animal carregado previamente no localstrorage a pagina vai ser exibida vazia, sem nenhuma informação, carregando apenas uma imagem para substituir até outra ser escolhida. Se o usuario acessar esta pagina clicando em um dos cards de seus animais cadastrados que vão estar na sua tela de perfil, o mesmo animal será buscado no database e salvo no localstorage durante esse processo. Assim, quando esta tela abrir irá puxar as informações do animal, o que significa que não será um cadastro propriamente dito, e sim uma alteração.
     // A tela deve ter botões para salvar, que ficará desabilitados até que todos os campos estejam preenchidos; deletar, que só irá aparecer se houver uma chave no localstorage chamada animal com um objeto com id; cancelar, que vai redirecionar para a tela de perfil
-    if (StorageService.exists("animal")) {
-        handleAnimal(StorageService.get("animal"));
+    if (StorageService.get("animalId")) {
+        handleAnimal(StorageService.get("animalId"));
+        console.log(StorageService.get("animalId"));
+
+        createButtonDelete();
     } else
         document
             .getElementById("foto")
             .setAttribute("src", "../../image/Usuario.png");
 }
 
-function handleAnimal(animalStorage) {
-    AnimalEntities.fillForm(animalStorage);
+function handleAnimal(animalId) {
+    console.log(animalId);
+    AnimalEntities.get(`/${animalId}`).then((animal) => {
+        AnimalEntities.fillForm(animal);
+    });
+}
+
+function createButtonDelete() {
+    const li = document.createElement("li");
+    const button = document.createElement("button");
+    button.name = "botao";
+    button.classList.add("botao");
+    button.id = "btn-deletar";
+    button.innerHTML = "Deletar";
+    button.onclick = () => {
+        const animalId = StorageService.get("animalId");
+        AnimalEntities.delete(animalId);
+    };
+    li.append(button);
+    document.getElementById("lista-botoes").append(li);
 }
 
 AnimalEntities.savePhoto();
