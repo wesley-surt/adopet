@@ -1,6 +1,7 @@
 import { StorageService } from "../service/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../view/AnimalView.js";
+import { RequestionBackendService } from "../service/RequestionBackendService.js";
 
 function fillnAllFields() {
     handleUser(StorageService.get("user"));
@@ -22,12 +23,13 @@ function handleUser(userStorage) {
 
 fillnAllFields();
 
-const button = document.getElementById("botao");
-button.onclick = () => (window.location = "editar-perfil.html");
+const buttonEditar = document.getElementById("btn-editar");
+buttonEditar.onclick = () => (window.location = "editar-perfil.html");
 
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
 const userId = StorageService.get("user")._id;
+
 AnimalEntities.get(`/query?userId=${userId}`)
     .then((animals) => {
         console.log(animals.length > 0);
@@ -39,6 +41,19 @@ AnimalEntities.get(`/query?userId=${userId}`)
         );
         console.error(err);
     });
+
+const buttonDelete = document.getElementById("btn-deletar");
+buttonDelete.onclick = () => {
+    RequestionBackendService.delete(`users/${userId}`)
+        .then((res) => {
+            console.log(res);
+            StorageService.clear();
+            window.location = "login.html";
+        })
+        .catch(
+            alert("Ocorreu algum erro no servidor. Tente novamente mais tarde.")
+        );
+};
 
 function addEventsToCards() {
     const cards = document.querySelectorAll(".card");

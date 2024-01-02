@@ -23,15 +23,15 @@ function filtrar() {
 }
 
 function callError(err) {
+    console.error(err.message);
     alert(
         "Ocorreu algum erro ao carregar esta pagina. Tente novamente mais tarde ou contate nossa equipe técnica."
     );
-    console.error(err);
 }
 
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
-if (StorageService.get("user")) {
+if (!!StorageService.get("user")) {
     const state = StorageService.get("user").state;
     AnimalEntities.get(`/search?state=${state}`)
         .then((animals) => view.loadCard(animals))

@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import Animals from "../models/Animal.js";
 import jwt from "jsonwebtoken";
 import users from "../models/Users.js";
 import { environment } from "../../environment/env.js";
@@ -10,23 +11,11 @@ class UsersController {
     static login = async (req, res, next) => {
         const { email, password } = req.body;
 
-        console.log(email);
-        console.log(password);
-
         validateField(email, `Email is required - ${email}`, res);
         validateField(password, `Password is required - ${password}`, res);
 
         const user = await users.findOne({ email: email });
-        validateField(user, "User not find.", res, next);
-
-        const checkPassword = await bcrypt.compare(password, user.password);
-
-        const validPassword = validateField(
-            checkPassword,
-            "Invalid password.",
-            res,
-            next
-        );
+        if (user) await bcrypt.compare(password, user.password);
 
         try {
             const userId = user._id;
@@ -36,11 +25,16 @@ class UsersController {
                 },
                 secret
             );
+            if (user) {
+                res.status(200).json({ token, userId });
+                return next();
+            }
 
-            if (validPassword) res.status(200).json({ token, userId });
+            res.status(500).json({ message: "User not find." });
+            return next();
         } catch (err) {
-            console.log(err);
             res.status(500).json({ message: "Server error. Try again later" });
+            return next();
         }
     };
 
@@ -129,11 +123,6 @@ class UsersController {
                     } else res.status(200).json(user);
                 }
             );
-
-            //.then((user) => res.status(200).json({ user }))
-            //.catch((err) => {
-            //    throw new Error(err.message);
-            //});
         } catch (err) {
             console.log(err.message);
         }
@@ -169,9 +158,20 @@ class UsersController {
     static delete = async (req, res) => {
         let id = req.params.id;
 
-        users
+        await Animals.find({ userId: id }, {}).then((animals) => {
+            animals.forEach((a) => {
+                const id = a.id;
+                Animals.findByIdAndDelete(id)
+                    .then()
+                    .catch(res.status(500).json(err.message));
+            });
+        });
+
+        await users
             .findByIdAndDelete(id)
-            .then((response) => res.status(200).json(response))
+            .then((response) => {
+                res.status(200).json(response);
+            })
             .catch((err) => res.status(500).json(err.message));
     };
 }

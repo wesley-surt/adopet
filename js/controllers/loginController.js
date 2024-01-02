@@ -16,11 +16,12 @@ inputs.forEach((input) => {
 
 const button = document.getElementById("botao");
 button.onclick = () => {
-    const body = {
-        email: document.getElementById("email").value,
-        password: document.getElementById("senha").value,
-    };
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("senha").value;
 
-    console.log(body);
-    RequestionBackendService.login(body);
+    if (email && password) {
+        const body = { email: email, password: password };
+        console.log(body);
+        RequestionBackendService.login(body);
+    } else alert("Preencha os campos de email e senha para proceguir");
 };

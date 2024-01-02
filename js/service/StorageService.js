@@ -1,5 +1,4 @@
 import { CryptographyService } from "./CryptographyService.js";
-
 export class StorageService {
     static set(key, value) {
         localStorage.setItem(
@@ -9,9 +8,11 @@ export class StorageService {
     }
 
     static get(key) {
-        return JSON.parse(
-            CryptographyService.decrypt(localStorage.getItem(key))
-        );
+        if (!!localStorage.getItem(key))
+            return JSON.parse(
+                CryptographyService.decrypt(localStorage.getItem(key))
+            );
+        else return "";
     }
 
     static delete(key) {
@@ -20,5 +21,9 @@ export class StorageService {
 
     static exists(key) {
         return !!localStorage.getItem(key);
+    }
+
+    static clear() {
+        localStorage.clear();
     }
 }

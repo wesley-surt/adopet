@@ -5,17 +5,23 @@ export class RequestionBackendService {
     static login(body) {
         HttpService.post("users/login", body)
             .then((data) => {
-                StorageService.set("token", data.token);
-                StorageService.set("userId", data.userId);
+                console.log(data);
+                console.log(data.token);
+                console.log(data.userId);
+                if (data.token && data.userId) {
+                    StorageService.set("token", data.token);
+                    StorageService.set("userId", data.userId);
 
-                this.get(`users/${data.userId}`).then((user) => {
-                    StorageService.set("user", user);
-                });
-
-                window.location = "animais.html";
+                    this.get(`users/${data.userId}`).then((user) => {
+                        StorageService.set("user", user);
+                        window.location = "animais.html";
+                    });
+                } else alert("Email ou senha inválido. then");
             })
             .catch((err) => {
-                alert("Email ou senha inválido.");
+                alert(
+                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou entre em contato com nossa equipe técnica. catch"
+                );
                 console.error(err.message);
             });
     }
