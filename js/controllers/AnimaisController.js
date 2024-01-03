@@ -31,7 +31,7 @@ function callError(err) {
 
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
-if (!!StorageService.get("user")) {
+if (!!StorageService.get("user").state) {
     const state = StorageService.get("user").state;
     AnimalEntities.get(`/search?state=${state}`)
         .then((animals) => view.loadCard(animals))

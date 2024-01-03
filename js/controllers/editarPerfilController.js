@@ -6,9 +6,15 @@ const button = document.getElementById("botao");
 button.onclick = (e) => {
     e.preventDefault();
 
+    console.log(!!StorageService.get("user").photo);
+    console.log(StorageService.get("user").photo);
+
+    const photo = !!StorageService.get("user").photo
+        ? StorageService.get("user").photo
+        : StorageService.get("photoUser") || "";
     const body = {
         user: {
-            photo: StorageService.get("photo") || "",
+            photo: photo,
             name: document.getElementById("nome").value || "",
             city: document.getElementById("cidade").value || "",
             state: document.getElementById("uf").value || "",
@@ -21,6 +27,7 @@ button.onclick = (e) => {
     RequestionBackendService.update("users/update", body)
         .then((user) => {
             StorageService.set("user", user);
+            StorageService.set("photoUser", "");
             window.location = "perfil.html";
         })
         .catch((err) => {
@@ -60,7 +67,7 @@ file.onchange = () => {
                 .getElementById("foto")
                 .setAttribute("src", `${res.data.link}`);
 
-            StorageService.set("photo", res.data.link);
+            StorageService.set("photoUser", res.data.link);
         })
         .catch(console.error);
 };

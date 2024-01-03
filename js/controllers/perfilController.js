@@ -32,7 +32,6 @@ const userId = StorageService.get("user")._id;
 
 AnimalEntities.get(`/query?userId=${userId}`)
     .then((animals) => {
-        console.log(animals.length > 0);
         handlesRegisteredAnimals.call(this, animals);
     })
     .catch((err) => {
@@ -45,14 +44,15 @@ AnimalEntities.get(`/query?userId=${userId}`)
 const buttonDelete = document.getElementById("btn-deletar");
 buttonDelete.onclick = () => {
     RequestionBackendService.delete(`users/${userId}`)
-        .then((res) => {
-            console.log(res);
+        .then(() => {
             StorageService.clear();
             window.location = "login.html";
         })
-        .catch(
-            alert("Ocorreu algum erro no servidor. Tente novamente mais tarde.")
-        );
+        .catch((err) => {
+            alert(
+                "Ocorreu algum erro no servidor. Tente novamente mais tarde."
+            );
+        });
 };
 
 function addEventsToCards() {

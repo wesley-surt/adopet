@@ -155,24 +155,38 @@ class UsersController {
         }
     };
 
-    static delete = async (req, res) => {
+    static delete = async (req, res, next) => {
         let id = req.params.id;
 
-        await Animals.find({ userId: id }, {}).then((animals) => {
-            animals.forEach((a) => {
-                const id = a.id;
-                Animals.findByIdAndDelete(id)
-                    .then()
-                    .catch(res.status(500).json(err.message));
+        await Animals.find({ userId: id }, {})
+            .then((animals) => {
+                console.log(animals);
+                console.log("passei no then dos animais");
+                if (animals.length > 0)
+                    animals.forEach((a) => {
+                        const id = a._id;
+                        Animals.findByIdAndDelete(id)
+                            .then()
+                            .catch((err) => {
+                                throw new Error(err.message);
+                            });
+                    });
+            })
+            .catch((err) => {
+                res.status(500).json(err.message);
+                return next();
             });
-        });
 
         await users
             .findByIdAndDelete(id)
             .then((response) => {
                 res.status(200).json(response);
+                return next();
             })
-            .catch((err) => res.status(500).json(err.message));
+            .catch((err) => {
+                res.status(500).json(err.message);
+                return next();
+            });
     };
 }
 
