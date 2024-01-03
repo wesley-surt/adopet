@@ -1,5 +1,7 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
+import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { StorageService } from "../service/StorageService.js";
+import { CitiesView } from "../view/CitiesView.js";
 // Caso os campos não estejam todos preenchidos ao clicar em salvar, deve aparecer um popup alertando o usuario de que deve completar os campos. Deve checar tambem se a foto está no localstorage.
 const buttonSave = document.getElementById("btn-salvar");
 buttonSave.onclick = (e) => {
@@ -59,3 +61,19 @@ function createButtonDelete() {
 AnimalEntities.savePhoto();
 
 fillInAllFields();
+
+const ufSelect = document.querySelector("[data-uf]");
+ufSelect.addEventListener("change", callCities);
+function callCities() {
+    const ufId = ufSelect.value;
+    IbgeAPIService.cities(ufId).then((cities) => {
+        const parentElementRef = document.querySelector("[data-cidade]");
+        const template = new CitiesView(parentElementRef);
+        template.loadTemplate(cities);
+
+        if (cities.length === 0)
+            alert(
+                "O estado escolhido não possui cidades cadastradas na API do IBGE. Por favor, escolha um outro estado."
+            );
+    });
+}

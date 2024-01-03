@@ -1,3 +1,4 @@
+import { listOfStates } from "../helper/listOfStates.js";
 import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
 import { RequestionBackendService } from "../service/RequestionBackendService.js";
@@ -45,6 +46,7 @@ function fillnAllFields() {
 }
 
 function handleUser(userStorage) {
+    console.log(userStorage.state);
     document
         .getElementById("foto")
         .setAttribute(
@@ -54,8 +56,20 @@ function handleUser(userStorage) {
     document.getElementById("nome").value = userStorage.name || "";
     document.getElementById("telefone").value = userStorage.telephone || "";
     document.getElementById("cidade").value = userStorage.city || "";
-    document.getElementById("uf").value = userStorage.state || "";
+    document.getElementById("uf").value =
+        traversesListOfStates(userStorage, listOfStates) || "";
     document.getElementById("sobre").value = userStorage.about || "";
+}
+
+function traversesListOfStates(userStorage, list) {
+    console.log(list);
+    for (let i = 0; i < list.length; i++) {
+        const obj = list[i];
+        console.log(obj);
+        console.log(obj.code);
+        console.log(obj.state);
+        if (obj.state === userStorage.state) return obj.code;
+    }
 }
 
 const file = document.getElementById("file");
