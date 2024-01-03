@@ -1,8 +1,6 @@
-export class AnimalView {
-    constructor(elemente) {
-        this._elemente = elemente;
-    }
+import { View } from "./View.js";
 
+export class AnimalView extends View {
     template(list) {
         return `
             ${list
@@ -43,9 +41,5 @@ export class AnimalView {
                 })
                 .join("")}
         `;
-    }
-
-    loadCard(list) {
-        this._elemente.innerHTML = this.template(list);
     }
 }
