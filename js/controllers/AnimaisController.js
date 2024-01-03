@@ -34,10 +34,10 @@ const view = new AnimalView(list);
 if (!!StorageService.get("user").state) {
     const state = StorageService.get("user").state;
     AnimalEntities.get(`/search?state=${state}`)
-        .then((animals) => view.loadCard(animals))
+        .then((animals) => view.loadTemplate(animals))
         .catch((err) => callError(err));
 } else {
     AnimalEntities.get(`/`)
-        .then((animals) => view.loadCard(animals))
+        .then((animals) => view.loadTemplate(animals))
         .catch((err) => callError(err));
 }

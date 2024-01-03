@@ -67,7 +67,7 @@ function addEventsToCards() {
 }
 
 function handlesRegisteredAnimals(animals) {
-    view.loadCard(animals);
+    view.loadTemplate(animals);
     addEventsToCards();
 
     const fragment = new DocumentFragment();

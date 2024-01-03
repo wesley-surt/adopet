@@ -1,23 +1,25 @@
+import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
 import { RequestionBackendService } from "../service/RequestionBackendService.js";
 import { StorageService } from "../service/StorageService.js";
+import { CitiesView } from "../view/CitiesView.js";
 
 const button = document.getElementById("botao");
 button.onclick = (e) => {
     e.preventDefault();
 
-    console.log(!!StorageService.get("user").photo);
-    console.log(StorageService.get("user").photo);
-
     const photo = !!StorageService.get("user").photo
         ? StorageService.get("user").photo
         : StorageService.get("photoUser") || "";
+
+    const ufSelect = document.getElementById("uf");
+    const valueSelected = ufSelect.options[ufSelect.selectedIndex].textContent;
     const body = {
         user: {
             photo: photo,
             name: document.getElementById("nome").value || "",
             city: document.getElementById("cidade").value || "",
-            state: document.getElementById("uf").value || "",
+            state: valueSelected || "",
             telephone: document.getElementById("telefone").value || "",
             about: document.getElementById("sobre").value || "",
         },
@@ -73,3 +75,19 @@ file.onchange = () => {
 };
 
 fillnAllFields();
+
+const ufSelect = document.querySelector("[data-uf]");
+ufSelect.addEventListener("change", callCities);
+function callCities() {
+    const ufId = ufSelect.value;
+    IbgeAPIService.cities(ufId).then((cities) => {
+        const parentElementRef = document.querySelector("[data-cidade]");
+        const template = new CitiesView(parentElementRef);
+        template.loadTemplate(cities);
+
+        if (cities.length === 0)
+            alert(
+                "O estado escolhido não possui cidades cadastradas na API do IBGE. Por favor, escolha um outro estado."
+            );
+    });
+}

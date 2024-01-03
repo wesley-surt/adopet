@@ -7,7 +7,7 @@ export class View {
         throw new Error("The template must be overridden in the child classes");
     }
 
-    loadCard(list) {
+    loadTemplate(list) {
         this._elemente.innerHTML = this.template(list);
     }
 }
