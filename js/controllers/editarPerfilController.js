@@ -46,7 +46,6 @@ function fillnAllFields() {
 }
 
 function handleUser(userStorage) {
-    console.log(userStorage.state);
     document
         .getElementById("foto")
         .setAttribute(
@@ -62,12 +61,8 @@ function handleUser(userStorage) {
 }
 
 function traversesListOfStates(userStorage, list) {
-    console.log(list);
     for (let i = 0; i < list.length; i++) {
         const obj = list[i];
-        console.log(obj);
-        console.log(obj.code);
-        console.log(obj.state);
         if (obj.state === userStorage.state) return obj.code;
     }
 }
@@ -96,6 +91,7 @@ function callCities() {
     const ufId = ufSelect.value;
     IbgeAPIService.cities(ufId).then((cities) => {
         const parentElementRef = document.querySelector("[data-cidade]");
+        console.log(parentElementRef);
         const template = new CitiesView(parentElementRef);
         template.loadTemplate(cities);
 
