@@ -1,3 +1,4 @@
+import { jumpAPI } from "../../testando.js";
 import { listOfStates } from "../helper/listOfStates.js";
 import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
@@ -79,6 +80,8 @@ file.onchange = () => {
                 .setAttribute("src", `${res.data.link}`);
 
             StorageService.set("photoUser", res.data.link);
+            jumpAPI;
+            //jumpAPI(res.data.link);
         })
         .catch(console.error);
 };

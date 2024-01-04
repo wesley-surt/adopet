@@ -142,7 +142,7 @@ class UsersController {
             });
     };
 
-    static exists = async (req, res) => {
+    static exists = async (req, res, next) => {
         const { email } = req.body;
         validateField(email, "Email is required", res);
 
@@ -150,8 +150,10 @@ class UsersController {
 
         if (user) {
             res.status(200).json({ exists: true });
+            return next();
         } else {
             res.status(404).json({});
+            return next();
         }
     };
 
