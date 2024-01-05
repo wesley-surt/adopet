@@ -5,7 +5,7 @@ import animalsRoutes from "./animals.js";
 
 const routes = (app) => {
     const corsOptions = {
-        origin: "http://127.0.0.1:5500",
+        origin: "http://127.0.0.1:5501",
         credentials: true,
         optionSuccessStatus: 200,
         header: "x-access-token",

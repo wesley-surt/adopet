@@ -1,4 +1,3 @@
-import { jumpAPI } from "../../testando.js";
 import { listOfStates } from "../helper/listOfStates.js";
 import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
@@ -75,13 +74,10 @@ file.onchange = () => {
 
     ImgurAPIService.save(data)
         .then((res) => {
-            document
-                .getElementById("foto")
-                .setAttribute("src", `${res.data.link}`);
-
+            const image = document.getElementById("foto");
+            image.setAttribute("src", `${res.data.link}`);
+            image.setAttribute("class", "fotoQuadrada");
             StorageService.set("photoUser", res.data.link);
-            jumpAPI;
-            //jumpAPI(res.data.link);
         })
         .catch(console.error);
 };
