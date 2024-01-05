@@ -1,5 +1,4 @@
 import { listOfStates } from "../helper/listOfStates.js";
-import { cropperImagem } from "../helper/testando.js";
 import { IbgeAPIService } from "../service/IbgeAPIService.js";
 import { ImgurAPIService } from "../service/ImgurAPIService.js";
 import { RequestionBackendService } from "../service/RequestionBackendService.js";
@@ -75,7 +74,9 @@ file.onchange = () => {
 
     ImgurAPIService.save(data)
         .then((res) => {
-            document.getElementById("foto").setAttribute("src", `${image}`);
+            const image = document.getElementById("foto");
+            image.setAttribute("src", `${res.data.link}`);
+            image.setAttribute("class", "fotoQuadrada");
             StorageService.set("photoUser", res.data.link);
         })
         .catch(console.error);

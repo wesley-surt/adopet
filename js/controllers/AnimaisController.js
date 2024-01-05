@@ -4,6 +4,7 @@ import { AnimalView } from "../view/AnimalView.js";
 
 const filtro = document.querySelector("[data-campoFiltro]");
 const cards = document.querySelectorAll("[data-card]");
+
 /**
  * Futuramente devo usar esse trecho de código para filtrar por cidade
  * 

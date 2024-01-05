@@ -25,3 +25,8 @@
     text-align: center;
     color: #3772ff;
 }
+
+#fotoQuadrada {
+    height: 170px;
+    width: 170px;
+}
