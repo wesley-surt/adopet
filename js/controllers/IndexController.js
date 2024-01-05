@@ -2,9 +2,9 @@ var botoes = document.querySelectorAll(".botao");
 botoes.forEach((botao) => {
     botao.onclick = (evento) => {
         if (evento.target.name === "login") {
-            window.location = "login.html";
+            window.location = "html/login.html";
         } else if (evento.target.name === "cadastro") {
-            window.location = "cadastro.html";
+            window.location = "html/cadastro.html";
         }
     };
 });

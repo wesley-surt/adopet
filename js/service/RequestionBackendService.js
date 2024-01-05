@@ -16,7 +16,7 @@ export class RequestionBackendService {
                         StorageService.set("user", user);
                         window.location = "animais.html";
                     });
-                } else alert("Email ou senha inválido. then");
+                } else alert("Email ou senha inválido.");
             })
             .catch((err) => {
                 alert(
