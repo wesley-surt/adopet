@@ -1,11 +1,11 @@
-import { ImgurAPIService } from "../service/ImgurAPIService.js";
-import { RequestionBackendService } from "../service/RequestionBackendService.js";
-import { StorageService } from "../service/StorageService.js";
+import { HttpService } from "../services/HttpService.js";
+import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
+import { StorageService } from "../services/StorageService.js";
 
 export class AnimalEntities {
     static register(body) {
-        RequestionBackendService.register("animals/register", body)
-            .then(() => (window.location = "perfil.html"))
+        HttpService.post("animals/register", body)
+            .then(() => (window.location = "profile.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -15,9 +15,9 @@ export class AnimalEntities {
     }
 
     static uptade(body) {
-        RequestionBackendService.update("animals/update", body)
+        HttpService.put("animals/update", body)
             .then(() => {
-                window.location = "perfil.html";
+                window.location = "profile.html";
             })
             .catch((err) => {
                 alert(
@@ -28,8 +28,8 @@ export class AnimalEntities {
     }
 
     static delete(animalId) {
-        RequestionBackendService.delete(`animals/${animalId}`)
-            .then(() => (window.location = "perfil.html"))
+        HttpService.delete(`animals/${animalId}`)
+            .then(() => (window.location = "profile.html"))
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
@@ -39,7 +39,7 @@ export class AnimalEntities {
     }
 
     static get(path) {
-        return RequestionBackendService.get(`animals${path}`);
+        return HttpService.get(`animals/${path}`);
     }
 
     static create() {

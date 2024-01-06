@@ -1,0 +1,57 @@
+@import url("../generic/base/reset.css");
+@import url("../generic/base/body.css");
+@import url("../generic/base/header.css");
+@import url("../responsive_generic/responsive_base/header.css");
+@import url("../generic/base/footer.css");
+@import url("../responsive_generic/responsive_base/footer.css");
+@import url("../generic/components/button/style_1.css");
+@import url("../responsive_page/style_index.css");
+
+body {
+    background: #3772ff;
+    color: #ffffff;
+}
+
+.conteiner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.secao1,
+.secao2__texto {
+    text-align: center;
+}
+
+.secao1__imagem--logo {
+    margin-bottom: 2rem;
+}
+
+.secao1__texto {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.secao2__texto {
+    font-weight: 400;
+    line-height: 1.3rem;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.ilustracao {
+    margin-left: -2rem;
+    margin-bottom: -1rem;
+    text-align: center;
+}
+
+.forma2 {
+    position: absolute;
+    right: 0;
+}

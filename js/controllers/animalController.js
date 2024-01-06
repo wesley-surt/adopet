@@ -1,7 +1,7 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
-import { IbgeAPIService } from "../service/IbgeAPIService.js";
-import { StorageService } from "../service/StorageService.js";
-import { CitiesView } from "../view/CitiesView.js";
+import { IbgeAPIService } from "../services/external_apis/IbgeAPIService.js";
+import { StorageService } from "../services/StorageService.js";
+import { CitiesView } from "../views/CitiesView.js";
 // Caso os campos não estejam todos preenchidos ao clicar em salvar, deve aparecer um popup alertando o usuario de que deve completar os campos. Deve checar tambem se a foto está no localstorage.
 const buttonSave = document.getElementById("btn-salvar");
 buttonSave.onclick = (e) => {
@@ -20,7 +20,7 @@ buttonSave.onclick = (e) => {
 const backButton = document.getElementById("btn-voltar");
 backButton.onclick = () => {
     StorageService.set("animalId", "");
-    window.location = "perfil.html";
+    window.location = "profile.html";
 };
 
 function fillInAllFields() {
@@ -35,7 +35,7 @@ function fillInAllFields() {
 }
 
 function handleAnimal(animalId) {
-    AnimalEntities.get(`/${animalId}`).then((animal) => {
+    AnimalEntities.get(`${animalId}`).then((animal) => {
         AnimalEntities.fillForm(animal);
     });
 }

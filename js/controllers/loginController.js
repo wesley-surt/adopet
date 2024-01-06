@@ -1,4 +1,4 @@
-import { RequestionBackendService } from "../service/RequestionBackendService.js";
+import { UserEntities } from "../entities/UserEntities.js";
 
 var inputs = document.querySelectorAll("[data-input]");
 
@@ -22,6 +22,6 @@ button.onclick = () => {
     if (email && password) {
         const body = { email: email, password: password };
         console.log(body);
-        RequestionBackendService.login(body);
+        UserEntities.login(body);
     } else alert("Preencha os campos de email e senha para proceguir");
 };

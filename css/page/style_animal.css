@@ -1,0 +1,28 @@
+@import url("../generic/base/reset.css");
+@import url("../generic/base/body.css");
+@import url("../generic/base/header.css");
+@import url("../responsive_generic/responsive_base/header.css");
+@import url("../generic/base/footer.css");
+@import url("../generic/base/container.css");
+@import url("../generic/components/button/style_2.css");
+@import url("../generic/components/form/style_2.css");
+@import url("../generic/components/field/style_2.css");
+@import url("../generic/components/janela/janela.css");
+@import url("../generic/components/errors/style.css");
+@import url("../responsive_generic/responsive_components/janela_rsponsiva/janela_responsiva.css");
+@import url("../page/style_edit_profile.css");
+@import url("../page/style_profile_message.css");
+@import url("../responsive_page/style_animal.css");
+
+.lista-botoes {
+    display: flex;
+    width: 92%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.botao {
+    width: 9rem;
+    margin: 0;
+}

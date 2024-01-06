@@ -6,25 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/generico/base/reset.css">
-    <link rel="stylesheet" href="../css/generico/base/body.css">
-    <link rel="stylesheet" href="../css/generico/base/cabecalho.css">
-    <link rel="stylesheet" href="../css/generico/base_responsiva/cabecalho.css">
-    <link rel="stylesheet" href="../css/generico/base/rodape.css">
-    <link rel="stylesheet" href="../css/generico/base/conteiner.css">
-    <link rel="stylesheet" href="../css/generico/componentes/botao/botao.css">
-    <link rel="stylesheet" href="../css/generico/componentes/formulario/form_perfil-mensagem.css">
-    <link rel="stylesheet" href="../css/generico/componentes/campo-label-input/campo-label-input_animal.css">
-    <link rel="stylesheet" href="../css/generico/componentes/janela/janela.css">
-    <link rel="stylesheet" href="../css/generico/componentes/estilizacao_de_erros/style_erros.css">
-    <link rel="stylesheet" href="../css/generico_responsivo/componente_responsivo/janela_rsponsiva/janela_responsiva.css">
-    <link rel="stylesheet" href="../css/pagina/style_editar_perfil.css">
-    <link rel="stylesheet" href="../css/pagina/style_perfil-mensagem.css">
-    <link rel="stylesheet" href="../css/pagina/style_animal.css">
-    <link rel="stylesheet" href="../css/pagina_responsiva/responsivo_animal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/page/style_animal.css">
     <title class="pagina" aria-valuetext="perfil">animal</title>
 </head>
 
@@ -219,23 +204,23 @@
         </span>
     </div>
 
-    <script src="../js/helper/AlertaHelper.js"></script>
-    <script src="../js/helper/ValidacaoHelper.js"></script>
+    <script src="../js/helpers/AlertaHelper.js"></script>
+    <script src="../js/helpers/ValidacaoHelper.js"></script>
     <script src="../js/modules/Mensagem.js"></script>
     <script src="../js/modules/Janela.js"></script>
-    <script src="../js/view/ListaErros.js"></script>
-    <script src="../js/view/ListaMensagens.js"></script>
-    <script src="../js/view/MensagemView.js"></script>
-    <script src="../js/service/RedirecionaFactory.js"></script>
-    <script src="../js/controllers/RedirecionaController.js"></script>
-    <script type="module" src="../js/controllers/perfilEhMensagemController.js"></script>
+    <script src="../js/views/ListaErros.js"></script>
+    <script src="../js/views/ListaMensagens.js"></script>
+    <script src="../js/views/MensagemView.js"></script>
+    <script src="../js/services/RedirecionaFactory.js"></script>
+    <script src="../js/controllers/redirecionaController.js"></script>
+    <script type="module" src="../js/controllers/profileMessageController.js"></script>
     <script type="module" src="../js/controllers/animalController.js"></script>
     <script type="module" src="../js/entities/AnimalEntities.js"></script>
     <script>
         var janela = new Janela();
         var redirecionaController = new RedirecionaController();
     </script>
-    <script type="module" src="../js/helper/routeGuard.js"></script>
+    <script type="module" src="../js/helpers/routeGuard.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,42 @@
+@import url("../generic/base/reset.css");
+@import url("../generic/base/body.css");
+@import url("../generic/base/header.css");
+@import url("../responsive_generic/responsive_base/header.css");
+@import url("../generic/base/footer.css");
+@import url("../generic/components/card-animal/style.css");
+@import url("../responsive_generic/responsive_base/footer_animal.css");
+@import url("../generic/base/container.css");
+@import url("../responsive_page/style_animals.css");
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.campo_de_busca {
+    color: #3772ff;
+    margin: 0.9rem 0;
+    text-align: end;
+}
+
+.filtrar {
+    position: relative;
+}
+
+.secao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao1__texto {
+    text-align: center;
+    color: #3772ff;
+}
+
+#fotoQuadrada {
+    height: 170px;
+    width: 10rem;
+}

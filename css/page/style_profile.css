@@ -1,0 +1,54 @@
+@import url("../generic/base/reset.css");
+@import url("../generic/base/body.css");
+@import url("../generic/base/header.css");
+@import url("../responsive_generic/responsive_base/header.css");
+@import url("../generic/base/footer.css");
+@import url("../generic/base/container.css");
+@import url("../generic/components/button/style_2.css");
+@import url("../generic/components/form/style_2.css");
+@import url("../generic/components/field/style_4.css");
+@import url("../generic/components/errors/style.css");
+@import url("../generic/components/janela/janela.css");
+@import url("../generic/components/card-animal/style.css");
+@import url("../responsive_generic/responsive_components/janela_rsponsiva/janela_responsiva.css");
+@import url("../responsive_generic/responsive_components/card_animal/style.css");
+@import url("../page/style_profile_message.css");
+@import url("../responsive_page/style_profile_message.css");
+
+.formulario__texto {
+    color: #737380;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.grupo_foto {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grupo_foto img {
+    width: 8rem;
+}
+
+.titulo-animais-cadastrado {
+    text-align: center;
+    font-size: x-large;
+    color: #3772ff;
+    margin-bottom: 0.5rem;
+}
+
+.btn-adicionar {
+    padding: 0.6rem 0.8rem;
+    background-color: #fc7071;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.2rem;
+}
+
+.abc {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}

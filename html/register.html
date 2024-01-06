@@ -8,21 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/page/style_login.css">
-    <title class="pagina" aria-valuetext="login">login</title>
+    <link rel="stylesheet" href="../css/page/style_register.css">
+    <title class="pagina" aria-valuetext="register">cadastro</title>
 </head>
 
 <body>
 
+    <div class="body--escuro">
     <header class="cabecalho">
-    <div class="imagem--forma1"><img src="../image/Forma 1.png"></div>
+
+    <div class="imagem--forma1">
+        <img src="../image/Forma 1.png">
+    </div>
 
         <nav class="navegacao--conteiner">
             <div class="navegacao">
                 <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>
 
                 <ul class="navegacao__lista">
-
+                    
                     <li class="item"><a class="item__imagem--casa" href="inicio.html"><img src="../image/Casa.png" alt="Botão para voltar ao início da página"></a></li>
                     <li class="item"><a class="item__imagem--mensagem" href="#"><img src="../image/Mensagens.png"></a></li>
 
@@ -32,6 +36,7 @@
     </header>
 
     <main>
+
         <article class="conteiner">
 
             <section class="secao1">
@@ -39,20 +44,33 @@
             </section>
 
             <section class="secao2">
-                <p class="secao2__texto">Já tem conta? Faça seu login:</p>
+
+                <p class="secao2__texto">Ainda não tem cadastro?</p>
+                <p class="secao2__texto">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+
             </section>
 
             <div class="forma2"></div>
             <div class="imagem--patas"><img src="../image/Patas.png"></div>
 
             <section class="secao3">
-                <form>
+                <form data-form>
+
                     <div class="campo" data-campo>
 
                         <label data-label class="campo__label" for="email">Email</label>
-                        <input data-input="email" class="campo__input" type="email" placeholder="Insira seu email"
+                        <input data-input="email" class="campo__input" type="text" placeholder="Escolha seu melhor email"
                          id="email" name="email" pattern="^[a-zA-Z\w\d!@#$%&*+-._]+@([a-zA-Z\d]+(.[a-zA-Z\d]+)+)$"
                          required>
+
+                         <span data-alerta class="alerta"></span>
+                    </div>
+
+                    <div class="campo" data-campo>
+
+                        <label data-label class="campo__label" for="nome">Nome</label>
+                        <input data-input="nome" class="campo__input" type="text" placeholder="Digite seu nome completo" name="nome"
+                        id="nome" pattern="^(\s*[a-zA-Z]{2,}\s*)+$" required>
 
                          <span data-alerta class="alerta"></span>
                     </div>
@@ -64,12 +82,20 @@
                          id="senha" name="senha" pattern="^([\w\da-zA-Z!@#$%&*+-._]{6,})" required>
 
                          <span data-alerta class="alerta"></span>
-
-                        <p><a class="esqueci_senha" href="#">Esqueci minha senha.</a></p>
                     </div>
-                </form>
 
-                <button class="botao" type="submit" name="botao" id="botao">Entrar</button>
+                    <div class="campo" data-campo>
+
+                        <label data-label class="campo__label" for="confirma_senha">Confirma sua senha</label>
+                        <input data-input="confirmaSenha" class="campo__input" type="password" placeholder="Repita a senha criada acima" 
+                        id="confirmaSenha" name="confirmaSenha" required>
+
+                         <span data-alerta class="alerta"></span>
+                    </div>
+
+                </form>
+                
+                <button class="botao" type="submit" name="botao" id="botao">Salvar</button>
             </section>
         </article>
     </main>
@@ -79,7 +105,7 @@
         <footer class="rodape">
             <p>2022 - Desenvolvido pelo @wesley-surt.</p>
         </footer>
-        
+
     </div>
 
     <div class="janela">
@@ -97,16 +123,19 @@
     <script src="../js/modules/Janela.js"></script>
     <script src="../js/helpers/AlertaHelper.js"></script>
     <script src="../js/helpers/ValidacaoHelper.js"></script>
+    <script src="../js/helpers/SenhasHelper.js"></script>
     <script src="../js/views/ListaErros.js"></script>
     <script src="../js/views/ListaMensagens.js"></script>
     <script src="../js/views/MensagemView.js"></script>
+    <script src="../js/services/SenhasProxyFactory.js"></script>
     <script src="../js/services/RedirecionaFactory.js"></script>
     <script src="../js/controllers/RedirecionaController.js"></script>
-    <script type="module" src="../js/controllers/loginController.js"></script>
+    <script type="module" src="../js/controllers/registerControl.js"></script>
     <script>
         var janela = new Janela();
         var redirecionaController = new RedirecionaController();
     </script>
+    <script type="module" src="../js/helpers/ChecksExistingEmail.js"></script>
 
 </body>
 </html>

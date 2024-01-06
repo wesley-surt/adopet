@@ -1,0 +1,18 @@
+.secao2 {
+    background: #f6f6f6;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 1rem;
+    padding: 1.8rem 0rem;
+    position: relative;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    width: 92%;
+}
