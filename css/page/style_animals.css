@@ -7,6 +7,7 @@
 @import url("../responsive_generic/responsive_base/footer_animal.css");
 @import url("../generic/base/container.css");
 @import url("../responsive_page/style_animals.css");
+@import url("../generic/components/photo/style.css");
 
 .conteiner {
     display: flex;
@@ -34,9 +35,4 @@
 .secao1__texto {
     text-align: center;
     color: #3772ff;
-}
-
-#fotoQuadrada {
-    height: 170px;
-    width: 10rem;
 }

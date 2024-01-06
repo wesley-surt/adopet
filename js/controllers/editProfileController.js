@@ -1,3 +1,4 @@
+import { PhotoComponent } from "../components/PhotoComponent.js";
 import { UserEntities } from "../entities/UserEntities.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
@@ -67,9 +68,8 @@ file.onchange = () => {
 
     ImgurAPIService.save(data)
         .then((res) => {
-            const image = document.getElementById("foto");
-            image.setAttribute("src", `${res.data.link}`);
-            image.setAttribute("class", "fotoQuadrada");
+            const photoRef = document.querySelector("[data-fotoPerfil]");
+            photoRef.setAttribute("src", `${res.data.link}`);
             StorageService.set("photoUser", res.data.link);
         })
         .catch(console.error);

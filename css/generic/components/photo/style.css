@@ -1,0 +1,10 @@
+.foto--circular {
+    height: 170px;
+    width: 170px !important;
+    border-radius: 10em;
+}
+
+.foto--quadrada {
+    height: 170px;
+    width: 10rem;
+}

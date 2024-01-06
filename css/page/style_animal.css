@@ -13,6 +13,7 @@
 @import url("../page/style_edit_profile.css");
 @import url("../page/style_profile_message.css");
 @import url("../responsive_page/style_animal.css");
+@import url("../generic/components/photo/style.css");
 
 .lista-botoes {
     display: flex;
