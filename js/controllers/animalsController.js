@@ -44,15 +44,17 @@ function showCards(state) {
     const listRef = document.getElementById("catalogo");
     const view = new AnimalView(listRef);
     if (state) {
-        AnimalEntities.get(`/search?state=${state}`)
+        AnimalEntities.get(`search?state=${state}`)
             .then((animals) => view.loadTemplate(animals))
             .catch((err) => callError(err));
     } else {
-        AnimalEntities.get(`/`)
+        AnimalEntities.get("")
             .then((animals) => view.loadTemplate(animals))
             .catch((err) => callError(err));
     }
 }
 
 const state = StorageService.get("user").state;
+console.log(StorageService.get("user"));
+console.log(state);
 showCards(state);
