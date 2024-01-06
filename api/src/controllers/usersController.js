@@ -49,10 +49,12 @@ class UsersController {
             city,
             photo,
             telephone,
+            cep,
         } = req.body;
 
         validateField(email, `Email is required - ${email}`, res);
         validateField(name, `ERROR: Name is required - ${name}`, res);
+        validateField(name, `ERROR: Cep is required - ${name}`, res);
         validateField(
             password,
             `ERROR: Password is required - ${password}`,
@@ -88,6 +90,7 @@ class UsersController {
             city,
             photo,
             telephone,
+            cep,
         });
 
         try {
@@ -103,7 +106,7 @@ class UsersController {
 
     static update = async (req, res) => {
         const { user, id } = req.body;
-        const { photo, name, city, about, telephone, state } = user;
+        const { photo, name, city, about, telephone, state, cep } = user;
 
         try {
             users.findByIdAndUpdate(
@@ -115,6 +118,7 @@ class UsersController {
                     about,
                     telephone,
                     state,
+                    cep,
                 },
                 { new: true, select: "-password" },
                 (err, user) => {

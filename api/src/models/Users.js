@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
     city: { type: String },
     state: { type: String },
     about: { type: String },
+    cep: { type: String },
     id: { type: String },
 });
 
