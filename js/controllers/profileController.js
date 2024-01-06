@@ -18,6 +18,7 @@ function handleUser(userStorage) {
     document.getElementById("telefone").innerHTML = userStorage.telephone || "";
     document.getElementById("cidade").innerHTML = userStorage.city || "";
     document.getElementById("uf").innerHTML = userStorage.state || "";
+    document.getElementById("cep").innerHTML = userStorage.cep || "";
     document.getElementById("sobre").innerHTML = userStorage.about || "";
 }
 
