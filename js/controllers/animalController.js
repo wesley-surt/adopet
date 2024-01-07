@@ -8,12 +8,18 @@ function modalClose() {
 
 function save(e) {
     e.preventDefault();
-
     const inputs = document.querySelectorAll("[data-input]");
-    console.log(ValidacaoHelper.validando(inputs));
+    const selectsAreValid = ValidationForSelect.valid(
+        document.querySelectorAll("[data-select]")
+    );
 
-    if (ValidacaoHelper.validando(inputs)) {
+    if (
+        selectsAreValid &&
+        ValidacaoHelper.validando(inputs) &&
+        document.getElementById("file").value
+    ) {
         const body = AnimalEntities.create();
+        StorageService.set("photoAnimal", "");
 
         if (!!StorageService.get("animalId")) {
             body.id = StorageService.get("animalId");
@@ -99,6 +105,17 @@ function handleAnimal(animalId) {
     });
 }
 
+function handleValidationSelects() {
+    const parent =
+        document.querySelector("[data-select]").parentNode.parentNode;
+
+    console.log();
+
+    if (ValidationForSelect.valid(document.querySelectorAll("[data-select]")))
+        ValidationForSelect.removeAlert(parent);
+    else ValidationForSelect.addAlert(parent);
+}
+
 fillInAllFields();
 
 const buttonSave = document.getElementById("btn-salvar");
@@ -112,5 +129,8 @@ cep.onblur = searchCep;
 
 const dialog = new Dialog(document.querySelector("dialog"));
 document.getElementById("modal_close").onclick = modalClose;
+
+const selects = document.querySelectorAll("[data-select]");
+selects.forEach((s) => s.addEventListener("blur", handleValidationSelects));
 
 AnimalEntities.savePhoto();

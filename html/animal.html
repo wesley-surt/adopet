@@ -55,10 +55,13 @@
                         <div class="campo">
                             <label data-label class="campo__label" for="foto">Foto</label>
 
+                            <input data-input="foto" type="file" name="file" id="file">
+
                             <label class="grupo_foto" for="file">
-                                <input type="file" name="file" id="file">
                                 <img class="grupo_foto___img foto--quadrada" src="" name="foto" id="foto" alt="">
                             </label>
+
+                            <span data-alerta class="alerta"></span>
                         </div>
 
                         <div data-campo class="campo">
@@ -99,24 +102,25 @@
                         <div data-campo class="campo">
                             <label data-label class="campo__label" for="comportamento1">Comportamento</label>
                             <div class="grupo--comportamento">
-                                <select data-input="comportamento" class="campo__input comportamento" id="comportamento1" name="comportamento" required>
-                                    <option disabled selected>--Selecionar--</option>
+                                <select data-select="comportamento" class="campo__input comportamento" id="comportamento1" name="comportamento" required>
+                                    <option selected disabled>--Selecione--</option>
                                     <option value="Amoroso(a)">Amoroso(a)</option>
                                     <option value="Carinhoso(a)">Carinhoso(a)</option>
-                                    <option value="Amigável">Amigável</option>
-                                    <option value="Dócil">Dócil</option>
+                                    <option value="Agitado(a)">Agitado(a)</option>
+                                    <option value="Manço(a)">Manço(a)</option>
+                                    <option value="Bravo(a)">Bravo(a)</option>
                                 </select>
-
-                                <select data-input="comportamento" class="campo__input comportamento" id="comportamento2" name="comportamento" pattern="^[a-zA-Z]$" required>
-                                    <option disabled selected>--Selecionar--</option>
-                                    <option value="Amoroso(a)">Amoroso(a)</option>
-                                    <option value="Carinhoso(a)">Carinhoso(a)</option>
+                                
+                                <select data-select="comportamento" class="campo__input comportamento" id="comportamento2" name="comportamento" required>
+                                    <option selected disabled>--Selecione--</option>
+                                    <option value="Gentil">Gentil</option>
                                     <option value="Amigável">Amigável</option>
                                     <option value="Dócil">Dócil</option>
+                                    <option value="Alegre">Alegre</option>
                                 </select>
                             </div>
 
-                            <span data-alerta class="alerta"></span>
+                            <span data-alerta class="alerta">Selecione os comportamentos do animal</span>
                         </div>
 
                         <div data-campo class="campo">
@@ -171,6 +175,7 @@
 
     <script src="../js/helpers/AlertaHelper.js"></script>
     <script src="../js/helpers/ValidacaoHelper.js"></script>
+    <script src="../js/helpers/ValidationForSelect.js"></script>
     <script src="../js/modules/Mensagem.js"></script>
     <script src="../js/modules/Janela.js"></script>
     <script src="../js/views/ListaErros.js"></script>
