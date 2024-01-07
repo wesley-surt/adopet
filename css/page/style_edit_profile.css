@@ -8,6 +8,7 @@
 @import url("../generic/components/form/style_2.css");
 @import url("../generic/components/field/style_1.css");
 @import url("../generic/components/janela/janela.css");
+@import url("../generic/components/errors/style.css");
 @import url("../responsive_generic/responsive_components/janela_rsponsiva/janela_responsiva.css");
 @import url("../page/style_profile_message.css");
 @import url("../responsive_page/style_profile_message.css");
@@ -23,16 +24,6 @@
 .grupo_foto {
     margin: 0 auto;
     text-align: center;
-}
-
-.grupo_foto img {
-    width: 8rem;
-}
-
-.grupo_foto___texto {
-    color: #fc7071;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
 }
 
 #file {

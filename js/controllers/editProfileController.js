@@ -1,11 +1,9 @@
-import { PhotoComponent } from "../components/PhotoComponent.js";
 import { UserEntities } from "../entities/UserEntities.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
 import { StorageService } from "../services/StorageService.js";
 
-const button = document.getElementById("botao");
-button.onclick = (e) => {
+function save(e) {
     e.preventDefault();
 
     const photo = !!StorageService.get("user").photo
@@ -25,13 +23,11 @@ button.onclick = (e) => {
         id: StorageService.get("userId"),
     };
 
-    console.log(body);
-
     UserEntities.update(body)
         .then((user) => {
             StorageService.set("user", user);
             StorageService.set("photoUser", "");
-            // window.location = "profile.html";
+            window.location = "profile.html";
         })
         .catch((err) => {
             alert(
@@ -39,10 +35,19 @@ button.onclick = (e) => {
             );
             console.error(err.message);
         });
-};
+}
 
-function fillnAllFields() {
-    handleUser(StorageService.get("user"));
+function exclusion() {
+    UserEntities.delete(userId)
+        .then(() => {
+            StorageService.clear();
+            window.location = "login.html";
+        })
+        .catch((err) => {
+            alert(
+                "Ocorreu algum erro no servidor. Tente novamente mais tarde."
+            );
+        });
 }
 
 function handleUser(userStorage) {
@@ -61,8 +66,7 @@ function handleUser(userStorage) {
     document.getElementById("sobre").value = userStorage.about || "";
 }
 
-const file = document.getElementById("file");
-file.onchange = () => {
+function savePhoto() {
     const data = new FormData();
     data.append("image", file.files[0]);
 
@@ -73,12 +77,9 @@ file.onchange = () => {
             StorageService.set("photoUser", res.data.link);
         })
         .catch(console.error);
-};
+}
 
-fillnAllFields();
-
-const cep = document.getElementById("cep");
-cep.addEventListener("blur", () => {
+function searchCep() {
     // Implementar depois uma validação que vai verificar se o formato do cep está correto antes de fazer a requisição.
     CepAPIService.request(cep.value)
         .then((data) => {
@@ -86,4 +87,22 @@ cep.addEventListener("blur", () => {
             document.getElementById("uf").value = data.uf;
         })
         .catch(console.log);
-});
+}
+
+function fillnAllFields() {
+    handleUser(StorageService.get("user"));
+}
+
+fillnAllFields();
+
+const button = document.getElementById("botao");
+button.onclick = save;
+
+const buttonDelete = document.getElementById("btn-deletar");
+buttonDelete.onclick = exclusion;
+
+const file = document.getElementById("file");
+file.onchange = savePhoto;
+
+const cep = document.getElementById("cep");
+cep.onblur = searchCep;

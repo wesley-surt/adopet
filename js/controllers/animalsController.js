@@ -2,10 +2,8 @@ import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalView } from "../views/AnimalView.js";
 
-const filtro = document.querySelector("[data-campoFiltro]");
-const cards = document.querySelectorAll("[data-card]");
-
 /**
+ const cards = document.querySelectorAll("[data-card]");
  * Futuramente devo usar esse trecho de código para filtrar por cidade
  * 
 filtro.addEventListener("change", filtrar);
@@ -26,13 +24,6 @@ function filtrar() {
 }
  */
 
-filtro.addEventListener("change", filtrar);
-function filtrar() {
-    let estadoSelecionado = filtro.options[filtro.selectedIndex].text;
-    if (estadoSelecionado == "Mostrar Todos") showCards("");
-    else showCards(estadoSelecionado);
-}
-
 function callError(err) {
     console.error(err.message);
     alert(
@@ -40,9 +31,12 @@ function callError(err) {
     );
 }
 
+const filtro = document.querySelector("[data-campoFiltro]");
+
 function showCards(state) {
     const listRef = document.getElementById("catalogo");
     const view = new AnimalView(listRef);
+
     if (state) {
         AnimalEntities.get(`search?state=${state}`)
             .then((animals) => view.loadTemplate(animals))
@@ -54,7 +48,11 @@ function showCards(state) {
     }
 }
 
-const state = StorageService.get("user").state;
-console.log(StorageService.get("user"));
-console.log(state);
-showCards(state);
+function filtrar() {
+    let estadoSelecionado = filtro.options[filtro.selectedIndex].text;
+    if (estadoSelecionado == "Mostrar Todos") showCards("");
+    else showCards(estadoSelecionado);
+}
+
+filtro.addEventListener("change", filtrar);
+showCards(StorageService.get("user").state);

@@ -1,11 +1,10 @@
 import { letraMaiusculaHelper } from "../helpers/inputEmMaiusculo.js";
 import { UserEntities } from "../entities/UserEntities.js";
 
-var inputs = document.querySelectorAll("[data-input]");
-var inputNome = document.getElementById("nome");
-
+const inputNome = document.getElementById("nome");
 inputNome.oninput = letraMaiusculaHelper;
 
+const inputs = document.querySelectorAll("[data-input]");
 inputs.forEach((input) => {
     input.addEventListener("blur", () => {
         let senhasProxyFactory = SenhasProxyFactory.create(

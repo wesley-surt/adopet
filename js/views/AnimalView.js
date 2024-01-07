@@ -10,7 +10,7 @@ export class AnimalView extends View {
                         <div class="conteiner--card">
 
                             <div class="imagem_do_pet">
-                                <img id="fotoQuadrada" src="${animal.photo}">
+                                <img class="foto--quadrada" src="${animal.photo}">
                             </div>
                             
                             <div class="conteudo_do_pet">

@@ -38,6 +38,10 @@ class ListaMensagens {
                 patternMismatch: "Este campo possui alguma irregularidade.",
                 valueMissing: "Digite o nome do seu estado.",
             },
+            cep: {
+                patternMismatch: "Este campo deve conter apenas letras.",
+                valueMissing: "Este campo não pode ficar vazio.",
+            },
         };
     }
 }

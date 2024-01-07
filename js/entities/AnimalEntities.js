@@ -4,38 +4,15 @@ import { StorageService } from "../services/StorageService.js";
 
 export class AnimalEntities {
     static register(body) {
-        HttpService.post("animals/register", body)
-            .then(() => (window.location = "profile.html"))
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err.message);
-            });
+        return HttpService.post("animals/register", body);
     }
 
     static uptade(body) {
-        HttpService.put("animals/update", body)
-            .then(() => {
-                window.location = "profile.html";
-            })
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err.message);
-            });
+        return HttpService.put("animals/update", body);
     }
 
     static delete(animalId) {
-        HttpService.delete(`animals/${animalId}`)
-            .then(() => (window.location = "profile.html"))
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err);
-            });
+        return HttpService.delete(`animals/${animalId}`);
     }
 
     static get(path) {

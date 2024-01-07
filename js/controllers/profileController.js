@@ -1,11 +1,6 @@
 import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
-import { UserEntities } from "../entities/UserEntities.js";
-
-function fillnAllFields() {
-    handleUser(StorageService.get("user"));
-}
 
 function handleUser(userStorage) {
     document
@@ -22,39 +17,9 @@ function handleUser(userStorage) {
     document.getElementById("sobre").innerHTML = userStorage.about || "";
 }
 
-fillnAllFields();
-
-const buttonEditar = document.getElementById("btn-editar");
-buttonEditar.onclick = () => (window.location = "edit_profile.html");
-
-const list = document.getElementById("catalogo");
-const view = new AnimalView(list);
-const userId = StorageService.get("user")._id;
-
-AnimalEntities.get(`query?userId=${userId}`)
-    .then((animals) => {
-        handlesRegisteredAnimals.call(this, animals);
-    })
-    .catch((err) => {
-        alert(
-            "Ocorreu algum erro ao carregar esta pagina. Tente novamente mais tarde ou contate nossa equipe técnica."
-        );
-        console.error(err);
-    });
-
-const buttonDelete = document.getElementById("btn-deletar");
-buttonDelete.onclick = () => {
-    UserEntities.delete(userId)
-        .then(() => {
-            StorageService.clear();
-            window.location = "login.html";
-        })
-        .catch((err) => {
-            alert(
-                "Ocorreu algum erro no servidor. Tente novamente mais tarde."
-            );
-        });
-};
+function fillInAllFields() {
+    handleUser(StorageService.get("user"));
+}
 
 function addEventsToCards() {
     const cards = document.querySelectorAll(".card");
@@ -67,6 +32,8 @@ function addEventsToCards() {
     });
 }
 
+const list = document.getElementById("catalogo");
+const view = new AnimalView(list);
 function handlesRegisteredAnimals(animals) {
     view.loadTemplate(animals);
     addEventsToCards();
@@ -83,3 +50,20 @@ function handlesRegisteredAnimals(animals) {
     const firstChild = togglesTitleElement.firstChild;
     togglesTitleElement.insertBefore(fragment, firstChild);
 }
+
+const userId = StorageService.get("user")._id;
+AnimalEntities.get(`query?userId=${userId}`)
+    .then((animals) => {
+        handlesRegisteredAnimals(animals);
+    })
+    .catch((err) => {
+        alert(
+            "Ocorreu algum erro ao carregar esta pagina. Tente novamente mais tarde ou contate nossa equipe técnica."
+        );
+        console.error(err);
+    });
+
+const buttonEditar = document.getElementById("btn-editar");
+buttonEditar.onclick = () => (window.location = "edit_profile.html");
+
+fillInAllFields();

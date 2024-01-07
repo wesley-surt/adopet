@@ -14,6 +14,7 @@
 @import url("../page/style_profile_message.css");
 @import url("../responsive_page/style_animal.css");
 @import url("../generic/components/photo/style.css");
+@import url("../generic/components/errors/style.css");
 
 .lista-botoes {
     display: flex;
@@ -21,9 +22,4 @@
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.botao {
-    width: 9rem;
-    margin: 0;
 }
