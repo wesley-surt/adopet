@@ -80,9 +80,9 @@
                                         <option value="meses" selected>meses</option>
                                         <option value="anos">anos</option>
                                     </select>
+
+                                    <span data-alerta class="alerta"></span>
                                 </span>
-    
-                                <span data-alerta class="alerta"></span>
                             </span>
     
                             <span data-campo class="campo campo--porte">
@@ -93,8 +93,6 @@
                                     <option value="medio/grande">Medio/Grande</option>
                                     <option value="grande">Grande</option>
                                 </select>
-    
-                                <span data-alerta class="alerta"></span>
                             </span>
                         </div>
 
@@ -124,7 +122,9 @@
                         <div data-campo class="campo">
                             <label data-label class="campo__label" for="cep">CEP</label>
                             <input data-input="cep" class="campo__input"  name="cep" id="cep"
-                            placeholder="Digite seu CEP" required>
+                            placeholder="Digite seu CEP" required pattern="^([0-9]){8}$">
+
+                            <span data-alerta class="alerta"></span>
                         </div>
 
                         <div class="grupo--campo grupo--campo_regiao">
@@ -163,17 +163,11 @@
 
     </div>
 
-    <div class="janela">
-
-        <span class="janela__pop-up">
-
-            <p class="pop-up__texto">
-                Preencha corretamente todos os campos para continuar.
-            </p>
-        
-            <p onclick="janela.remove()" id="pop-up__botao">OK</p>
-        </span>
-    </div>
+    <dialog>
+        <h1 class="modal__title">Atenção</h1>
+        <p class="modal__paragraph">Você precisa preencher todas as informações corretamente para salvar.</p>
+        <button class="modal__button" id="modal_close">ok</button>
+    </dialog>
 
     <script src="../js/helpers/AlertaHelper.js"></script>
     <script src="../js/helpers/ValidacaoHelper.js"></script>
@@ -183,15 +177,10 @@
     <script src="../js/views/ListaMensagens.js"></script>
     <script src="../js/views/MensagemView.js"></script>
     <script src="../js/services/RedirecionaFactory.js"></script>
-    <script src="../js/controllers/redirecionaController.js"></script>
+    <script src="../js/components/Dialog.js"></script>
     <script type="module" src="../js/controllers/profileMessageController.js"></script>
     <script type="module" src="../js/controllers/animalController.js"></script>
     <script type="module" src="../js/entities/AnimalEntities.js"></script>
-    <script>
-        var janela = new Janela();
-        var redirecionaController = new RedirecionaController();
-    </script>
     <script type="module" src="../js/helpers/routeGuard.js"></script>
-
 </body>
 </html>

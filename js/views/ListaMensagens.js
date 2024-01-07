@@ -35,6 +35,10 @@ class ListaMensagens {
                 patternMismatch: "Este campo deve conter apenas números.",
                 valueMissing: "Informe o CEP de sua rua.",
             },
+            idade: {
+                patternMismatch: "Este campo deve conter apenas números.",
+                valueMissing: "Informe a idade do animal.",
+            },
         };
     }
 }

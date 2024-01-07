@@ -37,6 +37,10 @@ function save(e) {
         });
 }
 
+function comeBack() {
+    window.location = "profile.html";
+}
+
 function exclusion() {
     UserEntities.delete(userId)
         .then(() => {
@@ -51,7 +55,6 @@ function exclusion() {
 }
 
 function handleUser(userStorage) {
-    console.log(userStorage);
     document
         .getElementById("foto")
         .setAttribute(
@@ -80,7 +83,6 @@ function savePhoto() {
 }
 
 function searchCep() {
-    // Implementar depois uma validação que vai verificar se o formato do cep está correto antes de fazer a requisição.
     CepAPIService.request(cep.value)
         .then((data) => {
             document.getElementById("cidade").value = data.localidade;
@@ -97,6 +99,9 @@ fillnAllFields();
 
 const button = document.getElementById("botao");
 button.onclick = save;
+
+const backButton = document.getElementById("btn-voltar");
+backButton.onclick = comeBack;
 
 const buttonDelete = document.getElementById("btn-deletar");
 buttonDelete.onclick = exclusion;

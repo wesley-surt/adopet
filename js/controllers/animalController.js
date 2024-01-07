@@ -1,36 +1,47 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../services/StorageService.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
-// Caso os campos não estejam todos preenchidos ao clicar em salvar, deve aparecer um popup alertando o usuario de que deve completar os campos. Deve checar tambem se a foto está no localstorage.
+
+function modalClose() {
+    dialog.close();
+}
 
 function save(e) {
     e.preventDefault();
-    const body = AnimalEntities.create();
 
-    if (!!StorageService.get("animalId")) {
-        body.id = StorageService.get("animalId");
-        AnimalEntities.uptade(body)
-            .then(() => {
-                window.location = "profile.html";
-            })
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err.message);
-            });
+    const inputs = document.querySelectorAll("[data-input]");
+    console.log(ValidacaoHelper.validando(inputs));
 
-        StorageService.set("animalId", "");
+    if (ValidacaoHelper.validando(inputs)) {
+        const body = AnimalEntities.create();
+
+        if (!!StorageService.get("animalId")) {
+            body.id = StorageService.get("animalId");
+            AnimalEntities.uptade(body)
+                .then(() => {
+                    window.location = "profile.html";
+                })
+                .catch((err) => {
+                    alert(
+                        "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                    );
+                    console.error(err.message);
+                });
+
+            StorageService.set("animalId", "");
+        } else {
+            body.userId = StorageService.get("userId");
+            AnimalEntities.register(body)
+                .then(() => (window.location = "profile.html"))
+                .catch((err) => {
+                    alert(
+                        "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                    );
+                    console.error(err.message);
+                });
+        }
     } else {
-        body.userId = StorageService.get("userId");
-        AnimalEntities.register(body)
-            .then(() => (window.location = "profile.html"))
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err.message);
-            });
+        dialog.open();
     }
 }
 
@@ -64,7 +75,6 @@ function createButtonDelete() {
 }
 
 function searchCep() {
-    // Implementar depois uma validação que vai verificar se o formato do cep está correto antes de fazer a requisição.
     CepAPIService.request(cep.value)
         .then((data) => {
             document.getElementById("cidade").value = data.localidade;
@@ -74,7 +84,6 @@ function searchCep() {
 }
 
 function fillInAllFields() {
-    // A tela deve ter botões para salvar, que ficará desabilitados até que todos os campos estejam preenchidos; deletar, que só irá aparecer se houver uma chave no localstorage chamada animal com um objeto com id; cancelar, que vai redirecionar para a tela de perfil
     if (StorageService.get("animalId")) {
         handleAnimal(StorageService.get("animalId"));
         createButtonDelete();
@@ -100,5 +109,8 @@ backButton.onclick = comeBack;
 
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;
+
+const dialog = new Dialog(document.querySelector("dialog"));
+document.getElementById("modal_close").onclick = modalClose;
 
 AnimalEntities.savePhoto();

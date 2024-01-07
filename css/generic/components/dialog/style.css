@@ -1,0 +1,42 @@
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 /0.3);
+    background-color: #3772ff;
+    width: 80%;
+    max-width: 24em;
+}
+
+.modal__title {
+    text-align: center;
+    padding-bottom: 0.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.modal__paragraph {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    padding-bottom: 0.8rem;
+}
+
+.modal__button {
+    display: inline;
+    background: #fc7071;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+}
