@@ -1,6 +1,6 @@
 import { letraMaiusculaHelper } from "../helpers/inputEmMaiusculo.js";
 
-var inputs = document.querySelectorAll(".campo__input");
+var inputs = document.querySelectorAll("[data-input]");
 var inputNome = document.getElementById("nome");
 
 inputNome.oninput = letraMaiusculaHelper;
