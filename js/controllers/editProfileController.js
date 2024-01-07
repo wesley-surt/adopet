@@ -3,38 +3,49 @@ import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
 import { StorageService } from "../services/StorageService.js";
 
+function modalClose() {
+    dialog.close();
+}
+
 function save(e) {
     e.preventDefault();
 
-    const photo = !!StorageService.get("user").photo
-        ? StorageService.get("user").photo
-        : StorageService.get("photoUser") || "";
+    const inputs = document.querySelectorAll("[data-input]");
+    console.log(ValidacaoHelper.validando(inputs));
 
-    const body = {
-        user: {
-            photo: photo,
-            name: document.getElementById("nome").value || "",
-            city: document.getElementById("cidade").value || "",
-            state: document.getElementById("uf").value || "",
-            telephone: document.getElementById("telefone").value || "",
-            about: document.getElementById("sobre").value || "",
-            cep: document.getElementById("cep").value || "",
-        },
-        id: StorageService.get("userId"),
-    };
+    if (ValidacaoHelper.validando(inputs)) {
+        const photo = !!StorageService.get("user").photo
+            ? StorageService.get("user").photo
+            : StorageService.get("photoUser") || "";
 
-    UserEntities.update(body)
-        .then((user) => {
-            StorageService.set("user", user);
-            StorageService.set("photoUser", "");
-            window.location = "profile.html";
-        })
-        .catch((err) => {
-            alert(
-                "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-            );
-            console.error(err.message);
-        });
+        const body = {
+            user: {
+                photo: photo,
+                name: document.getElementById("nome").value || "",
+                city: document.getElementById("cidade").value || "",
+                state: document.getElementById("uf").value || "",
+                telephone: document.getElementById("telefone").value || "",
+                about: document.getElementById("sobre").value || "",
+                cep: document.getElementById("cep").value || "",
+            },
+            id: StorageService.get("userId"),
+        };
+
+        UserEntities.update(body)
+            .then((user) => {
+                StorageService.set("user", user);
+                StorageService.set("photoUser", "");
+                window.location = "profile.html";
+            })
+            .catch((err) => {
+                alert(
+                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+                );
+                console.error(err.message);
+            });
+    } else {
+        dialog.open();
+    }
 }
 
 function comeBack() {
@@ -97,8 +108,8 @@ function fillnAllFields() {
 
 fillnAllFields();
 
-const button = document.getElementById("botao");
-button.onclick = save;
+const saveButton = document.getElementById("btn-salvar");
+saveButton.onclick = save;
 
 const backButton = document.getElementById("btn-voltar");
 backButton.onclick = comeBack;
@@ -111,3 +122,7 @@ file.onchange = savePhoto;
 
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;
+
+const dialog = new Dialog(document.querySelector("dialog"));
+
+document.getElementById("modal_close").onclick = modalClose;

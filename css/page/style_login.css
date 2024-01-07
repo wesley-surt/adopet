@@ -14,6 +14,7 @@
 @import url("../page/style_register_login.css");
 @import url("../responsive_page/style_login.css");
 @import url("../responsive_page/style_register_login.css");
+@import url("../generic/components/dialog/style.css");
 
 .conteiner {
     margin-bottom: 5rem;

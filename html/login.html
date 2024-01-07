@@ -75,23 +75,16 @@
     </main>
 
     <div class="secao4">
-
         <footer class="rodape">
             <p>2022 - Desenvolvido pelo @wesley-surt.</p>
         </footer>
-        
     </div>
 
-    <div class="janela">
-        <span class="janela__pop-up">
-            
-            <p class="pop-up__texto">
-                Preencha corretamente todos os campos para continuar.
-            </p>
-        
-            <p onclick="janela.remove()" id="pop-up__botao">OK</p>
-        </span>
-    </div>
+    <dialog>
+        <h1 class="modal__title">Atenção</h1>
+        <p class="modal__paragraph">Você precisa preencher os campos de email e senha para logar.</p>
+        <button class="modal__button" id="modal_close">ok</button>
+    </dialog>
 
     <script  src="../js/modules/Mensagem.js"></script>
     <script src="../js/modules/Janela.js"></script>
@@ -101,12 +94,7 @@
     <script src="../js/views/ListaMensagens.js"></script>
     <script src="../js/views/MensagemView.js"></script>
     <script src="../js/services/RedirecionaFactory.js"></script>
-    <script src="../js/controllers/RedirecionaController.js"></script>
+    <script src="../js/components/Dialog.js"></script>
     <script type="module" src="../js/controllers/loginController.js"></script>
-    <script>
-        var janela = new Janela();
-        var redirecionaController = new RedirecionaController();
-    </script>
-
 </body>
 </html>
