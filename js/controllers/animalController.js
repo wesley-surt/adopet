@@ -62,7 +62,7 @@ function createButtonDelete() {
     button.name = "botao";
     button.classList.add("botao");
     button.id = "btn-deletar";
-    button.innerHTML = "Deletar";
+    button.innerHTML = "Excluir";
     button.onclick = () => {
         const animalId = StorageService.get("animalId");
         AnimalEntities.delete(animalId)

@@ -5,6 +5,7 @@
 @import url("../generic/base/footer.css");
 @import url("../generic/base/container.css");
 @import url("../generic/components/button/style_2.css");
+@import url("../generic/components/button/style_green.css");
 @import url("../generic/components/form/style_2.css");
 @import url("../generic/components/field/style_4.css");
 @import url("../generic/components/errors/style.css");
@@ -47,9 +48,12 @@
     font-weight: 600;
     text-decoration: none;
     border-radius: 0.2rem;
+    margin-left: 1em;
 }
 
-.abc {
+.paragraph--add_animal {
     text-align: center;
     padding: 1rem 0 2rem 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e8e8e8;
 }

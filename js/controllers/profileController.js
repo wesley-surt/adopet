@@ -39,14 +39,14 @@ function handlesRegisteredAnimals(animals) {
     addEventsToCards();
 
     const fragment = new DocumentFragment();
-    const h3 = document.createElement("h3");
+    const h3 = document.createElement("span");
     h3.classList.add("titulo-animais-cadastrado");
 
     if (animals.length > 0) h3.innerHTML = "Animais cadastrados";
     else h3.innerHTML = "Você ainda não cadastrou animais para adoção";
 
     fragment.append(h3);
-    const togglesTitleElement = document.getElementById("alterna-titulo");
+    const togglesTitleElement = document.getElementById("paragraph--grupo");
     const firstChild = togglesTitleElement.firstChild;
     togglesTitleElement.insertBefore(fragment, firstChild);
 }

@@ -53,7 +53,7 @@ function comeBack() {
 }
 
 function exclusion() {
-    UserEntities.delete(userId)
+    UserEntities.delete(StorageService.get("userId"))
         .then(() => {
             StorageService.clear();
             window.location = "login.html";

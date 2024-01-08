@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: 0.4rem;
 }
 
 .campo__label {
@@ -11,9 +11,9 @@
 }
 
 .campo__input {
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     border: none;
-    background: #F6F6F6;
+    background: #f6f6f6;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     height: 2rem;
     text-align: center;
@@ -21,18 +21,23 @@
     position: relative;
 }
 
-.esqueci_senha, .campo__input::placeholder {
-    font-size: .8rem;
+.link_redireciona,
+.campo__input::placeholder {
+    font-size: 0.8rem;
     text-align: center;
     border: none;
     font-weight: 400;
 }
 
 .campo__input::placeholder {
-    color: #BCBCBC;
+    color: #bcbcbc;
 }
 
-.esqueci_senha {
+.link_redireciona {
     text-decoration: none;
-    color: #FC7071;
+    color: #3772ff;
+}
+
+.campo__link {
+    margin-top: 1em;
 }
