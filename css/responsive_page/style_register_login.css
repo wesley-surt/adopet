@@ -5,8 +5,9 @@
     }
 
     .forma2 {
-        background: url(../../imagens/Forma\ 2\ -\ invertida.png) center / cover no-repeat;
-        top: 42%;
+        background: url("../../image/Forma\ 2\ -\ invertida.png") center / cover
+            no-repeat;
+        top: 38%;
         left: 0;
         width: 4.3rem;
         height: 24.8rem;
@@ -17,12 +18,12 @@
     .conteiner {
         margin-top: 2.5rem;
     }
-    
+
     .forma2 {
-        background: url(../../imagens/Forma\ 2.png) center / cover no-repeat;
+        background: url("../../image/Forma\ 2.png") center / cover no-repeat;
         top: 28%;
         right: 0;
-        left:auto;
+        left: auto;
         width: 5.3rem;
         height: 30.8rem;
     }
@@ -43,7 +44,9 @@
 }
 
 @media screen and (min-width: 968px) {
-    #email, #nome, .alerta {
+    #email,
+    #nome,
+    .alerta {
         width: 30rem;
     }
 }

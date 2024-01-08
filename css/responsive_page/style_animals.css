@@ -1,4 +1,4 @@
-@media screen and (min-width: 0){
+@media screen and (min-width: 0) {
     .conteiner {
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -13,17 +13,17 @@
     }
 }
 
-@media screen and (min-width: 568px){
+@media screen and (min-width: 568px) {
     .conteiner {
         margin-top: 3rem;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .conteiner {
         margin-top: 7rem;
     }
-    
+
     .secao1__texto {
         width: 19rem;
     }
@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (min-width: 1133px){
+@media screen and (min-width: 1133px) {
     .imagem--usuario {
         right: 8rem;
     }
@@ -47,16 +47,16 @@
     }
 }
 
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 1300px) {
     .conteiner {
         margin-top: 2.8rem;
         margin-bottom: 3.8rem;
         gap: 2rem;
         position: relative;
-}
+    }
 
     .forma2 {
-        background: url(../../imagens/Forma\ 2.png) center / cover no-repeat;
+        background: url("../../image/Forma\ 2.png") center / cover no-repeat;
         height: 33rem;
         left: auto;
         position: absolute;
