@@ -1,9 +1,14 @@
+import { logout } from "../components/logout.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../services/StorageService.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 
-function modalClose() {
-    dialog.close();
+function modalCloseAlerta() {
+    dialogAlert.close();
+}
+
+function modalCloseMenu() {
+    dialogMenu.close();
 }
 
 function save(e) {
@@ -47,7 +52,7 @@ function save(e) {
                 });
         }
     } else {
-        dialog.open();
+        dialogAlert.open();
     }
 }
 
@@ -127,10 +132,17 @@ backButton.onclick = comeBack;
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;
 
-const dialog = new Dialog(document.querySelector("dialog"));
-document.getElementById("modal_close").onclick = modalClose;
+const dialogAlert = new Dialog(document.querySelector(".dialogo--aleta"));
+document.getElementById("modal_close").onclick = modalCloseAlerta;
+
+const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
+document.getElementById("modal_close--menu").onclick = modalCloseMenu;
+
+const menuHambuguer = document.querySelector(".menu_hamburguer");
+menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
 const selects = document.querySelectorAll("[data-select]");
 selects.forEach((s) => s.addEventListener("blur", handleValidationSelects));
 
 AnimalEntities.savePhoto();
+logout(document.querySelector(".menu_sair"));

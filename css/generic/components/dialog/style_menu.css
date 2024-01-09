@@ -1,0 +1,52 @@
+.dialogo--menu::backdrop {
+    background-color: #505050;
+    transition: background-color 0.5s ease;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+.dialogo--menu {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    transform: translate(50%, 50%);
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: none;
+    overflow: hidden;
+    min-width: 11em;
+    min-height: 17rem;
+}
+
+.modal_cabecalho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    column-gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #505050;
+    color: #505050;
+}
+
+.arrow_back {
+    cursor: pointer;
+    color: #505050;
+}
+
+.modal__title--menu {
+    font-size: x-large;
+}
+
+.item_menu {
+    color: #505050;
+    padding: 0.5rem 0;
+}
+
+.item_menu a {
+    text-decoration: none;
+    color: #505050;
+    outline: none;
+}
+
+.menu_sair {
+    cursor: pointer;
+}

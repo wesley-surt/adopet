@@ -11,6 +11,7 @@
 @import url("../generic/components/janela/janela.css");
 @import url("../generic/components/errors/style.css");
 @import url("../generic/components/dialog/style.css");
+@import url("../generic/components/dialog/style_menu.css");
 @import url("../responsive_generic/responsive_components/janela_rsponsiva/janela_responsiva.css");
 @import url("../page/style_edit_profile.css");
 @import url("../page/style_profile_message.css");

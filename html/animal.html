@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,300,0,0" />
     <link rel="stylesheet" href="../css/page/style_animal.css">
     <title class="pagina" aria-valuetext="perfil">animal</title>
 </head>
@@ -25,11 +26,31 @@
                 <ul class="navegacao__lista">
 
                     <li class="item"><a class="item__imagem--casa" href="inicio.html"><img src="../image/Casa.png" alt="Botão para voltar ao início da página"></a></li>
-                    <li class="item"><a class="item__imagem--mensagem" href="#"><img src="../image/Mensagens.png"></a></li>
+                    <li class="item"><a class="item__imagem--mensagem menu_hamburguer"><img class="menu_hamburguer" src="../image/Mensagens.png"></a></li>
 
                 </ul>
             </div>
         </nav>
+
+        <dialog class="dialogo--menu">
+            <div class="modal_cabecalho">
+                <span class="material-symbols-rounded arrow_back" id="modal_close--menu">
+                    arrow_back_ios
+                    </span>
+                <h1 class="modal__title--menu">Menu</h1>
+            </div>
+            <ul id="modal_lista--menu">
+                <li class="item_menu">
+                    <a href="animals.html">Animais para adoção</a>
+                </li>
+                <li class="item_menu">
+                    <a href="profile.html">Perfil</a>
+                </li>
+                <li class="item_menu menu_sair">
+                    Sair
+                </li>
+            </ul>
+        </dialog>
 
         <img class="imagem--usuario" id="ellipse">
         <div class="forma2"></div>
@@ -166,7 +187,7 @@
 
     </div>
 
-    <dialog>
+    <dialog class="dialogo--aleta">
         <h1 class="modal__title">Atenção</h1>
         <p class="modal__paragraph">Você precisa preencher todas as informações corretamente para salvar.</p>
         <button class="modal__button" id="modal_close">ok</button>
