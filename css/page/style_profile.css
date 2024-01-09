@@ -16,6 +16,7 @@
 @import url("../page/style_profile_message.css");
 @import url("../responsive_page/style_profile_message.css");
 @import url("../generic/components/photo/style.css");
+@import url("../generic/components/dialog/style_menu.css");
 
 .formulario__texto {
     color: #737380;

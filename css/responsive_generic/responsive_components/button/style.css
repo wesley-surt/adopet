@@ -1,0 +1,28 @@
+@media screen and (max-width: 568px) {
+    .grupo_botao {
+        margin: 0 1.2rem;
+        column-gap: 0;
+        row-gap: 1.2rem;
+        flex-direction: column;
+    }
+
+    .botao_flex-grow {
+        flex-grow: 0;
+        width: 100%;
+    }
+
+    .deletar {
+        margin: 1.2rem 0 0 1.2rem;
+    }
+
+    .texto_deletar {
+        border: 2px solid #fc7071;
+        color: #fc7071;
+        padding: 0.1rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-salvar {
+        order: -1;
+    }
+}

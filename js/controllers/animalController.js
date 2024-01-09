@@ -62,13 +62,18 @@ function comeBack() {
 }
 
 function createButtonDelete() {
-    const fragment = new DocumentFragment();
     const button = document.createElement("button");
-    button.name = "botao";
-    button.classList.add("botao");
-    button.id = "btn-deletar";
+    const fragment = new DocumentFragment();
+    const p = document.createElement("p");
+
+    button.classList.add("texto_deletar");
     button.innerHTML = "Excluir";
-    button.onclick = () => {
+
+    p.classList.add("deletar");
+    p.id = "btn-deletar";
+    p.name = "botao";
+    p.append(button);
+    p.onclick = () => {
         const animalId = StorageService.get("animalId");
         AnimalEntities.delete(animalId)
             .then(() => (window.location = "profile.html"))
@@ -81,7 +86,7 @@ function createButtonDelete() {
 
         StorageService.set("animalId", "");
     };
-    fragment.append(button);
+    fragment.append(p);
     document.querySelector(".secao2").append(fragment);
 }
 
@@ -101,7 +106,7 @@ function fillInAllFields() {
     } else
         document
             .getElementById("foto")
-            .setAttribute("src", "../../image/Usuario.png");
+            .setAttribute("src", "../../image/Perfil.png");
 }
 
 function handleAnimal(animalId) {

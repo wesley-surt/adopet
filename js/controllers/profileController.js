@@ -1,13 +1,18 @@
+import { logout } from "../components/logout.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
+
+function modalCloseMenu() {
+    dialogMenu.close();
+}
 
 function handleUser(userStorage) {
     document
         .getElementById("foto")
         .setAttribute(
             "src",
-            `${userStorage.photo || "../../image/Usuario.png"}`
+            `${userStorage.photo || "../../image/Perfil.png"}`
         );
     document.getElementById("nome").innerHTML = userStorage.name || "";
     document.getElementById("telefone").innerHTML = userStorage.telephone || "";
@@ -66,4 +71,11 @@ AnimalEntities.get(`query?userId=${userId}`)
 const buttonEditar = document.getElementById("btn-editar");
 buttonEditar.onclick = () => (window.location = "edit_profile.html");
 
+const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
+document.getElementById("modal_close--menu").onclick = modalCloseMenu;
+
+const menuHambuguer = document.querySelector(".menu_hamburguer");
+menuHambuguer.addEventListener("click", () => dialogMenu.open());
+
 fillInAllFields();
+logout(document.querySelector(".menu_sair"));

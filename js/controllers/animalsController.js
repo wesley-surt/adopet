@@ -1,6 +1,11 @@
+import { logout } from "../components/logout.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalView } from "../views/AnimalView.js";
+
+function modalCloseMenu() {
+    dialogMenu.close();
+}
 
 function callError(err) {
     console.error(err.message);
@@ -33,4 +38,11 @@ function filtrar() {
 const filtro = document.querySelector("[data-campoFiltro]");
 filtro.addEventListener("change", filtrar);
 
+const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
+document.getElementById("modal_close--menu").onclick = modalCloseMenu;
+
+const menuHambuguer = document.querySelector(".menu_hamburguer");
+menuHambuguer.addEventListener("click", () => dialogMenu.open());
+
 showCards(StorageService.get("user").state);
+logout(document.querySelector(".menu_sair"));

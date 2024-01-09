@@ -1,17 +1,20 @@
+import { logout } from "../components/logout.js";
 import { UserEntities } from "../entities/UserEntities.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
 import { StorageService } from "../services/StorageService.js";
 
-function modalClose() {
-    dialog.close();
+function modalCloseMenu() {
+    dialogMenu.close();
+}
+
+function modalCloseAlert() {
+    dialogAlert.close();
 }
 
 function save(e) {
     e.preventDefault();
-
     const inputs = document.querySelectorAll("[data-input]");
-    console.log(ValidacaoHelper.validando(inputs));
 
     if (ValidacaoHelper.validando(inputs)) {
         const photo = !!StorageService.get("user").photo
@@ -44,7 +47,7 @@ function save(e) {
                 console.error(err.message);
             });
     } else {
-        dialog.open();
+        dialogAlert.open();
     }
 }
 
@@ -70,7 +73,7 @@ function handleUser(userStorage) {
         .getElementById("foto")
         .setAttribute(
             "src",
-            `${userStorage.photo || "../../image/Usuario.png"}`
+            `${userStorage.photo || "../../image/Perfil.png"}`
         );
     document.getElementById("nome").value = userStorage.name || "";
     document.getElementById("telefone").value = userStorage.telephone || "";
@@ -123,6 +126,14 @@ file.onchange = savePhoto;
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;
 
-const dialog = new Dialog(document.querySelector("dialog"));
+const dialogAlert = new Dialog(document.querySelector(".dialogo--alerta"));
+document.getElementById("modal_close").onclick = modalCloseAlert;
 
-document.getElementById("modal_close").onclick = modalClose;
+const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
+document.getElementById("modal_close--menu").onclick = modalCloseMenu;
+console.log(dialogMenu);
+
+const menuHambuguer = document.querySelector(".menu_hamburguer");
+menuHambuguer.addEventListener("click", () => dialogMenu.open());
+
+logout(document.querySelector(".menu_sair"));

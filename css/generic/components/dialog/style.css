@@ -1,8 +1,8 @@
-.dialogo--aleta::backdrop {
+.dialogo--alerta::backdrop {
     background-color: rgb(0 0 0 / 0.5);
 }
 
-.dialogo--aleta {
+.dialogo--alerta {
     border: none;
     border-radius: 0.5rem;
     box-shadow: 0 0 1em rgb(0 0 0 /0.3);

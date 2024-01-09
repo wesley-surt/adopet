@@ -8,6 +8,7 @@
 @import url("../generic/base/container.css");
 @import url("../responsive_page/style_animals.css");
 @import url("../generic/components/photo/style.css");
+@import url("../generic/components/dialog/style_menu.css");
 
 .conteiner {
     display: flex;
