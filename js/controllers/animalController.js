@@ -13,16 +13,18 @@ function modalCloseMenu() {
 
 function save(e) {
     e.preventDefault();
-    const inputs = document.querySelectorAll("[data-input]");
+
+    const inputsAreValid = ValidacaoHelper.validando(
+        document.querySelectorAll("[data-input]")
+    );
     const selectsAreValid = ValidationForSelect.valid(
         document.querySelectorAll("[data-select]")
     );
+    const file =
+        document.getElementById("file").value ||
+        StorageService.get("photoAnimal");
 
-    if (
-        selectsAreValid &&
-        ValidacaoHelper.validando(inputs) &&
-        document.getElementById("file").value
-    ) {
+    if (selectsAreValid && inputsAreValid && file) {
         const body = AnimalEntities.create();
         StorageService.set("photoAnimal", "");
 
@@ -58,6 +60,7 @@ function save(e) {
 
 function comeBack() {
     StorageService.set("animalId", "");
+    StorageService.set("photoAnimal", "");
     window.location = "profile.html";
 }
 
@@ -137,7 +140,7 @@ backButton.onclick = comeBack;
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;
 
-const dialogAlert = new Dialog(document.querySelector(".dialogo--aleta"));
+const dialogAlert = new Dialog(document.querySelector(".dialogo--alerta"));
 document.getElementById("modal_close").onclick = modalCloseAlerta;
 
 const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));

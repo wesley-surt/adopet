@@ -76,6 +76,7 @@ export class AnimalsController {
             size,
             name,
             age,
+            cep,
         } = animal;
 
         validateField(characteristics1, "Characteristics1 is required", res);
@@ -88,6 +89,7 @@ export class AnimalsController {
         validateField(size, "Size is required", res);
         validateField(name, "Name is required", res);
         validateField(age, "Age is required", res);
+        validateField(cep, "Cep is required", res);
 
         const animalToSave = new animals({
             characteristics1: characteristics1,
@@ -101,6 +103,7 @@ export class AnimalsController {
             size: size,
             city: city,
             age: age,
+            cep: cep,
         });
 
         try {

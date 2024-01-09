@@ -17,6 +17,7 @@ const animalsSchema = mongoose.Schema({
     name: { type: String, required: true },
     city: { type: String, required: true },
     age: { type: String, required: true },
+    cep: { type: String, required: true },
     id: { type: String },
 });
 

@@ -27,6 +27,7 @@ export class AnimalEntities {
                 city: document.getElementById("cidade").value || "",
                 state: document.getElementById("uf").value || "",
                 age: document.getElementById("idade").value || "",
+                cep: document.getElementById("cep").value || "",
                 measure: document.getElementById("medida").value || "",
                 size: document.getElementById("porte").value || "",
                 about: document.getElementById("sobre").value || "",
@@ -42,6 +43,7 @@ export class AnimalEntities {
         document.getElementById("foto").setAttribute("src", `${animal.photo}`);
         document.getElementById("nome").value = animal.name;
         document.getElementById("idade").value = animal.age;
+        document.getElementById("cep").value = animal.cep;
         document.getElementById("cidade").value = animal.city;
         document.getElementById("uf").value = animal.state;
         document.getElementById("sobre").value = animal.about;
