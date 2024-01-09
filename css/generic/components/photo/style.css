@@ -2,9 +2,11 @@
     height: 170px;
     width: 170px !important;
     border-radius: 10em;
+    cursor: pointer;
 }
 
 .foto--quadrada {
     height: 170px;
     width: 10rem;
+    cursor: pointer;
 }

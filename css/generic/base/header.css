@@ -35,6 +35,7 @@
     right: 2.9rem;
     top: 2.5rem;
     width: 40px;
+    cursor: pointer;
 }
 
 .imagem--usuario {
@@ -44,4 +45,5 @@
 .menu_hamburguer {
     color: #ffffff;
     font-size: xx-large;
+    cursor: pointer;
 }

@@ -44,5 +44,10 @@ document.getElementById("modal_close--menu").onclick = modalCloseMenu;
 const menuHambuguer = document.querySelector(".menu_hamburguer");
 menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
-showCards(StorageService.get("user").state);
+const state = StorageService.get("user").state;
+showCards(state || "");
+state
+    ? (document.querySelector("[data-campoFiltro]").value = state)
+    : "Mostrar Todos";
+
 logout(document.querySelector(".menu_sair"));
