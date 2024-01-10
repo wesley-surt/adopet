@@ -8,18 +8,10 @@
 @import url("../generic/components/button/style_green.css");
 @import url("../generic/components/form/style_2.css");
 @import url("../generic/components/field/style_2.css");
-@import url("../generic/components/errors/style.css");
-@import url("../generic/components/dialog/style.css");
-@import url("../generic/components/dialog/style_menu.css");
-@import url("../page/style_edit_profile.css");
+@import url("../generic/components/field/style_4.css");
 @import url("../page/style_profile_message.css");
+@import url("../page/style_edit_profile.css");
 @import url("../responsive_page/style_animal.css");
 @import url("../generic/components/photo/style.css");
-
-.lista-botoes {
-    display: flex;
-    width: 92%;
-    margin: 0 auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+@import url("../generic/components/dialog/style_menu.css");
+@import url("../responsive_page/style_profile_message.css");
