@@ -2,6 +2,7 @@ import { logout } from "../components/logout.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
+import { addEventsToCards } from "../helpers/addEventsToCards.js";
 
 function modalCloseMenu() {
     dialogMenu.close();
@@ -26,22 +27,13 @@ function fillInAllFields() {
     handleUser(StorageService.get("user"));
 }
 
-function addEventsToCards() {
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((c) => {
-        c.addEventListener("click", () => {
-            const animalId = c.querySelector(".animal-id").textContent;
-            StorageService.set("animalId", animalId);
-            window.location = "animal.html";
-        });
-    });
-}
+// addEventsToCards
 
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
 function handlesRegisteredAnimals(animals) {
     view.loadTemplate(animals);
-    addEventsToCards();
+    addEventsToCards(document.querySelectorAll(".card"), "animal.html");
 
     const fragment = new DocumentFragment();
     const h3 = document.createElement("span");

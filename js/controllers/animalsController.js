@@ -1,5 +1,6 @@
 import { logout } from "../components/logout.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
+import { addEventsToCards } from "../helpers/addEventsToCards.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalView } from "../views/AnimalView.js";
 
@@ -20,11 +21,23 @@ function showCards(state) {
 
     if (state) {
         AnimalEntities.get(`search?state=${state}`)
-            .then((animals) => view.loadTemplate(animals))
+            .then((animals) => {
+                view.loadTemplate(animals);
+                addEventsToCards(
+                    document.querySelectorAll(".card"),
+                    "animal_profile.html"
+                );
+            })
             .catch((err) => callError(err));
     } else {
         AnimalEntities.get("")
-            .then((animals) => view.loadTemplate(animals))
+            .then((animals) => {
+                view.loadTemplate(animals);
+                addEventsToCards(
+                    document.querySelectorAll(".card"),
+                    "animal_profile.html"
+                );
+            })
             .catch((err) => callError(err));
     }
 }
