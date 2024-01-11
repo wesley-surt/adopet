@@ -89,7 +89,7 @@
                                 <label data-label class="campo__label" for="idade">Idade</label>
                                 <span class="grupo--idade">
                                     <p data-input="idade" class="caixa_texto" id="idade"></p>
-                                    <p data-input="idade" class="caixa_texto" id="idade"></p>
+                                    <p data-input="medida" class="caixa_texto" id="medida"></p>
                                 </span>
                             </span>
     
@@ -130,11 +130,13 @@
                         </div>
                     </form>
 
-                    <div>
-                        <label for="">breve perfil dono -> </label>
-                        <span>foto </span><span>nome clicavel redireciona para o perfil do dono</span>
-                    </div>
-                    
+                    <span class="anunciante">
+                        <p>Anunciante: </p>
+                        <a class="anunciante__foto" href="advertiser_profile.html">
+                            <img class="foto_perfil_anunciante" id="ellipse--anunciante">
+                            <p id="nome_anunciante"></p>
+                        </a>
+                    </span>
                 </section>
             </div>
         </article>
@@ -166,7 +168,7 @@
     <script src="../js/components/Dialog.js"></script>
     <script type="module" src="../js/components/imageUser.js"></script>
     <script type="module" src="../js/controllers/profileMessageController.js"></script>
-    <script type="module" src="../js/controllers/animalController.js"></script>
+    <script type="module" src="../js/controllers/animalProfileController.js"></script>
     <script type="module" src="../js/entities/AnimalEntities.js"></script>
     <script type="module" src="../js/helpers/routeGuard.js"></script>
 </body>

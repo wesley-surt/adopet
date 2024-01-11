@@ -27,8 +27,6 @@ function fillInAllFields() {
     handleUser(StorageService.get("user"));
 }
 
-// addEventsToCards
-
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
 function handlesRegisteredAnimals(animals) {
