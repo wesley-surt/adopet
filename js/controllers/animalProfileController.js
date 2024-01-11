@@ -36,12 +36,14 @@ function handleUser(user) {
 }
 
 function searchUser(userId) {
-    UserEntities.get(`${userId}`).then((user) => handleUser(user));
+    UserEntities.get(`${userId}`).then((user) => {
+        handleUser(user);
+        StorageService.set("advertiserId", user._id);
+    });
 }
 
 function animalQuest(animalId) {
     AnimalEntities.get(`${animalId}`).then((animal) => {
-        console.log(animal.userId);
         handleAnimal(animal);
         searchUser(animal.userId);
     });
