@@ -55,3 +55,11 @@
     margin-bottom: 1em;
     border-bottom: 1px solid #e8e8e8;
 }
+
+.foto--circular {
+    cursor: inherit;
+}
+
+.btn-adicionar {
+    cursor: pointer;
+}

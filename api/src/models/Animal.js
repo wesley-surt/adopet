@@ -11,13 +11,13 @@ const animalsSchema = mongoose.Schema({
     characteristics2: { type: String, required: true },
     measure: { type: String, required: true },
     photo: { type: String, required: true },
-    about: { type: String, required: true },
     state: { type: String, required: true },
     size: { type: String, required: true },
     name: { type: String, required: true },
     city: { type: String, required: true },
     age: { type: String, required: true },
     cep: { type: String, required: true },
+    about: { type: String },
     id: { type: String },
 });
 

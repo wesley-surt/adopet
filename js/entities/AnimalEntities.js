@@ -40,6 +40,8 @@ export class AnimalEntities {
     }
 
     static fillForm(animal) {
+        StorageService.set("photoAnimal", animal.photo);
+
         document.getElementById("foto").setAttribute("src", `${animal.photo}`);
         document.getElementById("nome").value = animal.name;
         document.getElementById("idade").value = animal.age;

@@ -14,6 +14,8 @@ function modalCloseMenu() {
 function save(e) {
     e.preventDefault();
 
+    console.log(StorageService.get("photoAnimal"));
+
     const inputsAreValid = ValidacaoHelper.validando(
         document.querySelectorAll("[data-input]")
     );
@@ -22,7 +24,9 @@ function save(e) {
     );
     const file =
         document.getElementById("file").value ||
-        StorageService.get("photoAnimal");
+        localStorage.getItem("photoAnimal")
+            ? StorageService.get("photoAnimal")
+            : "";
 
     if (selectsAreValid && inputsAreValid && file) {
         const body = AnimalEntities.create();
@@ -79,7 +83,10 @@ function createButtonDelete() {
     p.onclick = () => {
         const animalId = StorageService.get("animalId");
         AnimalEntities.delete(animalId)
-            .then(() => (window.location = "profile.html"))
+            .then(() => {
+                StorageService.set("photoAnimal");
+                window.location = "profile.html";
+            })
             .catch((err) => {
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."

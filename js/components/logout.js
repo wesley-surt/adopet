@@ -4,6 +4,6 @@ export function logout(button) {
     const logout = button;
     logout.addEventListener("click", () => {
         StorageService.clear();
-        window.location.reload();
+        window.location = "login.html";
     });
 }

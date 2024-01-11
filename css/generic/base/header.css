@@ -44,6 +44,6 @@
 
 .menu_hamburguer {
     color: #ffffff;
-    font-size: xx-large;
+    font-size: xx-large !important;
     cursor: pointer;
 }

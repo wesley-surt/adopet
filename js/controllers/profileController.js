@@ -67,5 +67,12 @@ document.getElementById("modal_close--menu").onclick = modalCloseMenu;
 const menuHambuguer = document.querySelector(".menu_hamburguer");
 menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
+const btnAdd = document.querySelector(".btn-adicionar");
+btnAdd.addEventListener("click", () => {
+    StorageService.set("photoAnimal", "");
+    StorageService.set("animalId", "");
+    window.location = "animal.html";
+});
+
 fillInAllFields();
 logout(document.querySelector(".menu_sair"));
