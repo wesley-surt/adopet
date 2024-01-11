@@ -63,3 +63,7 @@
 .btn-adicionar {
     cursor: pointer;
 }
+
+.icone_chamada--link {
+    display: none;
+}
