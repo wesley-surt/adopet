@@ -1,0 +1,46 @@
+.janela {
+    align-items: baseline;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.janela__pop-up {
+    align-items: center;
+    border-radius: .5rem;
+    background: #3d70fc;
+    display: inherit;
+    flex-direction: column;
+    padding: 2.5rem 3rem 1.2rem 3rem;
+    position: relative;
+    row-gap: 2rem;
+    text-align: center;
+    top: 35%;
+    transform: translateY(-80%);
+}
+
+.pop-up__texto {
+    color:#FFFFFF;;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#pop-up__botao {
+    background: #FC7071;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .6rem 1.5rem;
+    margin: 0 auto;
+}
+
+.abre_janela {
+    display: flex;
+}

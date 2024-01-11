@@ -1,0 +1,12 @@
+.lista-botoes {
+    display: flex;
+    width: 92%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.botao {
+    width: 9rem;
+    margin: 0;
+}

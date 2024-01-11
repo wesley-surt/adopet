@@ -1,0 +1,30 @@
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 100%;
+}
+
+.campo__label {
+    color: #3772FF;
+    font-weight: 600;
+}
+
+.campo > input, .campo > textarea {
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: .2rem;
+}
+
+.campo__input {
+    height: 3rem;
+}
+
+input[placeholder], textarea[placeholder] {
+    padding-left: .8rem;
+    font-size: .9rem;
+}
+
+textarea[placeholder] {
+    padding-top: 1rem;
+}

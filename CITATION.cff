@@ -1,0 +1,35 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: NeuroKids
+authors:
+  - family-names: Da Silva
+    given-names: Gustavo
+  - family-names: Beatriz
+    given-names: Martha
+  - family-names: Lopes
+    given-names: Pedro
+  - family-names: Bruno
+    given-names: Wesley
+  - name-suffix: Professora
+    affiliation: PUC Minas
+  - family-names: De Nardin
+    given-names: Luciana
+keywords:
+  - transtornos
+  - neurokids
+  - neurodiversidade
+  - tdah
+  - tea
+  - tod
+  - autista
+  - autismo
+  - hiperatividade
+  - crianças com transtornos
+  - deficit de atenção
+  - transtorno de deficit de atenção/hiperatividade
+  - transtorno obsessivo desafiador
+  - transtorno autista
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2023-06-30

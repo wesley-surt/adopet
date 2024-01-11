@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px) {
+    .conteiner {
+        padding-bottom: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 889px) {
+    .secao4 {
+        position: fixed;
+    }
+}
+
+.secao4 {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}

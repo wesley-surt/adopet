@@ -1,0 +1,67 @@
+@media screen and (min-width: 0){
+    .conteiner {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .secao1__texto {
+        width: 14rem;
+    }
+
+    .catalogo {
+        width: 23rem;
+    }
+}
+
+@media screen and (min-width: 568px){
+    .conteiner {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .conteiner {
+        margin-top: 7rem;
+    }
+    
+    .secao1__texto {
+        width: 19rem;
+    }
+
+    .catalogo {
+        width: 46.8rem;
+    }
+}
+
+@media screen and (min-width: 1133px){
+    .imagem--usuario {
+        right: 8rem;
+    }
+
+    .catalogo {
+        width: 70.6rem;
+    }
+
+    .secao1__texto {
+        width: 21rem;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .conteiner {
+        margin-top: 2.8rem;
+        margin-bottom: 3.8rem;
+        gap: 2rem;
+        position: relative;
+}
+
+    .forma2 {
+        background: url(../../imagens/Forma\ 2.png) center / cover no-repeat;
+        height: 33rem;
+        left: auto;
+        position: absolute;
+        top: 14%;
+        right: 0;
+        width: 5.5rem;
+    }
+}
