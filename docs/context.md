@@ -1,106 +1,63 @@
 ## Introdução
 
-No contexto atual, onde a tecnologia desempenha um papel cada vez mais significativo em nossa sociedade, é importante reconhecer a necessidade de promover a inclusão e o bem-estar de crianças, que estejam em algum espectro neurodivergente. Os transtornos neurodivergentes são realidades que afetam muitas crianças em todo o mundo. No entanto, a conscientização e os recursos adequados para lidar com essas condições ainda estão muito aquém do necessário.
+Escreva uma introdução para uma documentação de contexto de software com três parágrafos. Cada parágrafo deve conter no máximo 100 palavras. O assunto do primeiro parágrafo da introdução é sobre os impactos causados na sociedade por conta de abandono de animais nas grandes cidades e sobre o aumento de animais abandonados. O segundo paragrafo da introdução é sobre a solução que o software que será desenvolvido objetiva solucionar e como ele pretende fazer isso. Este segundo parágrafo deve abordar como solução temas como, diminuir a quantidade de animais nas ruas com a adoção consciente, facilitar o encontro entre as pessoas que querem adotar e as que querem colocar animais para adoção. O terceiro paragrafo deve relatar os motivos que levaram ao desenvolvimento do software/site; tais como: a sensibilização pela causa, afim de ajudar a evitar o abandono de animais
 
-Neste cenário, apresenta-se o projeto de uma aplicação web, cujo propósito é abordar essa lacuna crítica. Esta aplicação busca fornecer informações precisas e confiáveis sobre os transtornos neurodivergentes, bem como oferecer atividades de estimulação cognitiva personalizadas para o desenvolvimento cognitivo de crianças que enfrentam esses desafios. Mais do que uma simples ferramenta, o projeto representa um compromisso com a inclusão e o apoio às famílias e comunidades que lidam diariamente com esses transtornos.
+O crescente problema do abandono de animais nas grandes cidades tem gerado impactos significativos na sociedade, ampliando a população de animais desamparados. A falta de conscientização sobre a responsabilidade da adoção e a negligência resultam em um aumento alarmante de animais abandonados, gerando desafios socioambientais que demandam soluções inovadoras.
 
-A iniciativa do projeto baseia-se na compreensão de que a falta de conscientização, recursos adequados e uma abordagem personalizada são obstáculos significativos para o desenvolvimento e o bem estar dessas crianças. Além disso, é notório a necessidade de um ambiente digital que não apenas informe, mas também promova a compreensão e a aceitação em nossa sociedade. O potencial impacto positivo dessa aplicação é vasto, afetando não apenas as vidas das crianças neurodivergentes, mas também suas famílias, educadores e a sociedade como um todo. Portanto, a seguir, será detalhado o problema, os objetivos gerais e específicos deste projeto, a justificativa e seu público alvo, destacando sua importância dentro deste contexto amplo e relevante.
+Nesse cenário, surge a necessidade de um software dedicado a mitigar a problemática do abandono animal. O presente projeto propõe uma solução abrangente, visando reduzir a quantidade de animais nas ruas através da promoção da adoção consciente. A plataforma facilitará o encontro entre pessoas interessadas em adotar e aquelas que buscam encontrar lares amorosos para animais abandonados, promovendo uma conexão direta e eficaz.
+
+A inspiração para o desenvolvimento deste software/site surge da urgência em combater o abandono de animais. A sensibilização para essa causa motiva a criação de uma ferramenta que não apenas aborda o problema, mas também busca ativamente soluções. Com o propósito de prevenir o abandono de animais e fomentar a adoção responsável, esta iniciativa visa contribuir para a construção de uma sociedade mais compassiva e solidária com nossos amigos de quatro patas.
 
 ## Problema
 
-Os desafios enfrentados por crianças neurodivergentes com a faixa de idade entre 7 e 13 anos estão diretamente relacionados com a carência de informações e recursos precisos sobre os transtornos mentais, somada à falta de preparo dos profissionais da educação, gerando um ambiente desfavorável para o aprendizado e o bem-estar do grupo em questão [1].
+Animais abandonados acabam por passar dificuldades nas ruas das cidades e regiões rurais. Muitos desses animais abandonados são cães. Sem um lar acolhedor eles passam fome e são levados a obto por conta de acidentes no trânsito, como atropelamento. Este tipo de acidente causa sofrimento não apenas para o animal, mas, para os motoristas também, que podem ficar gravimente feridos em uma situação mais grave. Programas do governo ao incentivo da adoção e medidas para abrigar esses animais geram um custo significativo. A super população desses animais trazem uma certa incerteza em relação à saúde pública. Pois esses animais podem contribuir na propagação de certas doenças. Exemplo disso são a toxoplasmose, enfermidade advinda dos felinos e raiva, uma das mais mortais doenças transmitidas por animais. Se os animais não forem bem cuidados e vacinados pode se tornar um descontrole.
 
-Portanto, é indispensável reconhecer que o acesso a informações precisas sobre os neurodiversos e a prática deliberada de atividades interativas que facilitem o aprendizado e o desenvolvimento contínuo devem ser levados em consideração [2], a fim de atingir os objetivos propostos para a construção da aplicação web.
+Muitos desses problemas relatados podem ser evitados com a adoção consciente. O animal em um lar acolhedor e bem cuidado, com todas as vacinas em dias, entre outros observações para se manter o cuidade dos nossos amigos de quatro patas, pode ser benéfico para a sociedade como um todo. A aplicação surge para facilitar o encontro das pessoas que querem adotar com os animais que estão para adoção.
 
 ## Objetivos
 
 ## Objetivo Geral
 
-O objetivo geral deste projeto é desenvolver uma aplicação web educacional que promova a conscientização e ofereça atividades interativas para crianças com idades entre 7 e 13 anos afetadas por transtornos mentais. Esta aplicação visa fornecer recursos inclusivos e adaptáveis para atender às necessidades únicas dessas crianças, facilitando a aprendizagem, o desenvolvimento de habilidades sociais e emocionais, e oferecendo suporte em seu cotidiano.
+Diminuir superpopulação de animais abandonados em todos os estados do Brasil em 2024.
 
 ## Objetivos Específicos
 
-- Criar atividades que estimulem a concentração e o foco, proporcionando feedback positivo para reforçar comportamentos desejados.
-- Personalizar o conteúdo educacional para se adaptar ao nível de desenvolvimento e preferências de cada criança.
-- Oferecer desafios e atividades que estimulem o pensamento criativo e explorem áreas de interesse das crianças.
-- Integrar recursos de acessibilidade, como interface amigável, para garantir que a aplicação seja acessível a crianças com diferentes necessidades.
-- Coletar feedback de pais e crianças para aprimorar continuamente a aplicação e garantir sua eficácia na promoção do desenvolvimento e bem-estar das crianças neurodivergentes.
-- Fornecer informações que auxiliem profissionais da educação e familiares no ensino e na interação com crianças neurodiversas.
- 
-<!--
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
--->
+-   Criar uma dinâmica simples e intuitiva para a interação de pessoas que desejam adotar e de pessoas que querem encontrar um novo lar para seu animal.
+-   Elaborar perfis individuais para quem está usando a aplicação.
+-   Exibir animais que estão para adoção.
+-   Oferecer formas de filtrar animais por região.
+-   Possibilitar comunicação direta entre as partes interessadas na adoção.
 
 ## Justificativa
 
-O termo neurodiversidade, com surgimento de seus primeiros relatos em 1990, foi cunhado pela socióloga australiana e portadora da síndrome de Asperger Judy Singer, em 1999, em um texto com o sugestivo título de Por que você não pode ser normal uma vez na sua vida? De um "problema sem nome" para a emergência de uma nova categoria de diferença (Singer 1999).[3]
+O abandono de animais nas ruas é uma questão complexa que impacta negativamente a sociedade, o governo e o meio ambiente de diversas maneiras. Este problema reflete a falta de responsabilidade e compaixão por parte de alguns membros da sociedade, resultando em consequências prejudiciais para todos os envolvidos.
 
-Este movimento (afirmativo de identidade) que ganhou forças após a pesquisa elaborada por Judy, nos traz um novo entendimento a respeito de pessoas neuroatipicas. Uma das questões fortemente defendidas pelo movimento é que pessoas neurodivergentes fazem parte da variação humana.
+Primeiramente, o abandono animal nas ruas contribui para o aumento da população de animais de rua, o que gera diversos problemas sociais. Animais abandonados muitas vezes formam grupos desorganizados, enfrentando condições precárias de vida, fome e doenças. Isso pode levar a conflitos entre os próprios animais, além de representar um risco para a segurança das pessoas, especialmente em áreas urbanas.
 
-Atualmente,  acadêmicos   e   movimentos/organizações   sociais   referentes   às pessoas em situação de deficiência, no Brasil e em outros países, vêm discutindo questões  de  direitos  (políticos,  sociais,  educacionais) e  também  referentes  à identidade.[4]
+A sociedade também sofre emocionalmente ao testemunhar o sofrimento desses animais abandonados. A presença de animais de rua cria um ambiente desagradável e, em alguns casos, pode gerar preocupações com a saúde pública, devido à propagação de doenças transmitidas pelos animais.
 
-O resultado disso, no Brasil, têm desenvolvido pesquisas,   principalmente   na perspectiva histórico-cultural do desenvolvimento humano, que destacam quão fundamental é   a   contextualização   das   intervenções pedagógicas e   do conhecimento das condições socioculturais do educando, da família e da escola, inclusive  na  imbricação  com  a  efetividade  das  políticas  públicas  e  com  a formação/qualificação de profissionais, no propósito e desafio de consolidação da educação inclusiva.
+Do ponto de vista do governo, o abandono animal sobrecarrega os recursos destinados ao controle de população animal e ao bem-estar dos animais. Abrigos e organizações de resgate muitas vezes lutam para lidar com o grande número de animais abandonados, resultando em altos custos operacionais e desafios logísticos.
 
-Segundo a pesquisa sobre neurodiversidade, realizada pela Play Pesquisa e Conhecimento [5], o desejo de famílias neuroatipicas é um olhar empático da sociedade, que favoreça a inclusão.
-Em função disso, uma das conquistas mais recentes no Brasil aconteceu em Brasília, 17 de julho de 2023, onde foi aprovada a lei 14.624 que trata do uso do cordão ou colar de girassóis para identificar pessoas com alguma deficiência oculta não vista de imediato [6].
+Além disso, o governo também enfrenta pressão para tomar medidas mais eficazes no combate ao abandono de animais. A implementação e fiscalização de leis de proteção animal são cruciais para enfrentar esse problema, mas muitas vezes essas medidas são inadequadas ou não são devidamente aplicadas.
 
-Jim Sinclair, psicólogo autista, relata que presencia  o  acentuamento  de  ansiedade,  angústia,  raiva,  ressentimentos  e depressão em autistas submetidos a intervenções que procuram ajustá-los e/ou socializá-los    conforme    padrões    que    não    respeitam    suas    identidades “neuroatípicas”, como afirma, e seus interesses (SINCLAIR, [entre 2000 e 2013], p. 2, tradução nossa). Um dos métodos mais criticados pelo movimento é a análise do comportamento aplicada (ABA). [4]
+No contexto ambiental, o abandono de animais pode causar impactos significativos. Animais abandonados podem se tornar invasores em ecossistemas naturais, afetando negativamente a fauna local e competindo por recursos naturais. Essa interferência pode desequilibrar ecossistemas delicados e ameaçar espécies nativas.
 
-Em vista disso, esta aplicação web busca concientizar a respeito deste assunto tão importante, afim de eliminar (ou pelo menos mitigar) o preconceito e tornar impraticável o uso de expressões capacitistas, que chega a ser antiético. Também é observado uma abordagem nada invasiva e desconfortável, no âmbito de prestar auxílio na comunicação alternativa e desenvolvimento cognitivo (que por sinal, é uma das críticas levantadas pelo movimento e relatada pelo psicólogo autista SINCLAIR).
+Em suma, o abandono de animais nas ruas é um problema que vai além do sofrimento dos próprios animais. Ele envolve questões sociais, econômicas, de saúde pública e ambientais que demandam ações coordenadas da sociedade e do governo.
 
-Com o avanço da tecnologia, dos estudos e pesquisas voltados ao conhecimento de transtornos mentais, bem como na área da educação, tem se tornado cada vez mais claro que não só é possível, mas um dever, proporcionar formas diferentes de ensino para pessoas que encontram dificuldades de aprendizagem por algum fator neurodiverso. 
-
-O objetivo da aplicação é oportunizar o desenvolvimento de indivíduos neurodivergentes, de forma que o seu modo “ser” seja valorizado e as suas potencialidades sejam contempladas. Ressaltando a importância de os profissionais da educação conhecerem sobre os princípios e os alicerces que sustentam a neurodiversidade, tendo em vista que a ausência dessas informações poderá acarretar na continuidade de práticas excludentes.
-
-Além disso, é evidenciado a necessidade de informar e qualificar aqueles que atuam diretamente com as crianças para que possam identificar possíveis casos. Atualmente, pode-se entender como pessoas neurodivergentes: “Autistas (TEA), pessoas com Transtorno de Déficit de Atenção e Hiperatividade (TDAH), pessoas com altas habilidades/superdotação (AH/SD), dentre outras. Os demais indivíduos, ou seja, aqueles com o funcionamento cerebral considerado ‘típico’ são denominados ‘neurotípicos’” [7].
-
-Esta aplicação web tem o propósito de auxiliar crianças com transtornos mentais dos 7 aos 13 anos de idade, atendendo as suas necessidades de comunicação e desenvolvimento. Fazemos isso através de atividades de interação com cartões, com dinâmicas voltadas para o público infantil. Dispõe-se de páginas de conteúdo informativo, de fácil entendimento e de qualidade para crianças, pais, educadores e qualquer outra pessoa que busque se informar; Contendo, também, ferramentas acessíveis.
-
-
-<!--
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
--->
+Tendo em vista os fatos narrados dos problemas acarretados pelo abandono animal, a aplicação visa propor uma plataforma que facilite para os donos encontrar um novo lar para seu animal e para quem desejar adotar.
 
 ## Público-Alvo
 
-O público-alvo do projeto são pessoas interessadas em ampliar seu conhecimento sobre transtornos neurodivergentes, com ênfase em pais, professores, acompanhantes terapêuticos e terapeutas. Além disso, a aplicação visa atender especificamente crianças em idade escolar (de 7 a 13 anos) que foram diagnosticadas com algum transtorno neurodivergente, para fins de habilitação, reabilitação e desenvolvimento.
+O público-alvo do projeto são pessoas interessadas em encontrar lares adotivos e seguros para seus animais. Se enquadra nesta descrição, iniciativas de movimentos focados em tratar de animais resgatados de situações de risco; ONGs e projetos que abrigam animais domésticos que foram abandonados e pessoas que por motivos individuais não desejam ou não possuem condição de manter o animal sob sua guarda.
 
-Pais: Este grupo busca compreender melhor as necessidades e desafios de seus filhos neurodivergentes. Eles estão interessados em informações atualizadas sobre os transtornos, estratégias de apoio, e desejam encontrar recursos para auxiliar na educação e na convivência com seus filhos.
+ONGs, projetos e instituições de resgate animal: Estes grupos buscam sanar a falta de cuidado e lares adequados para receber animais domésticos de estimação, tratando de todo o processo que envolve o ato de adotar, escolhendo hambientes seguros e protetores para os animais.
 
-Professores: Educadores buscam orientações e ferramentas para criar ambientes de aprendizado inclusivos e eficazes para alunos neurodivergentes. Eles necessitam de estratégias pedagógicas, materiais educacionais e recursos para atender às diversas necessidades de seus alunos.
+Pessoas que desejam encontrar um lar para seus animais: Este grupo busca encontrar um novo lar para seus animais por motivos diversos. Seja por um orçamento limitado para manter os gastos com animais, por motivos de allergia ou por quais quer outros motivos relevantes.
 
-Acompanhantes Terapêuticos e Terapeutas: Este grupo inclui profissionais de saúde mental, terapeutas ocupacionais, fonoaudiólogos, entre outros. Eles desejam informações e técnicas terapêuticas atualizadas para proporcionar o melhor suporte possível às crianças neurodivergentes em suas sessões terapêuticas.
-
-Crianças (de 7 a 13 anos): O foco central é atender às necessidades das crianças neurodivergentes. A aplicação deve oferecer atividades e recursos que sejam apropriados para cada perfil, auxiliando em sua habilitação, reabilitação e desenvolvimento cognitivo e emocional.
-
-O público-alvo geral da aplicação web é diversificado, abrangendo uma variedade de pessoas envolvidas no cuidado e educação de crianças neurodivergentes. A aplicação deve fornecer informações atualizadas, recursos práticos, orientações específicas e ferramentas interativas que atendam às necessidades únicas de cada grupo de interesse, contribuindo para uma compreensão mais profunda e um melhor suporte às crianças neurodivergentes
-
-## Mapa de Stakeholders - Projeto: NeuroKids
+## Mapa de Stakeholders - Projeto: Adopet
 
 **Stakeholders Principais:**
 
-- Pais de Crianças Neurodivergentes:
-Responsabilidades: Apoiar e cuidar das crianças neurodivergentes.
-Interesses: Acesso a informações relevantes e recursos para melhor compreender e apoiar seus filhos.
-
-- Professores:
-Responsabilidades: Educar e apoiar crianças neurodivergentes em sala de aula.
-Interesses: Treinamento e recursos educacionais adequados, estratégias de ensino inclusivas.
-
-- Acompanhantes Terapêuticos e Terapeutas:
-Responsabilidades: Fornecer apoio terapêutico às crianças neurodivergentes.
-Interesses: Ferramentas e técnicas terapêuticas eficazes, colaboração com professores e pais.
-
-- Crianças Neurodivergentes:
-Responsabilidades: Participar de sessões terapêuticas e educacionais.
-Interesses: Atividades e abordagens adaptadas às suas necessidades, ambiente inclusivo.
-
-- Comunidade Escolar:
-Responsabilidades: Criar um ambiente de aprendizado inclusivo.
-Interesses: Consciência sobre as necessidades das crianças neurodivergentes, apoio às iniciativas educacionais.
-
-![diagrama drawio](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/142346815/09a0734a-b921-4980-8016-689972e49a01)
-
-
+-   ONGs, projetos, instituições governamentais e pessoas jurídicas:
+    Responsabilidades: oferecer um hambiente agradável e seguro para os animais.
+    Interesses: encontrar um lar adotivo amoroso.
