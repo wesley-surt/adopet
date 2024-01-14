@@ -7,4 +7,4 @@ botoes.forEach((botao) => {
             window.location = "./src/html/register.html";
         }
     };
-});
+})
