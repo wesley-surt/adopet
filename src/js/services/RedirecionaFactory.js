@@ -3,7 +3,7 @@ class RedirecionaFactory{
     constructor(pagina) {
         this._pagina = pagina;
         this._inputs = document.querySelectorAll('input');
-        this._janela = new Janela();
+        this._janela = 'Instancia de janela foi removido';
     }
 
     chama(pagina, callback) {
