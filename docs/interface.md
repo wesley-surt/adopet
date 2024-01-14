@@ -1,14 +1,10 @@
 # Projeto de Interface
 
-O Projeto de Interface foi estruturado em 25 páginas, cada uma com o objetivo específico de fornecer os recursos necessários. O objetivo central é assegurar a conformidade com os padrões de acessibilidade web, garantindo que os layouts sejam intuitivos e que as fontes de texto sejam facilmente legíveis, de forma a atender a um público diversificado, abrangendo indivíduos com diferentes habilidades, necessidades especiais e faixas etárias.
-
-Além disso, foram criadas seções dedicadas a atender tanto a profissionais e pais de crianças neurodivergentes quanto às próprias crianças com neurodiversidade. Cada seção é estruturada de forma a apresentar o conteúdo de forma organizada e intuitiva. Adicionalmente, no cabeçalho, foi inserida uma seção denominada "Área Infantil" com o intuito de promover o desenvolvimento de habilidades essenciais por meio de atividades dinâmicas educacionais e lúdicas, estimulando o interesse das crianças neurodivergentes.
-
 ## User Flow
 
 A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são apresentados os diversos caminhos que os usuários podem percorrer para acessar os recursos disponíveis.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/a446948f-341a-4699-9d47-1ea7e10cb128">
+![Frame 122](https://github.com/wesley-surt/adopet/assets/109616789/23878b25-c08e-4c24-9c87-c2f616fac6dd)
 
 ## Wireframes
 
@@ -16,88 +12,83 @@ A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são ap
 
 A partir da página inicial [RF-001], os usuários encontrarão seções dedicadas a atender demandas específicas, incluindo informações sobre o que é a neurodiversidade, os principais transtornos de desenvolvimento e uma seção de conteúdos voltada para pais e profissionais. No canto superior direito, encontra-se um campo de pesquisa que permite buscar o conteúdo desejado [RF-014], bem como ícones para compartilhamento do conteúdo nas redes sociais.
 
-![PaginaInicial_Wireframe](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/89950149/40fce231-eee1-4f66-b85e-2117d5b5ce39)
+![Desktop - Inicio](https://github.com/wesley-surt/adopet/assets/109616789/8f8952a0-c95b-430f-bade-405c606b9375)
 
-### Cadastro
+### Inicio para logar
 
 Caso não possua cadastro, a opção "Clique aqui e cadastre-se", na tela de Login, permite o redirecionamento para a página de cadastro para criação de nova conta de usuário a partir da inserção de informações nos campos solicitados [RF-002].
 
-![Desktop Cadastro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/792a227a-8505-4989-80ea-37688a86ce7e)
+![Desktop - Iniciao Entrar](https://github.com/wesley-surt/adopet/assets/109616789/574370ed-6873-4285-bf08-2a1746e3dcd7)
 
 ### Login
 
-
 Para que o usuário acesse os conteúdos da aplicação disponíveis na sessão infantil e perfil, deve ser feito o login em uma conta previamente criada, inserindo as informações nos campos de "e-mail" e "senha", respectivamente [RF-003]. 
 
-![Desktop Login](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/46b0355c-9e08-4fc7-b03b-a08ad9dfe46a)
+![Desktop - Login](https://github.com/wesley-surt/adopet/assets/109616789/2dc3f0e1-9cc1-4b79-9c6a-dc06537558c9)
 
-
-### Tela de Perfil
+### Cadastro de usuário
 
 A página de perfil apresenta todas as informações preenchidas pelo usuário no processo de cadastro bem como as opções de visualizar informações pessoais e editar perfil [RF-004].
 
-![Desktop%20Perfil%20(1)_resized](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/5c514437-a118-4c6a-a7a0-d060776b2fb8)
+![Desktop - Cadastro](https://github.com/wesley-surt/adopet/assets/109616789/36418663-7613-4634-adc0-7164a1e9ac80)
 
-
-### Editar Perfil
-
-Clicando em "Editar perfil", o usuário pode alterar as informações de cadastro [RF-005], alterar a senha de login ou excluir a sua conta [RF-006]. Logo abaixo, encontra-se a tela referente à edição das informações, bem como à alteração de senha e à exclusão da conta.
-
-![Perfil](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/f5d6ae49-e625-42da-86f1-5393e7f1cace)
-
-
-### Área Infantil
+### Perfil de usuário
 
 Por meio do cabeçalho, os usuários têm a opção de acessar a Área Infantil [RF-007], que também está disponível no menu de navegação. Nesta seção, estão disponíveis diversas atividades interativas.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/9aa7c1dc-e61c-43d1-b276-492b02147157">
+![Desktop - Perfil](https://github.com/wesley-surt/adopet/assets/109616789/c012792f-92df-455b-8433-0c449df3e7bf)
 
+### Editar/excluir perfil de usuário
 
-### Jogos interativos
+Clicando em "Editar perfil", o usuário pode alterar as informações de cadastro [RF-005], alterar a senha de login ou excluir a sua conta [RF-006]. Logo abaixo, encontra-se a tela referente à edição das informações, bem como à alteração de senha e à exclusão da conta.
+
+![Desktop - Editar Perfil](https://github.com/wesley-surt/adopet/assets/109616789/109b4064-fe28-4936-a17f-fc817762c795)
+
+### Perfil de animal para adoção
 
 Os usuários têm a opção de selecionar entre os jogos disponíveis [RF-008] na aplicação, escolhendo a dificuldade que melhor se adequa ao seu perfil. Esses jogos têm como objetivo auxiliar no ensino de crianças com dificuldades de aprendizagem por métodos convencionais. Cada jogo foi projetado para estimular habilidades específicas das crianças, como memória, lógica matemática e habilidades sociais.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/a9fd019e-b8c5-4cc9-8a6a-b70ab68f9f75">
+![Desktop - Perfil Animal Adoções](https://github.com/wesley-surt/adopet/assets/109616789/6c7c5084-3f03-4ac5-8913-ad0a07c621ab)
 
-### Páginas estáticas de informações
+### Editar/excluir perfil de animal para adoção
 
 Ao acessar o conteúdo por meio da página inicial, os usuários clicarão sobre o primeiro card denominado "Como lidar com crianças neurodiversas no ambiente escolar?", destinado a pais e profissionais, e serão redirecionados para à página da web que disponibiliza informações sobre como lidar com crianças neurodiversas no contexto escolar. Da mesma forma se segue para todas as demais páginas estáticas de informações, bem como o layout e design da página. [RF-009]
 
-<div>
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/3cbb91c1-3033-45e0-842c-85a2da0e04b1">
-</div>
+![Desktop - Perfil Animal Adoção](https://github.com/wesley-surt/adopet/assets/109616789/ab524c21-0e91-4481-b04a-7eab40df6069)
 
-### Página de sugestões de atividades escolares
+### Editar/excluir perfil de animal perdido
 
 Os usuários têm a opção de escolher algumas atividades recomendadas pela aplicação para serem aplicadas no ambiente escolar [RF-010], com o objetivo de oferecer diferentes abordagens de ensino do conteúdo.
 
-![Desktop Atividades Escolares](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/3e4bc9cb-e4fd-45cb-850e-15cb31e52bc0)
+![Desktop - Perfil Animal Perdido](https://github.com/wesley-surt/adopet/assets/109616789/1ffd99ae-5e82-4cc6-a586-213b430a5590)
 
-
-### Feedback
+### Editar/excluir perfil de animal encontrado
 
 Através do cabeçalho, é possível acessar a página de Feedback [RF-011], também disponível no menu de navegação. Nessa seção, os usuários têm a oportunidade de descrever eventuais problemas na aplicação ou oferecer sugestões. Essa funcionalidade visa coletar feedback valioso para aprimorar constantemente a aplicação, melhorando a experiência geral dos usuários [RF-011].
 
-![Desktop Feedback](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/99815953/2a6799cf-01fd-4bd0-9e2d-b64ae42de179)
+![Desktop - Perfil Animal Encontrado](https://github.com/wesley-surt/adopet/assets/109616789/51df551c-e533-43c5-a1b5-b43141e60a8b)
 
+### Animais para adoção
 
-### Ajuda
+Na tela de Ajuda [RF-012] da aplicação, os usuários encontram as opções de configurações da conta, relatar problemas e um
+ guia sobre como utilizar a seção infantil do site.
 
-Na tela de Ajuda [RF-012] da aplicação, os usuários encontram as opções de configurações da conta, relatar problemas e um guia sobre como utilizar a seção infantil do site.
+![Desktop - Animais Para Adoção](https://github.com/wesley-surt/adopet/assets/109616789/5b75ff38-46b0-4c09-bda6-bf9fa51f168b)
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/caf26841-c676-4771-8316-fad2d05eec5a">
-
-
-### Sobre nós
+### ONGs/Protetores
 
 Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/a59b3df0-19f2-4d27-b97e-4406e58ca0c5">
+![Desktop - ONGs](https://github.com/wesley-surt/adopet/assets/109616789/d5ebe619-2563-4d5c-b7ed-ff891a29c10d)
 
+### Eventos/campanhas
 
-### Modelos de componentes padrão
+Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
 
-Segue abaixo alguns modelos da aplicação.
+![Eventos/Campanhas](https://github.com/wesley-surt/adopet/assets/109616789/cc59a075-92cf-4d10-82be-785a9718aae0)
 
-![Wireframe%20-%201_resized](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/109616789/c77b1f94-65cc-41c0-a458-10e075508883)
+### Adicionar evento/campanha
 
+Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
+
+![Desktop - Add Evento Campanha](https://github.com/wesley-surt/adopet/assets/109616789/367aa994-d9d0-4057-87bc-491907346e5d)
