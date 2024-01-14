@@ -135,4 +135,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|  |                                                        |.
+|RT-001| O usuário só terá acesso à página que adiciona um evento ou uma campanha se ele for uma ONG. Um pop-up será exibido caso o acesso não for liberado|.

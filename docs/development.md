@@ -12,29 +12,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
-|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno | profile.html, profileController.js |
-|RF-009|A aplicação deve fornecer informações que ajudem a pais e profissionais a lidarem com crianças neurodiversas.| ALTA | Pedro Rodrigues | identificar_na_infancia.html |
-|RF-010|A aplicação deve indicar atividades para crianças neurodiversas no ambiente escolar.|ALTA| Wesley Bruno | atividades_escolares_tdah.html atividades_escolares_tea.html atividades_escolares_tod.html atividades_imprimir_tdah.html atividades_imprimir_tea.html orientacoes_pedagogicas.html plano_escolar_tod.html |
-|RF-009|A aplicação deve fornecer informações que ajudem a pais e profissionais a lidarem com crianças neurodiversas.|ALTA| Pedro Rodrigues | ambiente_familiar.html |
-|RF-001|A aplicação deve conter uma página principal de apresentação dos conteúdos.|ALTA| Martha Beatriz | index.html
-|RF-007|A aplicação deve conter uma sessão específica para crianças neurodiversas.|ALTA| Pedro Rodrigues | area_infantil.html |
-|RF-008|A aplicação deve conter jogos interativos para crianças neurodiversas.|MÉDIA| Pedro Rodrigues | atividade_cores.html |
-|RF-014|A aplicação deve conter campos de pesquisa nas páginas necessárias.|MÉDIA| Martha Beatriz | index.html
-|RF-011|A aplicação deve conter uma página de feedback. Não é preciso estar logado.|MÉDIA| Pedro Rodrigues | feedback.html |
-|RF-003|A aplicação deve permitir que o usuário faça login. |ALTA| Wesley Bruno | login.html |
-|RF-015|A aplicação deve oferecer a funcionalidade de compartilhamento de conteúdo nas redes sociais.|BAIXA| Martha Beatriz |index.html|
-|RF-012|A aplicação deve deve conter uma página de ajuda ao usuário.|MÉDIA| Martha Beatriz | ajuda_acesso_aplicacao.html; ajuda_atividades_aplicacao.html; ajuda_configuracao_conta.html; guia-alterarconfiguracoes-perfil.html; guia-avaliacao-desempenho.html; guia-como-excluir-conta.html; guia-compartilhamento-conteudos.html; guia-interacao-conteudos.html; guia-mudanca-email-e-senha.html; guia-niveis-dificuldade.html; guia-realizar-atividades.html; guia-verificar-problemas-conexao.html. |
-|RF-002|A aplicação deve permitir que o usuário crie uma conta de acesso. |ALTA| Wesley Bruno | cadastro.html|
-|RF-004|A aplicação deve permitir a visualização do perfil.|ALTA|Gustavo Novaes|perfil.html|
-|RF-005|A aplicação deve permitir editar as informações do perfil.|ALTA|Gustavo Novaes|editar-perfil.html; alterar-senha.html|
-|RF-006|A aplicação deve permiti que o usuário exclua sua conta.|ALTA|Gustavo Novaes|excluir-conta.html|
+|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno | profile.html, card-animal/style.css, responsive_components/card_animal/style.css, profileController.js, AnimalView.js |
+|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.| ALTA | Wesley Bruno | profile.html, animal.html, animal_profile.html, advertiser_profile.html, profileController.js, animalController.js, animalProfileController.js, advertiserProfileController.js, style_profile.css, style_animal_profile.css, style_advertiser.css, style_animal.css form/style_2.css, field/style_2.css, field/style_4.css, button/style_green.css, button/style_2.css |
 
 ### Requisitos não Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
-|RNF-009|A aplicação deve informar o usuário caso tente inserir algum dado inválido no formulário de cadastro e de editar o perfil. |MÉDIA| Wesley Bruno | input_invalid.css / celular.js, confirma_senha.js, email.js, nome.js, senha.js |
-|RNF-005|A aplicação deve armazenar os dados de forma segura em conformidade com a LGPD (Lei Geral de Proteção dos Dados).|ALTA| Wesley Bruno | Cryptography.js
+|RNF-003|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | dbConnect.js |
+|RNF-004|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | src/api/* |
 
 
 ## Descrição das estruturas:
