@@ -30,7 +30,7 @@ function handleAnimal(animalStorage) {
 function handleUser(user) {
     document
         .getElementById("ellipse--anunciante")
-        .setAttribute("src", `${user.photo || "../../../image/Perfil.png"}`);
+        .setAttribute("src", `${user.photo || "../../../adopet/image/Perfil.png"}`);
     document.getElementById("nome_anunciante").append(`${user.name}`);
 }
 

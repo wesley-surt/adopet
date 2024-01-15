@@ -6,5 +6,5 @@ if (StorageService.get("user").photo) {
         .setAttribute("src", `${StorageService.get("user").photo}`);
 } else {
     const ellipse = document.getElementById("ellipse");
-    ellipse.style.backgroundImage = "url(../../../image/Usuario.png)";
+    ellipse.style.backgroundImage = "url(../../../../adopet/image/Usuario.png)";
 }

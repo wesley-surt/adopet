@@ -13,7 +13,7 @@ function handleUser(userStorage) {
         .getElementById("foto")
         .setAttribute(
             "src",
-            `${userStorage.photo || "../../image/Perfil.png"}`
+            `${userStorage.photo || "../../../adopet/image/Perfil.png"}`
         );
     document.getElementById("nome").innerHTML = userStorage.name || "";
     document.getElementById("telefone").innerHTML = userStorage.telephone || "";

@@ -114,7 +114,7 @@ function fillInAllFields() {
     } else
         document
             .getElementById("foto")
-            .setAttribute("src", "../../image/Perfil.png");
+            .setAttribute("src", "../../../adopet/image/Perfil.png");
 }
 
 function handleAnimal(animalId) {
