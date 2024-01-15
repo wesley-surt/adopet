@@ -10,8 +10,6 @@ A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são ap
 
 ### Página inicial
 
-A partir da página inicial [RF-001], os usuários encontrarão seções dedicadas a atender demandas específicas, incluindo informações sobre o que é a neurodiversidade, os principais transtornos de desenvolvimento e uma seção de conteúdos voltada para pais e profissionais. No canto superior direito, encontra-se um campo de pesquisa que permite buscar o conteúdo desejado [RF-014], bem como ícones para compartilhamento do conteúdo nas redes sociais.
-
 ![Desktop - Inicio](https://github.com/wesley-surt/adopet/assets/109616789/8f8952a0-c95b-430f-bade-405c606b9375)
 
 ### Inicio para logar
@@ -46,7 +44,7 @@ Clicando em "Editar perfil", o usuário pode alterar as informações de cadastr
 
 ### Perfil de animal para adoção
 
-Os usuários têm a opção de selecionar entre os jogos disponíveis [RF-008] na aplicação, escolhendo a dificuldade que melhor se adequa ao seu perfil. Esses jogos têm como objetivo auxiliar no ensino de crianças com dificuldades de aprendizagem por métodos convencionais. Cada jogo foi projetado para estimular habilidades específicas das crianças, como memória, lógica matemática e habilidades sociais.
+A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal[RF-003].
 
 ![Desktop - Perfil Animal Adoções](https://github.com/wesley-surt/adopet/assets/109616789/6c7c5084-3f03-4ac5-8913-ad0a07c621ab)
 
@@ -58,13 +56,14 @@ Ao acessar o conteúdo por meio da página inicial, os usuários clicarão sobre
 
 ### Editar/excluir perfil de animal perdido
 
-Os usuários têm a opção de escolher algumas atividades recomendadas pela aplicação para serem aplicadas no ambiente escolar [RF-010], com o objetivo de oferecer diferentes abordagens de ensino do conteúdo.
+RF-004	
+Os usuários têm a opção de registrar perfis de animais desaparecidos. Assim como editar e excluir o perfil criado [RF-004].
 
 ![Desktop - Perfil Animal Perdido](https://github.com/wesley-surt/adopet/assets/109616789/1ffd99ae-5e82-4cc6-a586-213b430a5590)
 
 ### Editar/excluir perfil de animal encontrado
 
-Através do cabeçalho, é possível acessar a página de Feedback [RF-011], também disponível no menu de navegação. Nessa seção, os usuários têm a oportunidade de descrever eventuais problemas na aplicação ou oferecer sugestões. Essa funcionalidade visa coletar feedback valioso para aprimorar constantemente a aplicação, melhorando a experiência geral dos usuários [RF-011].
+Os usuários têm a opção de registrar perfis de animais encontrados. Assim como editar e excluir o perfil criado [RF-005].
 
 ![Desktop - Perfil Animal Encontrado](https://github.com/wesley-surt/adopet/assets/109616789/51df551c-e533-43c5-a1b5-b43141e60a8b)
 
