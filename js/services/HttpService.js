@@ -13,7 +13,7 @@ export class HttpService {
     }
 
     static post(path, body) {
-        const url = "https://adopet-api-eight.vercel.app/";
+        const url = "https://adopet-api-eight.vercel.app";
 
         return this.request(`${url}/${path}`, {
             method: "POST",
@@ -26,7 +26,7 @@ export class HttpService {
     }
 
     static put(path, body) {
-        const url = "https://adopet-api-eight.vercel.app/";
+        const url = "https://adopet-api-eight.vercel.app";
 
         return this.request(`${url}/${path}`, {
             method: "PUT",
@@ -39,7 +39,7 @@ export class HttpService {
     }
 
     static get(path) {
-        const url = "https://adopet-api-eight.vercel.app/";
+        const url = "https://adopet-api-eight.vercel.app";
         return this.request(`${url}/${path}`, {
             method: "GET",
             headers: {
@@ -50,7 +50,7 @@ export class HttpService {
     }
 
     static delete(path) {
-        const url = "https://adopet-api-eight.vercel.app/";
+        const url = "https://adopet-api-eight.vercel.app";
         return this.request(`${url}/${path}`, {
             method: "DELETE",
             headers: {
