@@ -122,12 +122,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001|A aplicação deve permitir a promoção de eventos, campanhas e possibilitar a adesão de parcerias apenas para pessoas a cargo de organizações não governamentais.| ALTA | 
-|RNF-002|A aplicação deve ser desenvolvida em HTML, CSS e Java Script.|ALTA|
-|RNF-003|A aplicação deve persistir os dados no banco de dados MongoDB.|ALTA|
-|RNF-004|A aplicação deve possuir um backend. |ALTA|
-|RNF-005|A aplicação deve informar o usuário caso tente inserir algum dado inválido nos formulários.|ALTA|
-|RNF-006|A aplicação deve ser desenvolvida usando Kanban|ALTA|
+|RNF-001|A aplicação deve ser desenvolvida em HTML, CSS e Java Script.|ALTA|
+|RNF-002|A aplicação deve persistir os dados no banco de dados MongoDB.|ALTA|
+|RNF-003|A aplicação deve possuir um backend. |ALTA|
+|RNF-004|A aplicação deve informar o usuário caso tente inserir algum dado inválido nos formulários.|ALTA|
+|RNF-005|A aplicação deve ser desenvolvida usando Kanban|ALTA|
 
 ## Restrições
 
@@ -135,6 +134,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|RT-001| O usuário só terá acesso à página que adiciona um evento ou uma campanha se ele for uma ONG. Um pop-up será exibido caso o acesso não for liberado.|
-|RT-002| Em relação ao requisito RF-003, as ONGs não terão seus perfis cadastrados na aplicação acessíveis para exibição por terceiros.|
-|RT-003| Todo o processo de adoção será tramitado diretamente entre quem está colocando o animal para adoção e o adotante.|
+|RT-001| O usuário só terá acesso à página que adiciona um evento ou uma campanha se ele for uma ONG. Um pop-up será exibido caso o acesso não for liberado. |
+|RT-002| Em relação ao requisito RF-003, as ONGs não terão seus perfis cadastrados na aplicação acessíveis para exibição por terceiros. |
+|RT-003| Todo o processo de adoção será tramitado diretamente entre quem está colocando o animal para adoção e o adotante. |
+|RT-004| A aplicação deve permitir que apenas ONGs promovam eventos, campanhas e possuam parcerias. | ALTA |
