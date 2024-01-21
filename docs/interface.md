@@ -1,77 +1,56 @@
 ## User Flow
 
 A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são apresentados os diversos caminhos que os usuários podem percorrer para acessar os recursos disponíveis.
-
-![User Flow](https://github.com/wesley-surt/adopet/assets/109616789/f4cfc5a0-ac38-41b6-9306-c9301d390c66)
+![Frame 122](https://github.com/wesley-surt/adopet/assets/109616789/4648ac1a-dddb-4ca7-98f9-7a43ea1753d7)
 
 ## Wireframes
 
 ### Página inicial
-
 ![Desktop - Inicio](https://github.com/wesley-surt/adopet/assets/109616789/04b88a5d-87ce-468b-844d-d250873fd9ba)
 
 ### Inicio para logar
-
-Caso não possua cadastro, a opção "Clique aqui e cadastre-se", na tela de Login, permite o redirecionamento para a página de cadastro para criação de nova conta de usuário a partir da inserção de informações nos campos solicitados [RF-002].
-
+Esta tela inicial fornece informações iniciais importantes para o usuário se familiarizar com a aplicação.
 ![Desktop - Inicial Entrar](https://github.com/wesley-surt/adopet/assets/109616789/ad0f7934-8d50-4538-b36a-b904dfed751b)
 
 ### Login
-
-Para que o usuário acesse os conteúdos da aplicação disponíveis na sessão infantil e perfil, deve ser feito o login em uma conta previamente criada, inserindo as informações nos campos de "e-mail" e "senha", respectivamente [RF-003]. 
-
 ![Desktop - Login](https://github.com/wesley-surt/adopet/assets/109616789/90de9570-6746-4b92-bd6a-73d859f2206f)
 
 ### Cadastro de usuário
-
-A página de perfil apresenta todas as informações preenchidas pelo usuário no processo de cadastro bem como as opções de visualizar informações pessoais e editar perfil [RF-004].
-
 ![Desktop - Cadastro](https://github.com/wesley-surt/adopet/assets/109616789/5f4c88af-57e5-44fc-bc7e-6038df7440fd)
 
-### Perfil de usuário
+### Perfil do responsável pelo cadastro do animal
+Esta tela exibe uma ficha com todos os dados importantes de quem cadastrou o animal (encontrado, perdido ou adoção) (RF-003).
+![Desktop - Perfil Usuario Responsavel](https://github.com/wesley-surt/adopet/assets/109616789/fe6c3ef0-417f-4e15-a28f-ef5bb91d02ab)
 
-Por meio do cabeçalho, os usuários têm a opção de acessar a Área Infantil [RF-007], que também está disponível no menu de navegação. Nesta seção, estão disponíveis diversas atividades interativas.
-
-![Desktop - Perfil](https://github.com/wesley-surt/adopet/assets/109616789/40283070-fdb2-4ce2-9d41-0f389a007a51)
+### Perfil de usuário/ONG
+Esta tela está reunindo todos os animais (encontrados, perdidos e adoções) registrados pelo usuário em um único local (RF-001).
+Além disso, a tela também possui um botão chamado "Interessados em parceira" que possibilita que as ONGs visualizem todas as pessoas interessadas em ser parceiras. Clicando em um dos mini-cards é redirecionado para a pagina de perfil do interessado(a) (RF-002).
+![Desktop - Perfil ONG (3)](https://github.com/wesley-surt/adopet/assets/109616789/2e44b2b6-ff59-4d0d-bb2d-aba6f4107f69)
 
 ### Editar/excluir perfil de usuário
-
-Clicando em "Editar perfil", o usuário pode alterar as informações de cadastro [RF-005], alterar a senha de login ou excluir a sua conta [RF-006]. Logo abaixo, encontra-se a tela referente à edição das informações, bem como à alteração de senha e à exclusão da conta.
-
+Esta tela permite o usuário ter um maior controle de suas informações. Ele pode alterar os dados ou excluir sua conta.
 ![Desktop - Editar Perfil](https://github.com/wesley-surt/adopet/assets/109616789/2aa2a7b2-430d-49f8-a425-4f054d4f7dfa)
 
 ### Perfil de animal
-
-A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal[RF-003].
-
-![Desktop - Perfil Animal Adoções](https://github.com/wesley-surt/adopet/assets/109616789/28e0ccaa-9c5b-472a-ac89-9a523ac4cd7c)
+Esta tela exibe uma ficha com todos os dados importantes do animal. Clicando no mini-card do responsável pelo cadastro é redirecionado para a tela que exibe todos os dados importantes do usuário (RF-003).
+![Desktop - Perfil Animal Adoções (1)](https://github.com/wesley-surt/adopet/assets/109616789/c5066d3e-b726-4437-841a-2e01e54dd5fe)
 
 ### Editar/excluir perfil de animal
-
-Ao acessar o conteúdo por meio da página inicial, os usuários clicarão sobre o primeiro card denominado "Como lidar com crianças neurodiversas no ambiente escolar?", destinado a pais e profissionais, e serão redirecionados para à página da web que disponibiliza informações sobre como lidar com crianças neurodiversas no contexto escolar. Da mesma forma se segue para todas as demais páginas estáticas de informações, bem como o layout e design da página. [RF-009]
-
+Esta tela jé genérica para quem quer cadastrar animais para adoção, perdidos e encontrados (RF-004 e RF-005).
 ![Desktop - Perfil Animal Adoção](https://github.com/wesley-surt/adopet/assets/109616789/46207a35-9b88-44c1-89c2-b97df2a0a847)
 
-### Animais para adoção
-
-Ao acessar o conteúdo por meio da página inicial, os usuários clicarão sobre o primeiro card denominado "Como lidar com crianças neurodiversas no ambiente escolar?", destinado a pais e profissionais, e serão redirecionados para à página da web que disponibiliza informações sobre como lidar com crianças neurodiversas no contexto escolar. Da mesma forma se segue para todas as demais páginas estáticas de informações, bem como o layout e design da página. [RF-009]
-
+### Animais para adoção, perdidos e encontrados
+Esta tela exibe todos os animais para adoção, perdidos ou encontrados, a depender do botão clicado pelo usuário na barra de navegação
 ![Desktop - Animais Para Adoção](https://github.com/wesley-surt/adopet/assets/109616789/3e3cc2ab-f50d-4276-a975-bdfede8f4a8d)
 
 ### ONGs/Protetores
-
-Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
-
-![Desktop - ONGs](https://github.com/wesley-surt/adopet/assets/109616789/9fc1eb3f-3e30-43d3-9727-5fb06d00b509)
+Esta tela possui um botão chamado "Ser parceiro" que expressa para a ONG o interesse deste usuário em se tornar um parceiro (RF-002).
+![Desktop - ONGs (1)](https://github.com/wesley-surt/adopet/assets/109616789/0cff422e-dc70-444a-b887-9cfd4e19690f)
 
 ### Eventos/campanhas
-
-Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
-
+Esta tela exibe todos os eventos e campanhas promovidos por ONGs
 ![Desktop - Eventos Campanhas](https://github.com/wesley-surt/adopet/assets/109616789/329bd5f8-1929-4531-a34d-d7128b83d891)
 
 ### Adicionar evento/campanha
-
-Através do cabeçalho, que também está disponível no menu de navegação, os usuários podem acessar informações sobre a história e os ideais que inspiraram a criação da aplicação [RF-013], bem como o objetivo a ser alcançado.
-
+Esta tela, a depender do botão clicado pelo usuário adiciona eventos ou campanhas (RF-002).
 ![Desktop - Add Evento Campanha](https://github.com/wesley-surt/adopet/assets/109616789/74b81774-eada-4413-90b5-ae9c67f0c663)
