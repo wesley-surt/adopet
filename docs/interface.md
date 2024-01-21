@@ -6,10 +6,10 @@ A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são ap
 ## Wireframes
 
 ### Página inicial
+Esta tela inicial fornece informações iniciais importantes para o usuário se familiarizar com a aplicação.
 ![Desktop - Inicio](https://github.com/wesley-surt/adopet/assets/109616789/04b88a5d-87ce-468b-844d-d250873fd9ba)
 
 ### Inicio para logar
-Esta tela inicial fornece informações iniciais importantes para o usuário se familiarizar com a aplicação.
 ![Desktop - Inicial Entrar](https://github.com/wesley-surt/adopet/assets/109616789/ad0f7934-8d50-4538-b36a-b904dfed751b)
 
 ### Login
