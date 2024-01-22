@@ -12,21 +12,18 @@ https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/a
 
 ## Cores
 
-A paleta de cores da aplicação foi cuidadosamente selecionada com o objetivo de criar um ambiente agradável, especialmente voltado para crianças. Além disso, consideramos de forma específica as necessidades das crianças neurodiversas, como aquelas que têm autismo e escolhemos as cores azul, laranja e amarelo por sua capacidade de promover o desenvolvimento social e proporcionar uma sensação de tranquilidade, tendo em vista que essas cores também têm o poder de transmitir alegria e facilitar a interatividade com os recursos disponíveis na aplicação. 
+A escolha das cores tem como base uma harmonia suave fisualmente. 
 
-<div>
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/7978f89b-2dec-4f61-a181-35740e5eee08" width=500>
-</div>
-
+![Cores da aplicação](https://github.com/wesley-surt/adopet/assets/109616789/057f4e0c-06a4-459b-9445-28b367fbb620)
 
 ## Tipografia
 
-A aplicação foi desenvolvida utilizando a fonte Roboto em suas diversas páginas. Além disso, observa-se mudanças no tipo da fonte, como Bold, Medium e Regular a depender do nível do título ou texto.
+A aplicação foi desenvolvida utilizando a fonte Poppins. A fonte se difere em peso regular e semi-bold.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/73b334e9-1bcc-436f-b954-fe70fa7482e9">
+![Tipografia](https://github.com/wesley-surt/adopet/assets/109616789/553745c3-ecd5-4778-854d-9aa65717ba80)
 
 ## Iconografia
 
-Os ícones foram escolhidos com base no Material Symbols do Google. Na imagem a seguir, cada ícone está descrito de acordo com o que representa na aplicação.
+Os ícones foram escolhidos com base no Material Symbols do Google.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/112666344/4e683078-21db-425b-af13-ba9bab646b98" >
+![Iconografia](https://github.com/wesley-surt/adopet/assets/109616789/ee54fe17-9dd9-4655-8961-b036332056e1)
