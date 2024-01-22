@@ -28,31 +28,39 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ## Usuário
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| id             | Numero (inteiro)  | Identificador único do usuário            | 1                                              |
-| name           | Text              | Nome registrado, nome social ou apelido   | angelica                                       |
-| photo          | Text              | Foto de rosto do usuário                  | https://imgur.api/idDaImagem                   |
-| email          | Text              | Conecta o usuário a uma conta cadastrada  | angelica@gmail.com                             |
-| telephone      | Text              | Número de celular pessoal do usuário      | (31)944445555                                  |
-| cep            | Text              | Evidencia a região do usuário             | 00111222                                       |
-| city           | Text              | Evidencia a cidade do usuário             | Belo Horizonte                                 |
-| state          | Text              | Evidencia o estado do usuário             | MG                                             |
+| id             | Numero (inteiro)  | Identificador único do usuário            | sdf65s6f5a6sdf564g                             |
+| name           | String            | Nome registrado, nome social ou apelido   | angelica                                       |
+| photo          | String            | Foto de rosto do usuário                  | https://imgur.api/idDaImagem                   |
+| email          | String            | Conecta o usuário a uma conta cadastrada  | angelica@gmail.com                             |
+| telephone      | String            | Número de celular pessoal do usuário      | (31)944445555                                  |
+| cep            | String            | Evidencia a região do usuário             | 00111222                                       |
+| city           | String            | Evidencia a cidade do usuário             | Belo Horizonte                                 |
+| state          | String            | Evidencia o estado do usuário             | MG                                             |
 | imAnNGO        | Boolean           | Confirma se a conta é de uma ONG ou não   | true                                           |
-| about          | Texto             | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com animais de petshop. Ocorre muito caso de donos abandonarem seus pets na loja e não temos como cuidar de tantos animaizinhos. |
+| about          | String            | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com animais de petshop. Ocorre muito caso de donos abandonarem seus pets na loja e não temos como cuidar de tantos animaizinhos. |
 
 
 ## Animal
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| id             | Numero            | Identificador único do animal             | 1                                              |
+| id             | Numero            | Identificador único do animal             | sdf65s6f5a6sdf564g                             |
 | userId         | Number            | Identificar o(a) responsável pelo animal registrado | sdf65s6f5a6sdf564g                   |
-| name           | Text              | Nome do animal                            | Amora                                          |
+| name           | String            | Nome do animal                            | Amora                                          |
+| status         | String            | Diz o status do registro                  | Perdido                                        |
 | characteristics1 | String          | Diz a primeira caracteristica marcante do animal | Dócil                                   |
 | characteristics2 | String          | Diz a segunda caracteristica marcante do animal | Amigável                                 |
 | measure        | String            | Diz a medida da idade do animal           | meses                                          |
 | photo          | String            | Foto do animal                            | https://imgur.api/idDaImagem                   |
 | size           | String            | Diz o porte/tamanho do animal             | medio                                          |
 | age            | String            | Diz a idade do animal                     | 11                                             |
-| city           | Text              | Evidencia a cidade do animal              | Belo Horizonte                                 |
-| state          | Text              | Evidencia o estado do animal              | MG                                             |
-| cep            | Text              | Evidencia a região do animal              | 00111222                                       |
-| about          | Texto             | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
+| city           | String            | Evidencia a cidade do animal              | Belo Horizonte                                 |
+| state          | String            | Evidencia o estado do animal              | MG                                             |
+| cep            | String            | Evidencia a região do animal              | 00111222                                       |
+| about          | String            | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
+
+
+## Interessados em parcerias
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
+| userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
