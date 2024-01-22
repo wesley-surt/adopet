@@ -90,7 +90,7 @@ Nathan gosta de desafios e jogos, o que pode ser incorporado em elementos de gam
 Possui habilidades básicas de navegação web, mas prefere soluções simples e diretas.
 Essa persona de Nathan pode ser utilizada como base para criar histórias de usuários no contexto de um software ou aplicativo que auxilia na busca por animais de estimação perdidos. Considerando suas características, a documentação do software pode focar em uma interface intuitiva, orientações claras e, se aplicável, elementos de gamificação para manter o envolvimento de Nathan no processo de busca por Whiskers.
 
-![Nathan](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/99815953/2a497241-8344-426a-a2b1-7781e3b5251e)
+![Nathan](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/99815953/d602ecfd-0868-4535-9549-6a4c9d77856a)
 
 ## Histórias de Usuários
 
