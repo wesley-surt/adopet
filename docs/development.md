@@ -20,7 +20,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
 |RNF-003|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | dbConnect.js |
-|RNF-004|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | src/api/* |
+|RNF-004|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | api/src/* |
 
 
 ## Descrição das estruturas:
@@ -29,25 +29,30 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Numero (inteiro)  | Identificador único do usuário            | 1                                              |
-| name           | Texto             | Nome registrado, nome social ou apelido   | angelica                                       |
-| photo           | Object            | Foto de rosto do usuário                  | {"lastModified": 1678399500750, "lastModifiedDate": "2023-03-09T22:05:00.750Z", "name": "perfilFoto.png", "size": 195613, "type": "image/png", "webkitRelativePath": ""}              |
-| email          | Texto             | Conecta o usuário a uma conta cadastrada  | angelica@gmail.com                             |
-| password          | Texto             | Dá acesso ao usuário, dono da conta       | ange1415$1                                  |
-| cellPhone        | Texto             | Número de celular pessoal do usuário      | (31)944445555                                |
-| gender         | Texto             | Evidencia o gênero de quem está usando a aplicação | mulher                                |
-| birth     | Texto             | Evidencia a idade de quem está usando a aplicação  | 14-04-1999                                 |
-| cep       | Texto             | Evidencia a região do usuário             | 00111222                                            |
-| cidade    | Texto             | Evidencia a cidade do usuário             | Belo Horizonte                                      |
-| estado    | Texto             | Evidencia o estado do usuário             | MG                                                  |
-| acting        | Texto             | Evidencia qual a relação do usuário com pessoas neurodivergentes, podendo ser, o próprio usuário, neurodivergente também | Pedagoga |
-| about          | Texto             | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com crianças. Meu interesse é aprender mais sobre transtornos para antender melhor as crianças com quem trabalho, caso sejam neuro divergentes |
+| name           | Text              | Nome registrado, nome social ou apelido   | angelica                                       |
+| photo          | Text              | Foto de rosto do usuário                  | https://imgur.api/idDaImagem                   |
+| email          | Text              | Conecta o usuário a uma conta cadastrada  | angelica@gmail.com                             |
+| telephone      | Text              | Número de celular pessoal do usuário      | (31)944445555                                  |
+| cep            | Text              | Evidencia a região do usuário             | 00111222                                       |
+| city           | Text              | Evidencia a cidade do usuário             | Belo Horizonte                                 |
+| state          | Text              | Evidencia o estado do usuário             | MG                                             |
+| imAnNGO        | Boolean           | Confirma se a conta é de uma ONG ou não   | true                                           |
+| about          | Texto             | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com animais de petshop. Ocorre muito caso de donos abandonarem seus pets na loja e não temos como cuidar de tantos animaizinhos. |
 
 
-## Resultado Do Jogo
+## Animal
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| gameName       | Texto             | Identificar o jogo registrado             | Acerte as cores                                |
-| punctuation    | Numero            | Pontuação máxima do jogador               | 5                                              |
-| attempt        | Numero            | Número total tentativas                   | 5                                              |
-| performance    | Texto             | Evidencia o desempenho do jogador         | Alto                                           |
-| date           | Texto             | Evidencia a data do resultado registrado  | 1/6/2023                                       |
+| id             | Numero            | Identificador único do animal             | 1                                              |
+| userId         | Number            | Identificar o(a) responsável pelo animal registrado | sdf65s6f5a6sdf564g                   |
+| name           | Text              | Nome do animal                            | Amora                                          |
+| characteristics1 | String          | Diz a primeira caracteristica marcante do animal | Dócil                                   |
+| characteristics2 | String          | Diz a segunda caracteristica marcante do animal | Amigável                                 |
+| measure        | String            | Diz a medida da idade do animal           | meses                                          |
+| photo          | String            | Foto do animal                            | https://imgur.api/idDaImagem                   |
+| size           | String            | Diz o porte/tamanho do animal             | medio                                          |
+| age            | String            | Diz a idade do animal                     | 11                                             |
+| city           | Text              | Evidencia a cidade do animal              | Belo Horizonte                                 |
+| state          | Text              | Evidencia o estado do animal              | MG                                             |
+| cep            | Text              | Evidencia a região do animal              | 00111222                                       |
+| about          | Texto             | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
