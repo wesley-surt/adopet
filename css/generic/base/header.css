@@ -13,10 +13,11 @@
 }
 
 .navegacao {
-    display: flex;
     position: relative;
+    display: flex;
     align-items: center;
     column-gap: 3rem;
+    width: 100%;
 }
 
 .navegacao__imagem--logo img {
@@ -27,19 +28,34 @@
 .navegacao__lista {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.imagem--usuario {
-    height: 40px;
-    position: relative;
-    right: 2.9rem;
-    top: 2.5rem;
-    width: 40px;
-    cursor: pointer;
+.item--nav {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: .5rem;
+    background-color: #36D6AD;
+    border-radius: .4rem;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
+    border: 3px solid #FFFFFF;
+    color: #FFFFFF;
 }
 
-.imagem--usuario {
-    border-radius: 10em;
+.item--nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.aba {
+    position: absolute;
+    display: none;
+}
+
+.item_hover--nav:hover .aba {
+    display: inline-block;
 }
 
 .menu_hamburguer {
@@ -47,3 +63,5 @@
     font-size: xx-large !important;
     cursor: pointer;
 }
+
+
