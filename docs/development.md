@@ -65,3 +65,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
 | NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
+
+## Eventos
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
+| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
+| name           | String            | Nome do evento                            | Levana fundo para animais de rua               |
+| locale         | String            | Local do evento                           | Rua caringa 475, Betania - Contagem (MG)       |
+| date           | String            | Data do evento                            | 21/02/2024                                     |
+| photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
+
+## Campanhas
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
+| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
+| photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
