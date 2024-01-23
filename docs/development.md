@@ -63,4 +63,5 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
+| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
