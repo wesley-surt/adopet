@@ -13,8 +13,8 @@
     border-radius: 0 0 0.5rem 0.5rem;
     border: none;
     overflow: hidden;
-    min-width: 11em;
-    min-height: 17rem;
+    min-width: 15em;
+    min-height: 23rem;
 }
 
 .modal_cabecalho {
@@ -37,16 +37,20 @@
 }
 
 .item_menu {
-    color: #505050;
-    padding: 0.5rem 0;
+    margin-top: 2rem;
 }
 
-.item_menu a {
-    text-decoration: none;
+.detalhe_menu {
     color: #505050;
+    cursor: pointer;
+}
+
+.ancora {
+    text-decoration: none;
     outline: none;
 }
 
-.menu_sair {
-    cursor: pointer;
+.item_abre_lista_menu {
+    display: flex;
+    align-items: center;
 }

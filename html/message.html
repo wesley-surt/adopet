@@ -20,7 +20,30 @@
 
         <nav class="navegacao--conteiner">
             <div class="navegacao">
-                <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>
+                <div class="menu_logo--navegacao">
+                    <span class="material-symbols-outlined menu_hamburguer">menu</span>
+                    <div  class="navegacao__imagem--logo"><img src="../image/Logo.png"></div>    
+                </div>
+
+                <dialog class="dialogo--menu">
+                    <div class="modal_cabecalho">
+                        <span class="material-symbols-rounded arrow_back" id="modal_close--menu">
+                            arrow_back_ios
+                            </span>
+                        <h1 class="modal__title--menu">Menu</h1>
+                    </div>
+                    <ul id="modal_lista--menu">
+                        <li class="item_menu">
+                            <a href="animals.html">Animais para adoção</a>
+                        </li>
+                        <li class="item_menu">
+                            <a href="profile.html">Perfil</a>
+                        </li>
+                        <li class="item_menu menu_sair">
+                            Sair
+                        </li>
+                    </ul>
+                </dialog>
 
                 <ul class="navegacao__lista">
                     <li class="item--nav">
@@ -88,6 +111,37 @@
                     <li class="item--nav">
                         <a class="" href="inicio.html">
                             Entrar
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navegacao__lista--mobile">
+                    <li class="item_hover--nav">
+                        <div class="item--nav">
+                            Animais
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </div>
+
+                        <ul class="aba">
+                            <li>
+                                <a href="adopt_animals.html">Adotar</a>
+                            </li>
+
+                            <li>
+                                <a href="animals_found.html">Encontrados</a>
+                            </li>
+
+                            <li>
+                                <a href="lost_animals.html">Perdidos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="item--nav">
+                        <a class="" href="inicio.html">
+                            Perfil
                         </a>
                     </li>
                 </ul>
