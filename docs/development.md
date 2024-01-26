@@ -1,7 +1,7 @@
 # Programação de Funcionalidades
 
 A aplicação Web encontra-se hospedada no GitHub Pages e pode ser acessada através do link abaixo:
-> - [NeuroKids] (https://icei-puc-minas-pmv-si.github.io/pmv-si-2023-2-pe1-t2-neurodiversidade/src/)
+> - [Adopet] (https://wesley-surt.github.io/adopet/)
 
 ## Requisitos Atendidos
 
@@ -59,14 +59,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | about          | String            | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
 
 
-## Interessados em parcerias
+## Interessado em parceria
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
 | NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
 
-## Eventos
+
+## Evento
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
@@ -76,7 +77,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | date           | String            | Data do evento                            | 21/02/2024                                     |
 | photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
 
-## Campanhas
+
+## Campanha
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
