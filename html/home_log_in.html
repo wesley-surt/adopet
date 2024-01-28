@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta name="referrer" content="no-referrer">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="../css/page/style_animal_profile.css">
-    <title class="pagina" aria-valuetext="perfil">profile animal</title>
+    <link rel="stylesheet" href="../css/page/style_home_log_in.css">
+    <title class="pagina" aria-valuetext="index">Inicio</title>
 </head>
 
 <body>
-    
     <header class="cabecalho">
         <div class="imagem--forma1"><img src="../image/Forma 1.png"></div>
-    
+
         <nav class="navegacao--conteiner">
             <div class="navegacao">
                 <div class="menu_logo--navegacao">
@@ -230,99 +228,46 @@
                 </ul>
             </div>
         </nav>
-
-        <a href="profile.html"><img class="imagem--usuario" id="ellipse"></a>
-        <div class="forma2"></div>
     </header>
-    
 
-    </main>
+    <main>
         <article class="conteiner">
-            <div>
-                <section class="secao1">
+            <section class="secao1">
+                
+                <div class="secao1__imagem--logo"><img src="../image/Logo.png"></div>
+                <p class="secao1__texto">Boas-Vindas!</p>
+                
+            </section>
 
-                    <p class="secao1__texto">
-                        Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.
-                    </p>
+            <section class="secao2">
+                
+                <p class="secao2__texto">
+                    Adotar pode mudar uma vida. 
+                    Que tal buscar seu novo melhor amigo hoje? Vem com a gente!
+                </p>
 
-                </section>
+            </section>
 
-                <section class="secao2">
-                    <form class="formulario" action="GET">
-                        <p class="formulario__texto">Perfil Pet</p>
+            <section class="secao3">
+                
+                <div class="botoes">
+                    
+                    <button class="botao" name="login">Já tenho conta</button>
+                    <button class="botao" name="register">Quero me cadastrar</button>
 
-                        <div class="campo">
-                            <label data-label class="campo__label" for="foto">Foto</label>
-
-                            <div class="grupo_foto">
-                                <img class="grupo_foto___img foto--quadrada" src="" name="foto" id="foto" alt="">
-                            </div>
-                        </div>
-
-                        <div data-campo class="campo">
-                            <label data-label class="campo__label" for="nome">Nome</label>
-                            <p data-input="nome" class="caixa_texto" id="nome"></p>
-                        </div>
-
-                        <div class="grupo--campo grupo--campo_idade">
-                            <span data-campo class="campo">
-                                <label data-label class="campo__label" for="idade">Idade</label>
-                                <span class="grupo--idade">
-                                    <p data-input="idade" class="caixa_texto" id="idade"></p>
-                                    <p data-input="medida" class="caixa_texto" id="medida"></p>
-                                </span>
-                            </span>
-    
-                            <span data-campo class="campo campo--porte">
-                                <label data-label class="campo__label" for="porte">Porte</label>
-                                <p data-input="porte" class="caixa_texto" id="porte"></p>
-                            </span>
-                        </div>
-
-                        <div data-campo class="campo">
-                            <label data-label class="campo__label" for="comportamento1">Comportamento</label>
-                            <div class="grupo--comportamento">
-                                <p data-input="comportamento1" class="caixa_texto comportamento" id="comportamento1"></p>
-                                <p data-input="comportamento2" class="caixa_texto comportamento" id="comportamento2"></p>
-                            </div>
-                        </div>
-
-                        <div data-campo class="campo">
-                            <label data-label class="campo__label" for="cep">CEP</label>
-                            <p data-input="cep" class="caixa_texto" id="cep"></p>
-                        </div>
-
-                        <div class="grupo--campo grupo--campo_regiao">
-                            <div data-campo class="campo">
-                                <label data-label class="campo__label" for="uf">UF</label>
-                                <p data-input="uf" class="caixa_texto" id="uf"></p>
-                            </div>
-
-                            <div data-campo data-cidade class="campo">
-                                <label data-label class="campo__label" for="cidade">Cidade</label>
-                                <p data-input="cidade" class="caixa_texto" id="cidade"></p>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <label class="campo__label" for="sobre">Sobre o pet</label>
-                            <p data-input="sobre" class="caixa_texto" id="sobre"></p>
-                        </div>
-                    </form>
-
-                    <span class="anunciante">
-                        <p>Anunciante: </p>
-                        <a class="anunciante__foto" href="advertiser_profile.html">
-                            <img class="foto_perfil_anunciante" id="ellipse--anunciante">
-                            <p id="nome_anunciante"></p>
-                        </a>
-                    </span>
-                </section>
-            </div>
+                </div>
+                
+            </section>
         </article>
+
+        <div class="forma2"><img src="../image/Forma 2.png"></div>
     </main>
 
     <div class="secao4">
+
+        <section>
+            <div class="ilustracao"><img src="../image/Ilustração 1.png"></div>
+        </section>
 
         <footer class="rodape">
             <p>2022 - Desenvolvido pelo @wesley-surt.</p>
@@ -330,26 +275,8 @@
 
     </div>
 
-    <dialog class="dialogo--alerta">
-        <h1 class="modal__title">Atenção</h1>
-        <p class="modal__paragraph">Você precisa preencher todas as informações corretamente para salvar.</p>
-        <button class="modal__button" id="modal_close">ok</button>
-    </dialog>
-
     <script src="../js/modules/Dialog.js"></script>
-    <script src="../js/helpers/AlertaHelper.js"></script>
-    <script src="../js/helpers/ValidacaoHelper.js"></script>
-    <script src="../js/helpers/ValidationForSelect.js"></script>
-    <script src="../js/modules/Mensagem.js"></script>
-    <script src="../js/views/ListaErros.js"></script>
-    <script src="../js/views/ListaMensagens.js"></script>
-    <script src="../js/views/MensagemView.js"></script>
-    <script src="../js/services/RedirecionaFactory.js"></script>
-    <script type="module" src="../js/components/imageUser.js"></script>
-    <script type="module" src="../js/controllers/profileMessageController.js"></script>
-    <script type="module" src="../js/controllers/animalProfileController.js"></script>
-    <script type="module" src="../js/entities/AnimalEntities.js"></script>
-    <script type="module" src="../js/helpers/routeGuard.js"></script>
+    <script type="module" src="../js/controllers/homeLogInController.js"></script>
     <script type="module" src="../js/components/menu.js"></script>
 </body>
 </html>

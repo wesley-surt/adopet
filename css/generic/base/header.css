@@ -42,39 +42,46 @@
 .item--nav {
     display: flex;
     align-items: center;
-    column-gap: .5rem;
-    padding: .5rem;
-    background-color: #36D6AD;
-    border-radius: .4rem;
+    column-gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: #36d6ad;
+    border-radius: 0.4rem;
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
-    border: 3px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 3px solid #ffffff;
+    color: #ffffff;
 }
 
 .item--nav a {
-    color: #FFFFFF;
-    text-decoration: none;
+    color: #ffffff;
 }
 
 .aba {
     position: absolute;
     display: none;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
-    border-radius: .3rem;
+    border-radius: 0.3rem;
 }
 
 .aba__item {
-    padding: .5rem;
-    min-height: 1.6rem;
-    min-width: 10rem;
     display: flex;
     align-items: center;
 }
 
 .aba__item:hover {
     background-color: #c4c4c4;
+}
+
+.ancora {
+    text-decoration: none;
+    outline: none;
+}
+
+.ancora--caixa {
+    padding: 0.5rem;
+    min-height: 1.6rem;
+    min-width: 10rem;
 }
 
 .item_hover--nav:hover .aba {
@@ -91,4 +98,3 @@
 .navegacao__lista--mobile {
     display: none;
 }
-

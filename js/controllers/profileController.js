@@ -4,10 +4,6 @@ import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 
-function modalCloseMenu() {
-    dialogMenu.close();
-}
-
 function handleUser(userStorage) {
     document
         .getElementById("foto")
@@ -60,12 +56,6 @@ AnimalEntities.get(`query?userId=${userId}`)
 
 const buttonEditar = document.getElementById("btn-editar");
 buttonEditar.onclick = () => (window.location = "edit_profile.html");
-
-const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
-document.getElementById("modal_close--menu").onclick = modalCloseMenu;
-
-const menuHambuguer = document.querySelector(".menu_hamburguer");
-menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
 const btnAdd = document.querySelector(".btn-adicionar");
 btnAdd.addEventListener("click", () => {

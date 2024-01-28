@@ -45,11 +45,6 @@
     cursor: pointer;
 }
 
-.ancora {
-    text-decoration: none;
-    outline: none;
-}
-
 .item_abre_lista_menu {
     display: flex;
     align-items: center;
