@@ -1,5 +1,5 @@
 # ADOPET
-`CURSO: Sistemas de Informação`
+`Projeto para portifólio`
 
 ![Logo](https://github.com/wesley-surt/adopet/assets/109616789/ff7ca545-4fc0-41a3-986a-d32f998849ee)
 

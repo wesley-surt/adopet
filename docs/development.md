@@ -1,7 +1,7 @@
 # Programação de Funcionalidades
 
 A aplicação Web encontra-se hospedada no GitHub Pages e pode ser acessada através do link abaixo:
-> - [NeuroKids] (https://icei-puc-minas-pmv-si.github.io/pmv-si-2023-2-pe1-t2-neurodiversidade/src/)
+> - [Adopet] (https://wesley-surt.github.io/adopet/)
 
 ## Requisitos Atendidos
 
@@ -36,7 +36,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | cep            | String            | Evidencia a região do usuário             | 00111222                                       |
 | city           | String            | Evidencia a cidade do usuário             | Belo Horizonte                                 |
 | state          | String            | Evidencia o estado do usuário             | MG                                             |
-| imAnNGO        | Boolean           | Confirma se a conta é de uma ONG ou não   | true                                           |
+| imAnNgo        | Boolean           | Confirma se a conta é de uma ONG ou não   | true                                           |
 | about          | String            | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com animais de petshop. Ocorre muito caso de donos abandonarem seus pets na loja e não temos como cuidar de tantos animaizinhos. |
 
 
@@ -59,26 +59,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | about          | String            | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
 
 
-## Interessados em parcerias
+## Interessado em parceria
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
+| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
 
-## Eventos
+
+## Evento
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
+| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | name           | String            | Nome do evento                            | Levana fundo para animais de rua               |
 | locale         | String            | Local do evento                           | Rua caringa 475, Betania - Contagem (MG)       |
 | date           | String            | Data do evento                            | 21/02/2024                                     |
 | photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
 
-## Campanhas
+
+## Campanha
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| NGOId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
+| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
 | photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |

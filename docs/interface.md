@@ -20,7 +20,7 @@ Esta tela inicial fornece informações iniciais importantes para o usuário se 
 
 ### Perfil do responsável pelo cadastro do animal
 Esta tela exibe uma ficha com todos os dados importantes de quem cadastrou o animal (encontrado, perdido ou adoção) (RF-003).
-![Desktop - Perfil Usuario Responsavel](https://github.com/wesley-surt/adopet/assets/109616789/fe6c3ef0-417f-4e15-a28f-ef5bb91d02ab)
+![Desktop - Perfil Usuario Responsavel (1)](https://github.com/wesley-surt/adopet/assets/109616789/563074dd-9961-4cfc-9964-3c53ce9168d1)
 
 ### Perfil de usuário/ONG
 Esta tela está reunindo todos os animais (encontrados, perdidos e adoções) registrados pelo usuário em um único local (RF-001).
@@ -29,7 +29,7 @@ Além disso, a tela também possui um botão chamado "Interessados em parceira" 
 
 ### Editar/excluir perfil de usuário
 Esta tela permite o usuário ter um maior controle de suas informações. Ele pode alterar os dados ou excluir sua conta.
-![Desktop - Editar Perfil](https://github.com/wesley-surt/adopet/assets/109616789/2aa2a7b2-430d-49f8-a425-4f054d4f7dfa)
+![Desktop - Editar Perfil (1)](https://github.com/wesley-surt/adopet/assets/109616789/a32d6a91-d652-4240-8587-c696e6ef9d20)
 
 ### Perfil de animal
 Esta tela exibe uma ficha com todos os dados importantes do animal. Clicando no mini-card do responsável pelo cadastro é redirecionado para a tela que exibe todos os dados importantes do usuário (RF-003).

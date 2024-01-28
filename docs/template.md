@@ -7,9 +7,6 @@ Nesta seção, apresentam-se detalhadamente as características gráficas da apl
 
 A seguir, observa-se o design geral da aplicação na página principal com os principais elementos que compõem a interface, incluindo o cabeçalho, a paleta de cores, o menu, os cards e as fontes utilizadas. Além disso, a capacidade de responsividade do site foi devidamente demonstrada, destacando a adaptação para diferentes tamanhos de tela.
 
-https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-2-pe1-t2-neurodiversidade/assets/89950149/8f568f75-0b1a-48f4-a0a4-36fbd3007bc2
-
-
 ## Cores
 
 A escolha das cores tem como base uma harmonia suave fisualmente. 
