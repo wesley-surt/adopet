@@ -11,10 +11,6 @@
 @import url("../responsive_page/style_animals.css");
 @import url("../generic/components/photo/style.css");
 
-.menu_hamburguer {
-    display: none;
-}
-
 .conteiner {
     display: flex;
     flex-direction: column;
