@@ -158,4 +158,3 @@ const selects = document.querySelectorAll("[data-select]");
 selects.forEach((s) => s.addEventListener("blur", handleValidationSelects));
 
 AnimalEntities.savePhoto();
-logout(document.querySelector(".menu_sair"));

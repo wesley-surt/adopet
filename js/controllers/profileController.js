@@ -65,4 +65,3 @@ btnAdd.addEventListener("click", () => {
 });
 
 fillInAllFields();
-logout(document.querySelector(".menu_sair"));

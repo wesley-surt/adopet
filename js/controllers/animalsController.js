@@ -62,5 +62,3 @@ showCards(state || "");
 state
     ? (document.querySelector("[data-campoFiltro]").value = state)
     : "Mostrar Todos";
-
-logout(document.querySelector(".menu_sair"));

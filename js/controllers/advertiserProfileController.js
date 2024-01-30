@@ -38,4 +38,3 @@ const menuHambuguer = document.querySelector(".menu_hamburguer");
 menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
 fillInAllFields();
-logout(document.querySelector(".menu_sair"));
