@@ -39,7 +39,8 @@
     max-width: 60rem;
 }
 
-.item--nav {
+.item--nav,
+.ancora--btn {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
@@ -97,4 +98,9 @@
 
 .navegacao__lista--mobile {
     display: none;
+}
+
+.material-symbols-outlined {
+    font-size: 17px;
+    font-weight: 600;
 }

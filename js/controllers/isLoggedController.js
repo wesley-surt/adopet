@@ -1,6 +1,10 @@
-const logouts = document.querySelectorAll(".menu_sair");
+import { StorageService } from "../services/StorageService.js";
 
-logouts.addEventListener("click", () => {
-    StorageService.clear();
-    window.location = "login.html";
+const logouts = document.querySelectorAll(".menu_sair");
+logouts.forEach((l) => {
+    l.addEventListener("click", (e) => {
+        e.preventDefault();
+        StorageService.clear();
+        window.location = "../../index.html";
+    });
 });
