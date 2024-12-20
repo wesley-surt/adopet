@@ -6,3 +6,11 @@
     height: 6rem;
     justify-content: center;
 }
+
+.secao4 {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}

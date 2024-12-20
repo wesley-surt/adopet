@@ -10,11 +10,94 @@
 @import url("../generic/components/form/style_1.css");
 @import url("../generic/components/field/style_3.css");
 @import url("../generic/components/errors/style.css");
-@import url("../page/style_register_login.css");
-@import url("../responsive_page/style_register.css");
-@import url("../responsive_page/style_register_login.css");
+@import url("../responsive_page/style_index.css");
+
+body {
+    line-height: 1.5rem;
+    color: #505050;
+    font-size:large;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
 
 .conteiner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 8rem;
     gap: 1.4rem;
+}
+
+.secao3 {
+    text-align: center;
+    gap: 7em;
+}
+
+.forma2 {
+    position: absolute;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bloco__titulo {
+    font-size:xx-large;
+}
+
+.bloco__paragrafo__principal{
+    padding: 0 1.5rem;
+}
+
+.bloco__subtitulo {
+    font-size: x-large;
+}
+
+.bloco__grupo--card {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+
+.card {
+    max-width: 27rem;
+}
+
+.bloco__grupo--texto-imagem {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.bloco__texto {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content:space-around;
+}
+
+.bloco__texto div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    text-align: start;
+    max-width: 35rem;
+}
+
+.bloco__grupo--texto-imagem li .bloco__paragrafo {
+    display: flex;
+    gap: 2rem;
+    max-width: 35rem;
+    text-align: start;
+}
+
+
+.homem__e__cao, .homem__e__cao__cortado, .mulher__e__gato, .mulher__e__gato__cortado {
+    max-width: 100%;
 }
