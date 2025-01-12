@@ -59,25 +59,17 @@ html, body {
     font-size: x-large;
 }
 
-.bloco__grupo--card {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-}
-
 .card {
-    max-width: 27rem;
+    max-width: 15.4rem;
 }
 
-.bloco__grupo--texto-imagem {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
+.bloco__card {
+    width: 100%;
+    max-width: 66rem;
 }
 
 .bloco__texto {
     display: flex;
-    flex-direction: column;
     row-gap: 2rem;
     justify-content:space-around;
 }
@@ -97,7 +89,10 @@ html, body {
     text-align: start;
 }
 
+.card__imagem {
+    width: min-content;
+}
 
-.homem__e__cao, .homem__e__cao__cortado, .mulher__e__gato, .mulher__e__gato__cortado {
-    max-width: 100%;
+.card__titulo {
+    font-weight: bold;
 }
