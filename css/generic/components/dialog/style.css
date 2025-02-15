@@ -3,7 +3,7 @@
 }
 
 .dialogo--alerta {
-    border: none;
+    border-color: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 0 1em rgb(0 0 0 /0.3);
     background-color: #3772ff;

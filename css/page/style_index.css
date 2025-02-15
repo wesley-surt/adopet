@@ -13,9 +13,7 @@
 @import url("../responsive_page/style_index.css");
 
 body {
-    line-height: 1.5rem;
     color: #505050;
-    font-size:large;
 }
 
 html, body {

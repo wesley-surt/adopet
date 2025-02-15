@@ -16,7 +16,6 @@
 @import url("../generic/components/dialog/style.css");
 
 .conteiner {
-    margin-bottom: 5rem;
     gap: 2.5rem;
 }
 
@@ -24,3 +23,6 @@
     margin-bottom: 0.5rem;
 }
 
+.navegacao--conteiner {
+    z-index: 1;
+}

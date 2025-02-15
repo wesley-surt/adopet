@@ -13,12 +13,11 @@ export class HttpService {
     }
 
     static post(path, body) {
-        const url = "https://adopet-api-eight.vercel.app";
+        const url = "http://localhost:3000";
 
         return this.request(`${url}/${path}`, {
             method: "POST",
             headers: {
-                "x-access-token": `${StorageService.get("token")}`,
                 "Content-type": "application/json",
             },
             body: JSON.stringify(body),
@@ -26,12 +25,12 @@ export class HttpService {
     }
 
     static put(path, body) {
-        const url = "https://adopet-api-eight.vercel.app";
+        const url = "http://localhost:3000";
 
         return this.request(`${url}/${path}`, {
             method: "PUT",
             headers: {
-                "x-access-token": `${StorageService.get("token")}`,
+                "authorization": `Token ${StorageService.get("token")}`,
                 "Content-type": "application/json",
             },
             body: JSON.stringify(body),
@@ -39,22 +38,22 @@ export class HttpService {
     }
 
     static get(path) {
-        const url = "https://adopet-api-eight.vercel.app";
+        const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
             method: "GET",
             headers: {
-                "x-access-token": `${StorageService.get("token")}`,
+                "authorization": `Token ${StorageService.get("token")}`,
                 "Content-type": "application/json",
             },
         });
     }
 
     static delete(path) {
-        const url = "https://adopet-api-eight.vercel.app";
+        const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
             method: "DELETE",
             headers: {
-                "x-access-token": `${StorageService.get("token")}`,
+                "authorization": `Token ${StorageService.get("token")}`,
                 "Content-type": "application/json",
             },
         });

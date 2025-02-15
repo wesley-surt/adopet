@@ -1,10 +1,12 @@
-import { logout } from "../components/logout.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 
 function handleUser(userStorage) {
+    console.log(StorageService.get("userId"))
+    console.log(StorageService.get("token"))
+    console.log(StorageService.get("user"))
     document
         .getElementById("foto")
         .setAttribute(
@@ -25,9 +27,13 @@ function fillInAllFields() {
 
 const list = document.getElementById("catalogo");
 const view = new AnimalView(list);
+
 function handlesRegisteredAnimals(animals) {
-    view.loadTemplate(animals);
-    addEventsToCards(document.querySelectorAll(".card"), "animal.html");
+
+    if (animals.length > 0) {
+        view.loadTemplate(animals);
+        addEventsToCards(document.querySelectorAll(".card"), "animal.html");
+    }
 
     const fragment = new DocumentFragment();
     const h3 = document.createElement("span");
@@ -42,7 +48,7 @@ function handlesRegisteredAnimals(animals) {
     togglesTitleElement.insertBefore(fragment, firstChild);
 }
 
-const userId = StorageService.get("user")._id;
+const userId = StorageService.get("userId");
 AnimalEntities.get(`query?userId=${userId}`)
     .then((animals) => {
         handlesRegisteredAnimals(animals);
