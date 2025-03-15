@@ -1,4 +1,3 @@
-import { logout } from "../components/logout.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 import { StorageService } from "../services/StorageService.js";

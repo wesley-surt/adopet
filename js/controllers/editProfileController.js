@@ -1,4 +1,3 @@
-import { logout } from "../components/logout.js";
 import { UserEntities } from "../entities/UserEntities.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
 import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
@@ -73,7 +72,7 @@ function handleUser(userStorage) {
         .getElementById("foto")
         .setAttribute(
             "src",
-            `${userStorage.photo || "../../../adopet/image/Perfil.png"}`
+            `${userStorage.photo || "../../image/Perfil.png"}`
         );
     document.getElementById("nome").value = userStorage.name || "";
     document.getElementById("telefone").value = userStorage.telephone || "";

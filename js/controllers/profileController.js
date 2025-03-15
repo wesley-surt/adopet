@@ -4,9 +4,6 @@ import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 
 function handleUser(userStorage) {
-    console.log(StorageService.get("userId"))
-    console.log(StorageService.get("token"))
-    console.log(StorageService.get("user"))
     document
         .getElementById("foto")
         .setAttribute(
@@ -65,9 +62,7 @@ buttonEditar.onclick = () => (window.location = "edit_profile.html");
 
 const btnAdd = document.querySelector(".btn-adicionar");
 btnAdd.addEventListener("click", () => {
-    StorageService.set("photoAnimal", "");
-    StorageService.set("animalId", "");
-    window.location = "animal.html";
+    window.location = "../../html/register_animal_adoption.html";
 });
 
 fillInAllFields();

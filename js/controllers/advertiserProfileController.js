@@ -1,4 +1,3 @@
-import { logout } from "../components/logout.js";
 import { UserEntities } from "../entities/UserEntities.js";
 import { StorageService } from "../services/StorageService.js";
 
