@@ -2,24 +2,26 @@ import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
+import { ImageService } from "../services/external_apis/imageService.js";
 
 function handleUser(userStorage) {
-    document
-        .getElementById("foto")
-        .setAttribute(
-            "src",
-            `${userStorage.photo || "../../../adopet/image/Perfil.png"}`
-        );
+
+    userStorage.photo
+    ? ImageService.handleDisplay(
+        userStorage.photo.replace('uploads\\', ''),
+        document.getElementById("foto")
+    )
+    : document.getElementById("foto").setAttribute(
+        "src",
+        "../../image/Perfil.png"
+    );
+    
     document.getElementById("nome").innerHTML = userStorage.name || "";
     document.getElementById("telefone").innerHTML = userStorage.telephone || "";
     document.getElementById("cidade").innerHTML = userStorage.city || "";
     document.getElementById("uf").innerHTML = userStorage.state || "";
     document.getElementById("cep").innerHTML = userStorage.cep || "";
     document.getElementById("sobre").innerHTML = userStorage.about || "";
-}
-
-function fillInAllFields() {
-    handleUser(StorageService.get("user"));
 }
 
 const list = document.getElementById("catalogo");
@@ -65,4 +67,4 @@ btnAdd.addEventListener("click", () => {
     window.location = "../../html/register_animal_adoption.html";
 });
 
-fillInAllFields();
+handleUser(StorageService.get("user"));

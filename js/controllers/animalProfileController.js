@@ -27,13 +27,15 @@ function handleAnimal(animalStorage) {
 }
 
 function handleUser(user) {
-    document
-        .getElementById("ellipse--anunciante")
-        .setAttribute(
+    const anunciante = document.getElementById("ellipse--anunciante")
+    if (anunciante) {
+        anunciante.setAttribute(
             "src",
             `${user.photo || "../../../adopet/image/Perfil.png"}`
         );
-    document.getElementById("nome_anunciante").append(`${user.name}`);
+
+        document.getElementById("nome_anunciante").append(`${user.name}`);
+    }
 }
 
 function searchUser(userId) {

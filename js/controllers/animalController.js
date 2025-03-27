@@ -65,38 +65,6 @@ function comeBack() {
     window.location = "profile.html";
 }
 
-function createButtonDelete() {
-    const button = document.createElement("button");
-    const fragment = new DocumentFragment();
-    const p = document.createElement("p");
-
-    button.classList.add("texto_deletar");
-    button.innerHTML = "Excluir";
-
-    p.classList.add("deletar");
-    p.id = "btn-deletar";
-    p.name = "botao";
-    p.append(button);
-    p.onclick = () => {
-        const animalId = StorageService.get("animalId");
-        AnimalEntities.delete(animalId)
-            .then(() => {
-                StorageService.set("photoAnimal");
-                window.location = "profile.html";
-            })
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err);
-            });
-
-        StorageService.set("animalId", "");
-    };
-    fragment.append(p);
-    document.querySelector(".secao2").append(fragment);
-}
-
 function searchCep() {
     CepAPIService.request(cep.value)
         .then((data) => {
@@ -133,7 +101,7 @@ function handleValidationSelects() {
     else ValidationForSelect.addAlert(parent);
 }
 
-fillInAllFields();
+// fillInAllFields();
 
 const buttonSave = document.getElementById("btn-salvar");
 buttonSave.onclick = save;

@@ -1,7 +1,36 @@
 import { UserEntities } from "../entities/UserEntities.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
-import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
 import { StorageService } from "../services/StorageService.js";
+import { ImageService } from "../services/external_apis/imageService.js";
+
+const inputFileImg = document.getElementById("file");
+const photo = document.getElementById("foto");
+
+// Quando um novo arquivo for selecionado
+inputFileImg.addEventListener("change", function(e) {
+    const file = e.target.files[0]; // Pega o primeiro arquivo selecionado
+
+    if (file) {
+        const reader = new FileReader(); // Cria um FileReader para ler o arquivo
+
+        // Quando o FileReader terminar de ler o arquivo
+        reader.onload = function(event) {
+            photo.src = event.target.result; // Atualiza a imagem exibida
+        };
+
+        reader.readAsDataURL(file); // Lê o arquivo como URL (base64)
+    } else {
+        StorageService.get('user').photo
+        ? ImageService.handleDisplay(
+            StorageService.get('user').photo.replace('uploads\\', ''),
+            document.getElementById("foto")
+        )
+        : document.getElementById("foto").setAttribute(
+            "src",
+            "../../image/Perfil.png"
+        ); // Volta para a imagem padrão se nenhum arquivo for selecionado
+    }
+});
 
 function modalCloseMenu() {
     dialogMenu.close();
@@ -11,18 +40,30 @@ function modalCloseAlert() {
     dialogAlert.close();
 }
 
+function updateUser(body) {
+        
+    UserEntities.update(body)
+        .then((user) => {
+            StorageService.set("user", user);
+            window.location = "profile.html";
+        })
+        .catch((err) => {
+            alert(
+                "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
+            );
+            console.error(err.message);
+        });
+}
+
 function save(e) {
     e.preventDefault();
     const inputs = document.querySelectorAll("[data-input]");
 
     if (ValidacaoHelper.validando(inputs)) {
-        const photo = !!StorageService.get("user").photo
-            ? StorageService.get("user").photo
-            : StorageService.get("photoUser") || "";
 
         const body = {
             user: {
-                photo: photo,
+                photo: '',
                 name: document.getElementById("nome").value || "",
                 city: document.getElementById("cidade").value || "",
                 state: document.getElementById("uf").value || "",
@@ -32,19 +73,18 @@ function save(e) {
             },
             id: StorageService.get("userId"),
         };
-
-        UserEntities.update(body)
-            .then((user) => {
-                StorageService.set("user", user);
-                StorageService.set("photoUser", "");
-                window.location = "profile.html";
+        
+        const file = document.getElementById('file');
+        
+        file
+        ? ImageService.save(file)
+            .then(res => res.json())
+            .then(res => {
+                body.user.photo = res.src;
+                updateUser(body);
             })
-            .catch((err) => {
-                alert(
-                    "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                );
-                console.error(err.message);
-            });
+        : updateUser(body);
+
     } else {
         dialogAlert.open();
     }
@@ -68,31 +108,23 @@ function exclusion() {
 }
 
 function handleUser(userStorage) {
-    document
-        .getElementById("foto")
-        .setAttribute(
-            "src",
-            `${userStorage.photo || "../../image/Perfil.png"}`
-        );
+
+    userStorage.photo
+    ? ImageService.handleDisplay(
+        userStorage.photo.replace('uploads\\', ''),
+        document.getElementById("foto")
+    )
+    : document.getElementById("foto").setAttribute(
+        "src",
+        "../../image/Perfil.png"
+    );
+
     document.getElementById("nome").value = userStorage.name || "";
     document.getElementById("telefone").value = userStorage.telephone || "";
     document.getElementById("cidade").value = userStorage.city || "";
     document.getElementById("uf").value = userStorage.state || "";
     document.getElementById("cep").value = userStorage.cep || "";
     document.getElementById("sobre").value = userStorage.about || "";
-}
-
-function savePhoto() {
-    const data = new FormData();
-    data.append("image", file.files[0]);
-
-    ImgurAPIService.save(data)
-        .then((res) => {
-            const photoRef = document.querySelector("[data-fotoPerfil]");
-            photoRef.setAttribute("src", `${res.data.link}`);
-            StorageService.set("photoUser", res.data.link);
-        })
-        .catch(console.error);
 }
 
 function searchCep() {
@@ -104,11 +136,7 @@ function searchCep() {
         .catch(console.log);
 }
 
-function fillnAllFields() {
-    handleUser(StorageService.get("user"));
-}
-
-fillnAllFields();
+handleUser(StorageService.get("user"));
 
 const saveButton = document.getElementById("btn-salvar");
 saveButton.onclick = save;
@@ -118,9 +146,6 @@ backButton.onclick = comeBack;
 
 const buttonDelete = document.getElementById("btn-deletar");
 buttonDelete.onclick = exclusion;
-
-const file = document.getElementById("file");
-file.onchange = savePhoto;
 
 const cep = document.getElementById("cep");
 cep.onblur = searchCep;

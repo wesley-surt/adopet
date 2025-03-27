@@ -1,5 +1,4 @@
 import { HttpService } from "../services/HttpService.js";
-import { ImgurAPIService } from "../services/external_apis/ImgurAPIService.js";
 import { StorageService } from "../services/StorageService.js";
 
 export class AnimalEntities {
