@@ -4,31 +4,29 @@ import { StorageService } from "../services/StorageService.js";
 import { ImageService } from "../services/external_apis/imageService.js";
 
 const inputFileImg = document.getElementById("file");
-const photo = document.getElementById("foto");
+const img = document.getElementById("foto");
 
-// Quando um novo arquivo for selecionado
 inputFileImg.addEventListener("change", function(e) {
-    const file = e.target.files[0]; // Pega o primeiro arquivo selecionado
+    const file = e.target.files[0];
 
     if (file) {
-        const reader = new FileReader(); // Cria um FileReader para ler o arquivo
+        const reader = new FileReader();
 
-        // Quando o FileReader terminar de ler o arquivo
         reader.onload = function(event) {
-            photo.src = event.target.result; // Atualiza a imagem exibida
+            img.src = event.target.result;
         };
 
-        reader.readAsDataURL(file); // Lê o arquivo como URL (base64)
+        reader.readAsDataURL(file);
     } else {
         StorageService.get('user').photo
         ? ImageService.handleDisplay(
-            StorageService.get('user').photo.replace('uploads\\', ''),
+            StorageService.get('user').photo,
             document.getElementById("foto")
         )
         : document.getElementById("foto").setAttribute(
             "src",
             "../../image/Perfil.png"
-        ); // Volta para a imagem padrão se nenhum arquivo for selecionado
+        );
     }
 });
 
@@ -45,7 +43,8 @@ function updateUser(body) {
     UserEntities.update(body)
         .then((user) => {
             StorageService.set("user", user);
-            window.location = "profile.html";
+            console.log(StorageService.get("user").photo)
+            //window.location = "profile.html";
         })
         .catch((err) => {
             alert(
@@ -73,17 +72,26 @@ function save(e) {
             },
             id: StorageService.get("userId"),
         };
-        
+
         const file = document.getElementById('file');
-        
-        file
-        ? ImageService.save(file)
-            .then(res => res.json())
-            .then(res => {
-                body.user.photo = res.src;
-                updateUser(body);
-            })
-        : updateUser(body);
+
+        if(file) {
+            ImageService.save(file)
+                .then(res => res.json())
+                .then(res => {
+
+                    console.log(res._id)
+                    console.log(StorageService.get("user").photo)
+
+                    StorageService.get("user").photo
+                    ? ImageService.delete(StorageService.get("user").photo).then(res => console.log(res))
+                    : false
+
+                    body.user.photo = res._id;
+                    updateUser(body);
+                });
+        }
+        else updateUser(body);
 
     } else {
         dialogAlert.open();
@@ -91,14 +99,14 @@ function save(e) {
 }
 
 function comeBack() {
-    window.location = "profile.html";
+    //window.location = "profile.html";
 }
 
 function exclusion() {
     UserEntities.delete(StorageService.get("userId"))
         .then(() => {
             StorageService.clear();
-            window.location = "login.html";
+            //window.location = "login.html";
         })
         .catch((err) => {
             alert(

@@ -11,8 +11,8 @@ export class ImageService {
         })
     }
 
-    static handleDisplay(nameFile, tagFile) {
-        return fetch(`http://localhost:4000/imagem/${nameFile}`, {
+    static handleDisplay(fileId, tagFile) {
+        return fetch(`http://localhost:4000/imagem/${fileId}`, {
             method: 'GET',
         })
         .then(response => {
@@ -29,4 +29,10 @@ export class ImageService {
             console.error('Erro:', error);
         });
     }
-}    
+
+    static delete(fileId) {
+        return fetch(`http://localhost:4000/pictures/${fileId}`, {
+            method: 'DELETE',
+        })
+    }
+}
