@@ -1,6 +1,35 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { StorageService } from "../services/StorageService.js";
 import { CepAPIService } from "../services/external_apis/CepAPIService.js";
+import { ImageService } from "../services/external_apis/imageService.js";
+
+const inputFileImg = document.getElementById("file");
+const img = document.getElementById("foto");
+img.setAttribute("src", "../../image/Perfil.png");
+
+inputFileImg.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+            img.src = event.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        StorageService.get('user').photo
+        ? ImageService.handleDisplay(
+            StorageService.get('user').photo,
+            document.getElementById("foto")
+        )
+        : document.getElementById("foto").setAttribute(
+            "src",
+            "../../image/Perfil.png"
+        );
+    }
+});
 
 function modalCloseAlerta() {
     dialogAlert.close();
@@ -14,46 +43,29 @@ function save(e) {
     e.preventDefault();
 
     const inputsAreValid = ValidacaoHelper.validando(
-        document.querySelectorAll("[data-input]")
+        document.querySelectorAll("[data-input]") || ''
     );
     const selectsAreValid = ValidationForSelect.valid(
-        document.querySelectorAll("[data-select]")
+        document.querySelectorAll("[data-select]") || ''
     );
     const file =
-        document.getElementById("file").value ||
-        localStorage.getItem("photoAnimal")
-            ? StorageService.get("photoAnimal")
-            : "";
+        document.getElementById("file") || '';
 
     if (selectsAreValid && inputsAreValid && file) {
         const body = AnimalEntities.create();
-        StorageService.set("photoAnimal", "");
 
-        if (!!StorageService.get("animalId")) {
-            body.id = StorageService.get("animalId");
-            AnimalEntities.uptade(body)
-                .then(() => {
-                    window.location = "profile.html";
-                })
-                .catch((err) => {
-                    alert(
-                        "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                    );
-                    console.error(err.message);
-                });
+        ImageService.save(file)
+            .then(res => res.json())
+            .then(res => {
+                body.animal.photo = res._id;
+                body.userId = StorageService.get('user')._id
 
-            StorageService.set("animalId", "");
-        } else {
-            body.userId = StorageService.get("userId");
-            AnimalEntities.register(body)
-                .then(() => (window.location = "profile.html"))
-                .catch((err) => {
-                    alert(
-                        "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
-                    );
-                    console.error(err.message);
-                });
-        }
+                AnimalEntities.register(body)
+                    .then(() => window.location = "profile.html")
+                    .catch(err => console.log(err));
+            })
+            .catch(err => console.log(err));
+
     } else {
         dialogAlert.open();
     }
@@ -101,8 +113,6 @@ function handleValidationSelects() {
     else ValidationForSelect.addAlert(parent);
 }
 
-// fillInAllFields();
-
 const buttonSave = document.getElementById("btn-salvar");
 buttonSave.onclick = save;
 
@@ -123,5 +133,3 @@ menuHambuguer.addEventListener("click", () => dialogMenu.open());
 
 const selects = document.querySelectorAll("[data-select]");
 selects.forEach((s) => s.addEventListener("blur", handleValidationSelects));
-
-AnimalEntities.savePhoto();

@@ -21,7 +21,7 @@ export class AnimalEntities {
     static create() {
         return {
             animal: {
-                photo: StorageService.get("photoAnimal") || "",
+                photo: "",
                 name: document.getElementById("nome").value || "",
                 city: document.getElementById("cidade").value || "",
                 state: document.getElementById("uf").value || "",
@@ -34,6 +34,7 @@ export class AnimalEntities {
                     document.getElementById("comportamento1").value || "",
                 characteristics2:
                     document.getElementById("comportamento2").value || "",
+                userId: StorageService.get('user')._id
             },
         };
     }
@@ -54,23 +55,5 @@ export class AnimalEntities {
             animal.characteristics1;
         document.getElementById("comportamento2").value =
             animal.characteristics2;
-    }
-
-    static savePhoto() {
-        const file = document.getElementById("file");
-        file.onchange = () => {
-            const data = new FormData();
-            data.append("image", file.files[0]);
-
-            ImgurAPIService.save(data)
-                .then((res) => {
-                    document
-                        .getElementById("foto")
-                        .setAttribute("src", `${res.data.link}`);
-
-                    StorageService.set("photoAnimal", res.data.link);
-                })
-                .catch(console.error);
-        };
     }
 }

@@ -4,11 +4,11 @@ import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 import { ImageService } from "../services/external_apis/imageService.js";
 
-function handleUser(userStorage) {
+function handleUser(user) {
 
-    userStorage.photo
+    user.photo
     ? ImageService.handleDisplay(
-        userStorage.photo.replace('uploads\\', ''),
+        user.photo.replace('uploads\\', ''),
         document.getElementById("foto")
     )
     : document.getElementById("foto").setAttribute(
@@ -16,12 +16,12 @@ function handleUser(userStorage) {
         "../../image/Perfil.png"
     );
     
-    document.getElementById("nome").innerHTML = userStorage.name || "";
-    document.getElementById("telefone").innerHTML = userStorage.telephone || "";
-    document.getElementById("cidade").innerHTML = userStorage.city || "";
-    document.getElementById("uf").innerHTML = userStorage.state || "";
-    document.getElementById("cep").innerHTML = userStorage.cep || "";
-    document.getElementById("sobre").innerHTML = userStorage.about || "";
+    document.getElementById("nome").innerHTML = user.name || "";
+    document.getElementById("telefone").innerHTML = user.telephone || "";
+    document.getElementById("cidade").innerHTML = user.city || "";
+    document.getElementById("uf").innerHTML = user.state || "";
+    document.getElementById("cep").innerHTML = user.cep || "";
+    document.getElementById("sobre").innerHTML = user.about || "";
 }
 
 const list = document.getElementById("catalogo");
@@ -30,8 +30,14 @@ const view = new AnimalView(list);
 function handlesRegisteredAnimals(animals) {
 
     if (animals.length > 0) {
-        view.loadTemplate(animals);
+        
+        view.loadTemplate(animals);     
         addEventsToCards(document.querySelectorAll(".card"), "animal.html");
+
+        animals.forEach(a => {         
+            let img = document.getElementById(a.photo);
+            ImageService.handleDisplay(a.photo, img);
+        });
     }
 
     const fragment = new DocumentFragment();

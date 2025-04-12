@@ -1,5 +1,6 @@
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
+import { ImageService } from "../services/external_apis/imageService.js";
 import { StorageService } from "../services/StorageService.js";
 import { AnimalView } from "../views/AnimalView.js";
 
@@ -14,6 +15,21 @@ function callError(err) {
     );
 }
 
+function addImages (animalsArray) {
+    animalsArray.forEach(a => {       
+
+        if(
+            a.photo
+            && a.photo != ''
+            && a.photo != undefined
+            && a.photo != null
+        ) {
+            let img = document.getElementById(a.photo);
+            ImageService.handleDisplay(a.photo, img);
+        };
+    });
+}
+
 function showCards(state) {
     const listRef = document.getElementById("catalogo");
     const view = new AnimalView(listRef);
@@ -21,21 +37,31 @@ function showCards(state) {
     if (state) {
         AnimalEntities.get(`search?state=${state}`)
             .then((animals) => {
-                view.loadTemplate(animals);
-                addEventsToCards(
-                    document.querySelectorAll(".card"),
-                    "animal_profile.html"
-                );
+                if(animals.length > 0) {
+
+                    view.loadTemplate(animals);
+                    addEventsToCards(
+
+                        document.querySelectorAll(".card"),
+                        "animal_profile.html"
+                    );
+
+                    addImages(animals);
+
+                } else alert('Nâo há animais cadastrados nesse Estado. Escolha outro estado de sua preferência!')
             })
             .catch((err) => callError(err));
     } else {
         AnimalEntities.get("")
             .then((animals) => {
                 view.loadTemplate(animals);
+
                 addEventsToCards(
                     document.querySelectorAll(".card"),
                     "animal_profile.html"
                 );
+
+                addImages(animals);
             })
             .catch((err) => callError(err));
     }

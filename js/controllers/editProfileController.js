@@ -44,7 +44,7 @@ function updateUser(body) {
         .then((user) => {
             StorageService.set("user", user);
             console.log(StorageService.get("user").photo)
-            //window.location = "profile.html";
+            window.location = "profile.html";
         })
         .catch((err) => {
             alert(
@@ -99,14 +99,14 @@ function save(e) {
 }
 
 function comeBack() {
-    //window.location = "profile.html";
+    window.location = "profile.html";
 }
 
 function exclusion() {
     UserEntities.delete(StorageService.get("userId"))
         .then(() => {
             StorageService.clear();
-            //window.location = "login.html";
+            window.location = "login.html";
         })
         .catch((err) => {
             alert(

@@ -1,65 +1,65 @@
 import { StorageService } from "../services/StorageService.js";
 import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { UserEntities } from "../entities/UserEntities.js";
+import { ImageService } from "../services/external_apis/imageService.js";
 
 function modalCloseMenu() {
     dialogMenu.close();
 }
 
-function handleAnimal(animalStorage) {
+function handleAnimal(animal) {
+
+    ImageService.handleDisplay(
+        animal.photo,
+        document.getElementById("foto")
+    )
+
     document
         .getElementById("foto")
-        .setAttribute("src", `${animalStorage.photo}`);
-    document.getElementById("nome").append(animalStorage.name || "");
-    document.getElementById("idade").append(animalStorage.age || "");
-    document.getElementById("cep").append(animalStorage.cep || "");
-    document.getElementById("cidade").append(animalStorage.city || "");
-    document.getElementById("uf").append(animalStorage.state || "");
-    document.getElementById("sobre").append(animalStorage.about || "");
-    document.getElementById("medida").append(animalStorage.measure || "");
-    document.getElementById("porte").append(animalStorage.size || "");
+        .setAttribute("src", `${animal.photo}`);
+    document.getElementById("nome").append(animal.name || "");
+    document.getElementById("idade").append(animal.age || "");
+    document.getElementById("cep").append(animal.cep || "");
+    document.getElementById("cidade").append(animal.city || "");
+    document.getElementById("uf").append(animal.state || "");
+    document.getElementById("sobre").append(animal.about || "");
+    document.getElementById("medida").append(animal.measure || "");
+    document.getElementById("porte").append(animal.size || "");
     document
         .getElementById("comportamento1")
-        .append(animalStorage.characteristics1 || "");
+        .append(animal.characteristics1 || "");
     document
         .getElementById("comportamento2")
-        .append(animalStorage.characteristics2 || "");
+        .append(animal.characteristics2 || "");
 }
 
 function handleUser(user) {
-    const anunciante = document.getElementById("ellipse--anunciante")
-    if (anunciante) {
-        anunciante.setAttribute(
-            "src",
-            `${user.photo || "../../../adopet/image/Perfil.png"}`
-        );
+    const img = document.getElementById("ellipse--anunciante")
 
-        document.getElementById("nome_anunciante").append(`${user.name}`);
-    }
+    user.photo
+        ?
+            ImageService.handleDisplay(user.photo, img)
+        :
+            img.setAttribute('src', '../../image/Perfil.png')
+
+    document.getElementById("nome_anunciante").append(`${user.name}`);
 }
 
 function searchUser(userId) {
-    UserEntities.get(`${userId}`).then((user) => {
-        handleUser(user);
-        StorageService.set("advertiserId", user._id);
-    });
+    UserEntities.get(`${userId}`)
+        .then((user) => {
+            handleUser(user);
+        });
 }
 
-function animalQuest(animalId) {
-    AnimalEntities.get(`${animalId}`).then((animal) => {
+AnimalEntities.get(`${StorageService.get("animalId")}`)
+    .then((animal) => {
         handleAnimal(animal);
         searchUser(animal.userId);
     });
-}
-
-function fillInAllFields() {
-    animalQuest(StorageService.get("animalId"));
-}
 
 const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
 document.getElementById("modal_close--menu").onclick = modalCloseMenu;
 
 const menuHambuguer = document.querySelector(".menu_hamburguer");
 menuHambuguer.addEventListener("click", () => dialogMenu.open());
-
-fillInAllFields();

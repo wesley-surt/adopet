@@ -1,6 +1,7 @@
+import { ImageService } from "../services/external_apis/imageService.js";
 import { View } from "./View.js";
 
-export class AnimalView extends View {
+export class AnimalView extends View {    
     template(list) {
         return `
             ${list
@@ -10,7 +11,7 @@ export class AnimalView extends View {
                         <div class="conteiner--card">
 
                             <div class="imagem_do_pet">
-                                <img class="foto--quadrada" src="${animal.photo}">
+                                <img class="foto--quadrada" id="${animal.photo}" src="">
                             </div>
                             
                             <div class="conteudo_do_pet">
