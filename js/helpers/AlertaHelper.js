@@ -2,7 +2,7 @@ class AlertaHelper{
 
     constructor(seletorPai){
         this._seletorPai = seletorPai;
-        this._mensagemView = new MensagemView(this._seletorPai);
+        this._messageView = new MessageView(this._seletorPai);
         this._label = seletorPai.querySelector('[data-label]');
         this._input = seletorPai.querySelector('[data-input]');
         this._alerta = seletorPai.querySelector('[data-alerta]');
@@ -13,7 +13,7 @@ class AlertaHelper{
         this._input.classList.add('alerta_input');
         this._alerta.classList.add('exibir_alerta');
 
-        this._mensagemView.atualizaMensagem(this._alerta, this._input);
+        this._messageView.updatesMessage(this._alerta, this._input);
     }
 
     removeAlerta(){
@@ -21,6 +21,6 @@ class AlertaHelper{
         this._input.classList.remove('alerta_input');
         this._alerta.classList.remove('exibir_alerta');
 
-        this._mensagemView.atualizaMensagem(this._alerta, this._input);
+        this._messageView.updatesMessage(this._alerta, this._input);
     }
 }

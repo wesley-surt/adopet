@@ -26,9 +26,7 @@ function searchUser(userId) {
     });
 }
 
-function fillInAllFields() {
-    searchUser(StorageService.get("advertiserId"));
-}
+searchUser(StorageService.get("advertiserId"));
 
 const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
 document.getElementById("modal_close--menu").onclick = modalCloseMenu;

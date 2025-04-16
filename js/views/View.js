@@ -1,6 +1,6 @@
 export class View {
-    constructor(elemente) {
-        this._elemente = elemente;
+    constructor(element) {
+        this._element = element;
     }
 
     template(list) {
@@ -8,6 +8,6 @@ export class View {
     }
 
     loadTemplate(list) {
-        this._elemente.innerHTML = this.template(list);
+        this._element.innerHTML = this.template(list);
     }
 }

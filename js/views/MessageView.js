@@ -1,10 +1,10 @@
-class MensagemView{
+class MessageView{
 
     constructor(){
         this._mensagem = new Mensagem();
     }
 
-    atualizaMensagem(alerta, input){
+    updatesMessage(alerta, input){
         var tipoInput = input.dataset.input;
         var lista = ListaErros.lista();
 
