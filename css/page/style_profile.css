@@ -10,17 +10,11 @@
 @import url("../generic/components/form/style_2.css");
 @import url("../generic/components/field/style_4.css");
 @import url("../generic/components/card-animal/style.css");
+@import url("../generic/components/formulario-texto/style.css");
 @import url("../responsive_generic/responsive_components/card_animal/style.css");
 @import url("../page/style_profile_message.css");
 @import url("../responsive_page/style_profile_message.css");
 @import url("../generic/components/photo/style.css");
-
-.formulario__texto {
-    color: #737380;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin: 0 auto;
-}
 
 .grupo_foto {
     margin: 0 auto;

@@ -103,7 +103,9 @@ function comeBack() {
 }
 
 function exclusion() {
-    UserEntities.delete(StorageService.get("userId"))
+    const user = StorageService.get("user");
+
+    UserEntities.delete(user._id)
         .then(() => {
             StorageService.clear();
             window.location = "login.html";
@@ -113,6 +115,8 @@ function exclusion() {
                 "Ocorreu algum erro no servidor. Tente novamente mais tarde."
             );
         });
+    
+    ImageService.delete(user.photo);
 }
 
 function handleUser(userStorage) {
