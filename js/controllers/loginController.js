@@ -1,11 +1,8 @@
 import { UserEntities } from "../entities/UserEntities.js";
 import { StorageService } from "../services/StorageService.js";
 
-function modalClose() {
-    dialog.close();
-}
-
 var inputs = document.querySelectorAll("[data-input]");
+
 inputs.forEach((input) => {
     input.addEventListener("blur", () => {
         let alertaHelper = new AlertaHelper(input.parentNode);
@@ -16,7 +13,9 @@ inputs.forEach((input) => {
 });
 
 const button = document.getElementById("botao");
+
 button.onclick = (e) => {
+
     e.preventDefault();
     const inputs = document.querySelectorAll("[data-input]");
 
@@ -29,9 +28,9 @@ button.onclick = (e) => {
 
         UserEntities.login(body)
             .then((data) => {
+
                 if (data.token && data.userId) {
-                    console.log(data.token)
-                    console.log(data.userId)
+
                     StorageService.set("token", data.token);
                     StorageService.set("userId", data.userId);
 
@@ -39,18 +38,22 @@ button.onclick = (e) => {
                         StorageService.set("user", user);
                         window.location = "adopt_animals.html";
                     });
+
                 } else alert("Email ou senha inválido.");
             })
             .catch((err) => {
+
                 alert(
                     "Ocorreu algum erro no servidor. Tente novamente mais tarde ou entre em contato com nossa equipe técnica."
                 );
+
                 console.error(err.message);
             });
+            
     } else {
         dialog.open();
     }
 };
 
 const dialog = new Dialog(document.querySelector("dialog"));
-document.getElementById("modal_close").onclick = modalClose;
+document.getElementById("modal_close").onclick = dialog.close();

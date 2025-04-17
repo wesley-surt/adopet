@@ -18,7 +18,9 @@ inputFileImg.addEventListener("change", function(e) {
         };
 
         reader.readAsDataURL(file);
+
     } else {
+        
         StorageService.get('user').photo
         ? ImageService.handleDisplay(
             StorageService.get('user').photo,
@@ -57,12 +59,14 @@ function save(e) {
         ImageService.save(file)
             .then(res => res.json())
             .then(res => {
+
                 body.animal.photo = res._id;
                 body.userId = StorageService.get('user')._id
 
                 AnimalEntities.register(body)
                     .then(() => window.location = "profile.html")
                     .catch(err => console.log(err));
+
             })
             .catch(err => console.log(err));
 
@@ -80,8 +84,10 @@ function comeBack() {
 function searchCep() {
     CepAPIService.request(cep.value)
         .then((data) => {
+
             document.getElementById("cidade").value = data.localidade;
             document.getElementById("uf").value = data.uf;
+
         })
         .catch(console.log);
 }
@@ -105,8 +111,6 @@ function handleAnimal(animalId) {
 function handleValidationSelects() {
     const parent =
         document.querySelector("[data-select]").parentNode.parentNode;
-
-    console.log();
 
     if (ValidationForSelect.valid(document.querySelectorAll("[data-select]")))
         ValidationForSelect.removeAlert(parent);

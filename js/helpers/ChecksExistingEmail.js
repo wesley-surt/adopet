@@ -11,6 +11,7 @@ email.onblur = () => {
             .then((data) => {
                 if (data.exists) alert("Este email já está cadastrado!");
             })
+
             .catch(console.log);
     }
 };

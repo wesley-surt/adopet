@@ -3,6 +3,7 @@ import { ImageService } from "../services/external_apis/imageService.js";
 import { StorageService } from "../services/StorageService.js";
 
 function createButtonDelete() {
+    
     const button = document.createElement("button");
     const fragment = new DocumentFragment();
     const p = document.createElement("p");
@@ -27,10 +28,13 @@ function createButtonDelete() {
                 
                 AnimalEntities.delete(animalId)
                     .then(() => {
+
                         StorageService.delete('animalId');
                         window.location = "profile.html";
+
                     })
                     .catch((err) => {
+
                         alert(
                             "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
                         );

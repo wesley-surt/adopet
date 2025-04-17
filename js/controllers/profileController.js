@@ -10,6 +10,7 @@ function handleUser(user) {
     ? ImageService.handleDisplay(
         user.photo.replace('uploads\\', ''),
         document.getElementById("foto")
+
     )
     : document.getElementById("foto").setAttribute(
         "src",
@@ -24,15 +25,19 @@ function handleUser(user) {
     document.getElementById("sobre").innerHTML = user.about || "";
 }
 
-const list = document.getElementById("catalogo");
-const view = new AnimalView(list);
+const view = new AnimalView(
+    document.getElementById("catalogo")
+);
 
 function handlesRegisteredAnimals(animals) {
 
-    if (animals.length > 0) {
-        
-        view.loadTemplate(animals);     
-        addEventsToCards(document.querySelectorAll(".card"), "animal.html");
+    if (animals.length > 0) {        
+        view.loadTemplate(animals);
+
+        addEventsToCards(
+            document.querySelectorAll(".card"),
+            "animal.html"
+        );
 
         animals.forEach(a => {         
             let img = document.getElementById(a.photo);
@@ -54,6 +59,7 @@ function handlesRegisteredAnimals(animals) {
 }
 
 const userId = StorageService.get("userId");
+
 AnimalEntities.get(`query?userId=${userId}`)
     .then((animals) => {
         handlesRegisteredAnimals(animals);

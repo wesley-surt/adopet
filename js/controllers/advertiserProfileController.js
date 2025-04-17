@@ -33,5 +33,3 @@ document.getElementById("modal_close--menu").onclick = modalCloseMenu;
 
 const menuHambuguer = document.querySelector(".menu_hamburguer");
 menuHambuguer.addEventListener("click", () => dialogMenu.open());
-
-fillInAllFields();

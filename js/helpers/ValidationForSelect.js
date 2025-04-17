@@ -1,9 +1,11 @@
 class ValidationForSelect {
     static valid(selects) {
         for (let i = 0; i < selects.length; i++) {
+
             const select = selects[i];
             if (select.value === "--Selecione--") return false;
         }
+
         return true;
     }
 

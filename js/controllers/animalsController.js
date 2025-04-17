@@ -19,11 +19,13 @@ function addImages (animalsArray) {
     animalsArray.forEach(a => {       
 
         if(
+
             a.photo
             && a.photo != ''
             && a.photo != undefined
             && a.photo != null
         ) {
+
             let img = document.getElementById(a.photo);
             ImageService.handleDisplay(a.photo, img);
         };
@@ -31,10 +33,12 @@ function addImages (animalsArray) {
 }
 
 function showCards(state) {
+
     const listRef = document.getElementById("catalogo");
     const view = new AnimalView(listRef);
 
     if (state) {
+
         AnimalEntities.get(`search?state=${state}`)
             .then((animals) => {
                 if(animals.length > 0) {
@@ -52,6 +56,7 @@ function showCards(state) {
             })
             .catch((err) => callError(err));
     } else {
+        
         AnimalEntities.get("")
             .then((animals) => {
                 view.loadTemplate(animals);

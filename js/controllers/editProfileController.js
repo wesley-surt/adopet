@@ -31,7 +31,7 @@ inputFileImg.addEventListener("change", function(e) {
 });
 
 function modalCloseMenu() {
-    dialogMenu.close();
+    dialog.close();
 }
 
 function modalCloseAlert() {
@@ -42,19 +42,24 @@ function updateUser(body) {
         
     UserEntities.update(body)
         .then((user) => {
+
             StorageService.set("user", user);
             console.log(StorageService.get("user").photo)
             window.location = "profile.html";
+
         })
         .catch((err) => {
+
             alert(
                 "Ocorreu algum erro no servidor. Tente novamente mais tarde ou contate nossa equipe técnica."
             );
+
             console.error(err.message);
         });
 }
 
 function save(e) {
+
     e.preventDefault();
     const inputs = document.querySelectorAll("[data-input]");
 
@@ -76,12 +81,10 @@ function save(e) {
         const file = document.getElementById('file');
 
         if(file) {
+
             ImageService.save(file)
                 .then(res => res.json())
                 .then(res => {
-
-                    console.log(res._id)
-                    console.log(StorageService.get("user").photo)
 
                     StorageService.get("user").photo
                     ? ImageService.delete(StorageService.get("user").photo).then(res => console.log(res))
@@ -107,13 +110,17 @@ function exclusion() {
 
     UserEntities.delete(user._id)
         .then(() => {
+
             StorageService.clear();
             window.location = "login.html";
+
         })
         .catch((err) => {
+
             alert(
                 "Ocorreu algum erro no servidor. Tente novamente mais tarde."
             );
+
         });
     
     ImageService.delete(user.photo);
@@ -140,10 +147,13 @@ function handleUser(userStorage) {
 }
 
 function searchCep() {
+
     CepAPIService.request(cep.value)
         .then((data) => {
+
             document.getElementById("cidade").value = data.localidade;
             document.getElementById("uf").value = data.uf;
+            
         })
         .catch(console.log);
 }
@@ -165,8 +175,8 @@ cep.onblur = searchCep;
 const dialogAlert = new Dialog(document.querySelector(".dialogo--alerta"));
 document.getElementById("modal_close").onclick = modalCloseAlert;
 
-const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
+const dialog = new Dialog(document.querySelector(".dialogo--menu"));
 document.getElementById("modal_close--menu").onclick = modalCloseMenu;
 
 const menuHambuguer = document.querySelector(".menu_hamburguer");
-menuHambuguer.addEventListener("click", () => dialogMenu.open());
+menuHambuguer.addEventListener("click", () => dialog.open());

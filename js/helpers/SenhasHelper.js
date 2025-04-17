@@ -5,9 +5,7 @@ class SenhasHelper{
         this._senha = document.getElementById('senha');
         this._confirmaSenha = document.getElementById('confirmaSenha');
         Object.freeze(this);
-
     }
-
 
     compara(){
       
