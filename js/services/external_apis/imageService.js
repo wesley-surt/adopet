@@ -1,6 +1,7 @@
 export class ImageService {
 
     static save(file) {
+
         const formData = new FormData();
         formData.append('file', file.files[0])
         formData.append('name', file.name)
@@ -12,6 +13,7 @@ export class ImageService {
     }
 
     static handleDisplay(fileId, tagFile) {
+
         return fetch(`http://localhost:4000/imagem/${fileId}`, {
             method: 'GET',
         })
@@ -19,6 +21,7 @@ export class ImageService {
             if (!response.ok) {
                 throw new Error('Erro ao carregar a imagem');
             }
+
             return response.blob();
         })
         .then(blob => {
@@ -31,6 +34,7 @@ export class ImageService {
     }
 
     static delete(fileId) {
+
         return fetch(`http://localhost:4000/pictures/${fileId}`, {
             method: 'DELETE',
         })

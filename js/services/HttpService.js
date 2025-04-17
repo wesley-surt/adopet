@@ -1,9 +1,12 @@
 import { StorageService } from "./StorageService.js";
 
 export class HttpService {
+
     static request(url, options) {
+        
         const promiseCallback = (resolve, reject) => {
             fetch(url, options)
+
                 .then((response) => response.json())
                 .then(resolve)
                 .catch(reject);
@@ -13,9 +16,10 @@ export class HttpService {
     }
 
     static post(path, body) {
-        const url = "http://localhost:3000";
 
+        const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
+
             method: "POST",
             headers: {
                 "authorization": `Token ${StorageService.get("token")}`,
@@ -26,9 +30,10 @@ export class HttpService {
     }
 
     static put(path, body) {
-        const url = "http://localhost:3000";
 
+        const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
+
             method: "PUT",
             headers: {
                 "authorization": `Token ${StorageService.get("token")}`,
@@ -39,8 +44,10 @@ export class HttpService {
     }
 
     static get(path) {
+
         const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
+
             method: "GET",
             headers: {
                 "authorization": `Token ${StorageService.get("token")}`,
@@ -50,8 +57,10 @@ export class HttpService {
     }
 
     static delete(path) {
+
         const url = "http://localhost:3000";
         return this.request(`${url}/${path}`, {
+
             method: "DELETE",
             headers: {
                 "authorization": `Token ${StorageService.get("token")}`,
