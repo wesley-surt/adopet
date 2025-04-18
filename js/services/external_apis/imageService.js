@@ -14,7 +14,7 @@ export class ImageService {
 
     static handleDisplay(fileId, tagFile) {
 
-        return fetch(`http://localhost:4000/imagem/${fileId}`, {
+        return fetch(`http://localhost:4000/pictures/${fileId}`, {
             method: 'GET',
         })
         .then(response => {
