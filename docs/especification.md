@@ -112,11 +112,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | |
-|RF-002|A aplicação deve promover eventos de adoção, campanhas para conscientização e possibilitar parcerias com potenciais adotantes.| ALTA | |
-|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.|ALTA| |
-|RF-004|A aplicação deve permitir registro de animais desaparecidos.|ALTA| |
-|RF-005|A aplicação deve permitir registro de animais encontrados.|ALTA| |
+|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno de Souza |
+|RF-002|A aplicação deve promover eventos de adoção, campanhas para conscientização e possibilitar parcerias com potenciais adotantes.| ALTA | Wesley Bruno de Souza |
+|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.|ALTA| Wesley Bruno de Souza |
+|RF-004|A aplicação deve permitir registro de animais desaparecidos.|ALTA| Wesley Bruno de Souza |
+|RF-005|A aplicação deve permitir registro de animais encontrados.|ALTA| Wesley Bruno de Souza |
+|RF-006|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-007|A aplicação deve permitir registro de usuários.|ALTA| Wesley Bruno de Souza |
+|RF-008|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
+|RF-009|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-010|A aplicação deve permitir a edição de informações do perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-011|A aplicação deve permitir a exclusão do perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-012|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-013|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
+|RF-014|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
+|RF-015|A aplicação deve exibir as informações do animal em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-016|A aplicação deve exibir as informações do tutelar do pet em uma página separada.|ALTA| Wesley Bruno de Souza |
 
 ### Requisitos não Funcionais
 
