@@ -1,7 +1,5 @@
 ## Introdução
 
-Escreva uma introdução para uma documentação de contexto de software com três parágrafos. Cada parágrafo deve conter no máximo 100 palavras. O assunto do primeiro parágrafo da introdução é sobre os impactos causados na sociedade por conta de abandono de animais nas grandes cidades e sobre o aumento de animais abandonados. O segundo paragrafo da introdução é sobre a solução que o software que será desenvolvido objetiva solucionar e como ele pretende fazer isso. Este segundo parágrafo deve abordar como solução temas como, diminuir a quantidade de animais nas ruas com a adoção consciente, facilitar o encontro entre as pessoas que querem adotar e as que querem colocar animais para adoção. O terceiro paragrafo deve relatar os motivos que levaram ao desenvolvimento do software/site; tais como: a sensibilização pela causa, afim de ajudar a evitar o abandono de animais
-
 O crescente problema do abandono de animais nas grandes cidades tem gerado impactos significativos na sociedade, ampliando a população de animais desamparados. A falta de conscientização sobre a responsabilidade da adoção e a negligência resultam em um aumento alarmante de animais abandonados, gerando desafios socioambientais que demandam soluções inovadoras.
 
 Nesse cenário, surge a necessidade de um software dedicado a mitigar a problemática do abandono animal. O presente projeto propõe uma solução abrangente, visando reduzir a quantidade de animais nas ruas através da promoção da adoção consciente. A plataforma facilitará o encontro entre pessoas interessadas em adotar e aquelas que buscam encontrar lares amorosos para animais abandonados, promovendo uma conexão direta e eficaz.
@@ -50,14 +48,14 @@ Tendo em vista os fatos narrados dos problemas acarretados pelo abandono animal,
 
 O público-alvo do projeto são pessoas interessadas em encontrar lares adotivos e seguros para seus animais. Se enquadra nesta descrição, iniciativas de movimentos focados em tratar de animais resgatados de situações de risco; ONGs e projetos que abrigam animais domésticos que foram abandonados e pessoas que por motivos individuais não desejam ou não possuem condição de manter o animal sob sua guarda.
 
-ONGs, projetos e instituições de resgate animal: Estes grupos buscam sanar a falta de cuidado e lares adequados para receber animais domésticos de estimação, tratando de todo o processo que envolve o ato de adotar, escolhendo hambientes seguros e protetores para os animais.
+ONGs, projetos e instituições de resgate animal: estes grupos buscam sanar a falta de cuidado e lares adequados para receber animais domésticos de estimação, tratando de todo o processo que envolve o ato de adotar, escolhendo hambientes seguros e protetores para os animais.
 
-Pessoas que desejam encontrar um lar para seus animais: Este grupo busca encontrar um novo lar para seus animais por motivos diversos. Seja por um orçamento limitado para manter os gastos com animais, por motivos de allergia ou por quais quer outros motivos relevantes.
+Pessoas que desejam encontrar um lar para seus animais: este grupo busca encontrar um novo lar para seus animais por motivos diversos. Seja por um orçamento limitado para manter os gastos com animais, por motivos de allergia ou por quais quer outros motivos relevantes.
 
 ## Mapa de Stakeholders - Projeto: Adopet
 
 **Stakeholders Principais:**
 
--   ONGs, projetos, instituições governamentais e pessoas jurídicas:
+-   ONGs, projetos, instituições governamentais e pessoas jurídicas.
     Responsabilidades: oferecer um hambiente agradável e seguro para os animais.
     Interesses: encontrar um lar adotivo amoroso.
