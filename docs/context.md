@@ -57,5 +57,5 @@ Pessoas que desejam encontrar um lar para seus animais: este grupo busca encontr
 **Stakeholders Principais:**
 
 -   ONGs, projetos, instituições governamentais e pessoas jurídicas.
-    Responsabilidades: oferecer um hambiente agradável e seguro para os animais.
-    Interesses: encontrar um lar adotivo amoroso.
+-   Responsabilidades: oferecer um hambiente agradável e seguro para os animais.
+-   Interesses: encontrar um lar adotivo amoroso.
