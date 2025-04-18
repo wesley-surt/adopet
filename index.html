@@ -23,7 +23,7 @@
             <div class="navegacao">
                 <div class="menu_logo--navegacao">
                     <span class="material-symbols-outlined menu_hamburguer">menu</span>
-                    <a href="./index.html"><div class="navegacao__imagem--logo"><img src="./image/Logo.png"></div></a>
+                    <a href="../index.html"><div class="navegacao__imagem--logo"><img src="../image/Logo.png"></div></a>
                 </div>
 
                 <dialog class="dialogo--menu">
@@ -38,29 +38,6 @@
                     <ul class="modal_lista--menu">
                         <li class="item_menu">
                             <a class="detalhe_menu ancora" class="item__imagem--casa" href="./index.html">Inicio</a>
-                        </li>
-    
-                        <li class="item_hover--nav">
-                            <div class="detalhe_menu item_menu detalhe_menu item_abre_lista_menu">
-                                Registrar animail
-                                <span class="material-symbols-outlined">
-                                    expand_more
-                                </span>
-                            </div>
-    
-                            <ul class="aba">
-                                <li class="aba__item">
-                                    <a class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_adoption.html">Adoção</a>
-                                </li>
-    
-                                <li class="aba__item">
-                                    <a class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_found.html">Encontrado</a>
-                                </li>
-    
-                                <li class="aba__item">
-                                    <a class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_lost.html">Perdido</a>
-                                </li>
-                            </ul>
                         </li>
     
                         <li class="item_menu">
@@ -78,52 +55,13 @@
                 </dialog>
 
                 <ul class="navegacao__lista">
-                    <li class="item_hover--nav">
-                        <div class="item--nav">
-                            Animais
-                            <span class="material-symbols-outlined">
-                                expand_more
-                            </span>
-                        </div>
-
-                        <ul class="aba">
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/adopt_animals.html">Adotar</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/animals_found.html">Encontrados</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/lost_animals.html">Perdidos</a>
-                            </li>
-                        </ul>
+                    
+                    <li class="">
+                        <a class="item--nav ancora ancora--btn ancora--btn" href="./html/adopt_animals.html">
+                            Adotar
+                        </a>
                     </li>
-
-                    <li class="item_hover--nav">
-                        <div class="item--nav">
-                            Registrar animail
-                            <span class="material-symbols-outlined">
-                                expand_more
-                            </span>
-                        </div>
-
-                        <ul class="aba">
-                            <li class="aba__item">
-                                <a  class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_adoption.html">Adoção</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a  class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_found.html">Encontrado</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a  class="detalhe_menu ancora ancora--caixa" href="./html/register_animal_lost.html">Perdido</a>
-                            </li>
-                        </ul>
-                    </li>
-
+                    
                     <li class="">
                         <a class="item--nav ancora ancora--btn ancora--btn" href="./html/profile.html">
                             Perfil
@@ -131,40 +69,22 @@
                     </li>
 
                     <li class="">
-                        <a class="item--nav ancora menu_entrar ancora--btn" href="./html/login.html">
-                            Entrar
-                        </a>
-                    </li>
-
-                    <li class="">
                         <a class="item--nav ancora menu_sair ancora--btn" href="">
                             Sair
+                        </a>
+
+                        <a class="item--nav ancora menu_entrar ancora--btn" href="./html/login.html">
+                            Entrar
                         </a>
                     </li>
                 </ul>
 
                 <ul class="navegacao__lista--mobile">
-                    <li class="item_hover--nav">
-                        <div class="item--nav">
-                            Animais
-                            <span class="material-symbols-outlined">
-                                expand_more
-                            </span>
-                        </div>
 
-                        <ul class="aba">
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/adopt_animals.html">Adotar</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/animals_found.html">Encontrados</a>
-                            </li>
-
-                            <li class="aba__item">
-                                <a class="detalhe_menu ancora ancora--caixa" href="./html/lost_animals.html">Perdidos</a>
-                            </li>
-                        </ul>
+                    <li class="">
+                        <a class="item--nav ancora" href="./html/adopt_animals.html">
+                            Adotar
+                        </a>
                     </li>
 
                     <li class="">
@@ -191,7 +111,7 @@
                 </div>
 
                 <div class="bloco bloco__card">
-                    <h2 class="bloco__subtitulo">Recursos para ONGs</h2>
+                    <h2 class="bloco__subtitulo">Recursos para ONGs de adoção de animais</h2>
                     <ul class="bloco__grupo--card">
                         <li class="card">
                             <img class="card__imagem" src="./image/evento.png" alt="Imagem de um calendário">
@@ -278,6 +198,7 @@
 
     <script src="./js/modules/Dialog.js"></script>
     <script src="./js/components/menu.js"></script>
+    <script type="module" src="./js/helpers/toggleEnterExitHelper.js"></script>
     <script type="module" src="./js/controllers/isLoggedController.js"></script>
 </body>
 </html>

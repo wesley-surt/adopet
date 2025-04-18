@@ -1,23 +1,29 @@
 import { UserEntities } from "../entities/UserEntities.js";
+import { ImageService } from "../services/external_apis/imageService.js";
 import { StorageService } from "../services/StorageService.js";
 
 function modalCloseMenu() {
     dialogMenu.close();
 }
 
-function handleUser(userStorage) {
-    document
-        .getElementById("foto")
-        .setAttribute(
+function handleUser(user) {
+    user.photo
+        ? ImageService.handleDisplay(
+            user.photo.replace('uploads\\', ''),
+            document.getElementById("foto")
+    
+        )
+        : document.getElementById("foto").setAttribute(
             "src",
-            `${userStorage.photo || "../../../adopet/image/Perfil.png"}`
+            "../../image/Perfil.png"
         );
-    document.getElementById("nome").append(userStorage.name || "");
-    document.getElementById("telefone").append(userStorage.telephone || "");
-    document.getElementById("cidade").append(userStorage.city || "");
-    document.getElementById("uf").append(userStorage.state || "");
-    document.getElementById("cep").append(userStorage.cep || "");
-    document.getElementById("sobre").append(userStorage.about || "");
+
+    document.getElementById("nome").append(user.name || "");
+    document.getElementById("telefone").append(user.telephone || "");
+    document.getElementById("cidade").append(user.city || "");
+    document.getElementById("uf").append(user.state || "");
+    document.getElementById("cep").append(user.cep || "");
+    document.getElementById("sobre").append(user.about || "");
 }
 
 function searchUser(userId) {
@@ -26,7 +32,7 @@ function searchUser(userId) {
     });
 }
 
-searchUser(StorageService.get("advertiserId"));
+searchUser(StorageService.get("userId"));
 
 const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));
 document.getElementById("modal_close--menu").onclick = modalCloseMenu;
