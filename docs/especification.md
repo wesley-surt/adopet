@@ -137,7 +137,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002|A aplicação deve persistir os dados no banco de dados MongoDB.|ALTA|
 |RNF-003|A aplicação deve possuir um backend. |ALTA|
 |RNF-004|A aplicação deve informar o usuário caso tente inserir algum dado inválido nos formulários.|ALTA|
-|RNF-005|A aplicação deve ser desenvolvida usando Kanban|ALTA|
+|RNF-005|A aplicação deve ser desenvolvida usando Kanban.|ALTA|
+|RNF-006|A aplicação deve criptografar as informações.|ALTA|
+|RNF-007|A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.|ALTA|
 
 ## Restrições
 
