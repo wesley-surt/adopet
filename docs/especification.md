@@ -121,15 +121,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-007|A aplicação deve permitir registro de usuários.|ALTA| Wesley Bruno de Souza |
 |RF-008|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
 |RF-009|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
-|RF-010|A aplicação deve permitir a edição de informações do perfil do usuário.|ALTA| Wesley Bruno de Souza |
-|RF-011|A aplicação deve permitir a exclusão do perfil do usuário.|ALTA| Wesley Bruno de Souza |
-|RF-012|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-010|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
+|RF-011|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-012|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
 |RF-013|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
-|RF-014|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
-|RF-015|A aplicação deve exibir as informações do animal em uma página separada.|ALTA| Wesley Bruno de Souza |
-|RF-016|A aplicação deve exibir as informações do tutelar do pet em uma página separada.|ALTA| Wesley Bruno de Souza |
-|RF-017|A aplicação deve exibir uma ficha com dados importantes de quem está colocando o animal para adoção.|ALTA| Wesley Bruno de Souza |
-|RF-018|A aplicação deve exibir uma ficha com dados importantes do animal para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-014|A aplicação deve exibir as informações do animal em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-015|A aplicação deve exibir as informações do tutelar do pet em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-016|A aplicação deve exibir uma ficha com dados importantes de quem está colocando o animal para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-017|A aplicação deve exibir uma ficha com dados importantes do animal para adoção.|ALTA| Wesley Bruno de Souza |
 
 ### Requisitos não Funcionais
 
