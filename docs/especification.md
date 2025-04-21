@@ -124,7 +124,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
 |RF-011|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
 |RF-012|A aplicação deve permitir ao usuário adotante visualizar as informações do animal para adoção em uma página separada.|ALTA| Wesley Bruno de Souza |
-|RF-013|A aplicação deve exibir as informações do tutelar do pet em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-013|A aplicação deve exibir as informações do tutelar do pet em uma página separada, caso o adotante queira saber quem é o responsável pelo animal.|ALTA| Wesley Bruno de Souza |
 |RF-014|A aplicação deve exibir uma ficha com dados importantes de quem está colocando o animal para adoção.|ALTA| Wesley Bruno de Souza |
 |RF-015|A aplicação deve exibir uma ficha com dados importantes do animal para adoção.|ALTA| Wesley Bruno de Souza |
 
