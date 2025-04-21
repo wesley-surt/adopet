@@ -27,8 +27,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
-|RNF-003|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | dbConnect.js |
-|RNF-004|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | api/src/* |
+|RNF-001|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | dbConnect.js |
+|RNF-002|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | [adopet-api](https://github.com/wesley-surt/adopet-api) |
+|RNF-003|Deve ser criado criada uma api para lidar apenas com o salvamento e atualização das imagens cadastradas na aplicação.|ALTA| Wesley Bruno | save_images_project_adopet |
 
 
 ## Descrição das estruturas:
@@ -38,13 +39,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | id             | Numero (inteiro)  | Identificador único do usuário            | sdf65s6f5a6sdf564g                             |
 | name           | String            | Nome registrado, nome social ou apelido   | angelica                                       |
-| photo          | String            | Foto de rosto do usuário                  | https://imgur.api/idDaImagem                   |
+| photo          | String            | Foto de rosto do usuário                  | 6806b5565d60c4e38476c890                       |
 | email          | String            | Conecta o usuário a uma conta cadastrada  | angelica@gmail.com                             |
-| telephone      | String            | Número de celular pessoal do usuário      | (31)944445555                                  |
+| telephone      | String            | Número de celular pessoal do usuário      | 31944445555                                    |
 | cep            | String            | Evidencia a região do usuário             | 00111222                                       |
 | city           | String            | Evidencia a cidade do usuário             | Belo Horizonte                                 |
 | state          | String            | Evidencia o estado do usuário             | MG                                             |
-| imAnNgo        | Boolean           | Confirma se a conta é de uma ONG ou não   | true                                           |
 | about          | String            | Descreve um pouco sobre o usuário, seus interes entre outras coisas, as quais deseja relatar | Me chamo Angelica. Tenho 39 anos e trabalho com animais de petshop. Ocorre muito caso de donos abandonarem seus pets na loja e não temos como cuidar de tantos animaizinhos. |
 
 
@@ -58,7 +58,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | characteristics1 | String          | Diz a primeira caracteristica marcante do animal | Dócil                                   |
 | characteristics2 | String          | Diz a segunda caracteristica marcante do animal | Amigável                                 |
 | measure        | String            | Diz a medida da idade do animal           | meses                                          |
-| photo          | String            | Foto do animal                            | https://imgur.api/idDaImagem                   |
+| photo          | String            | Foto do animal                            | 6806b5565d60c4e38476c890                       |
 | size           | String            | Diz o porte/tamanho do animal             | medio                                          |
 | age            | String            | Diz a idade do animal                     | 11                                             |
 | city           | String            | Evidencia a cidade do animal              | Belo Horizonte                                 |
