@@ -3,7 +3,7 @@
 A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são apresentados os diversos caminhos que os usuários podem percorrer para acessar os recursos disponíveis.
 
 ## Wireframes
-![User Flow](https://github.com/wesley-surt/adopet/assets/109616789/d0eb9b4a-013e-43e0-bcfc-a0bcdf6d4894)
+![User Flow](https://photos.app.goo.gl/RueTo2zh8RLRRwB18)
 
 ### Página inicial
 Esta tela inicial fornece informações iniciais importantes para o usuário se familiarizar com a aplicação.
