@@ -34,6 +34,19 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 **Dados de entrada** | As informações que devem ser inseridos.
 **Resultado obtido** | Sucesso.
 
+**Caso de Teste** | **CT001 - Cadastrar animal para adoção**
+ :--------------: | ------------
+**Procedimento**  | 1) Estar logado na aplicação;
+2) Acessar a página de perfil;
+3) Clicar no botão: Adicionar animal;
+4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional);
+5) Clicar em salvar.
+**Requisitos associados** | RF-004:	Um aplicativo deve permitir o registro de animais para adoção.
+**Artefatos associados** | Aqui ficará todos os arquivos relacionados.
+**Resultado esperado** | O que se espera do teste. O resultado final.
+**Dados de entrada** | nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional).
+**Resultado obtido** | Sucesso.
+
 ## Registro dos Testes de Software
 
 Apresento, a seguir, o relatório contendo as evidências dos testes de software conduzidos no sistema, seguindo o plano de testes previamente definido. Cada caso de teste está documentado e é acompanhado por vídeos que validam o correto funcionamento das funcionalidades. A seguir, compartilho alguns exemplos.
