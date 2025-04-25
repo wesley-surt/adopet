@@ -113,18 +113,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
 |RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno de Souza |
-|RF-002|A aplicação deve promover eventos de adoção, campanhas para conscientização e possibilitar parcerias com potenciais adotantes.| ALTA | Wesley Bruno de Souza |
-|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes.|ALTA| Wesley Bruno de Souza |
-|RF-004|A aplicação deve permitir registro de animais desaparecidos.|ALTA| Wesley Bruno de Souza |
-|RF-005|A aplicação deve permitir registro de animais encontrados.|ALTA| Wesley Bruno de Souza |
-|RF-006|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
-|RF-007|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
-|RF-008|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
-|RF-009|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
-|RF-010|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
-|RF-011|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
+|RF-002|A aplicação deve exibir uma ficha com dados importantes dos adotantes.|ALTA| Wesley Bruno de Souza |
+|RF-003|A aplicação deve permitir registro de animais desaparecidos.|ALTA| Wesley Bruno de Souza |
+|RF-004|A aplicação deve permitir registro de animais encontrados.|ALTA| Wesley Bruno de Souza |
+|RF-005|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-006|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
+|RF-007|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-008|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
+|RF-009|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-010|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
 |RF-012|A aplicação deve permitir ao usuário adotante visualizar as informações do animal para adoção em uma página separada.|ALTA| Wesley Bruno de Souza |
-|RF-013|A aplicação deve exibir as informações do tutelar do pet em uma página separada, caso o adotante queira saber quem é o responsável pelo animal.|ALTA| Wesley Bruno de Souza |
+|RF-012|A aplicação deve exibir as informações do tutelar do pet em uma página separada, caso o adotante queira saber quem é o responsável pelo animal.|ALTA| Wesley Bruno de Souza |
+|RF-013|A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.|ALTA| Wesley Bruno de Souza |
+
 
 ### Requisitos não Funcionais
 
@@ -133,10 +134,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001|A aplicação deve ser desenvolvida em HTML, CSS e Java Script.|ALTA|
 |RNF-002|A aplicação deve persistir os dados no banco de dados MongoDB.|ALTA|
 |RNF-003|A aplicação deve possuir um backend. |ALTA|
-|RNF-004|A aplicação deve informar o usuário caso tente inserir algum dado inválido nos formulários.|ALTA|
-|RNF-005|A aplicação deve ser desenvolvida usando Kanban.|ALTA|
-|RNF-006|A aplicação deve criptografar as informações.|ALTA|
-|RNF-007|A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.|ALTA|
+|RNF-004|A aplicação deve ser desenvolvida usando Kanban.|ALTA|
+|RNF-005|A aplicação deve criptografar as informações.|ALTA|
+|RNF-006|A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.|ALTA|
 
 ## Restrições
 
@@ -146,4 +146,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |RT-001| O usuário só terá acesso à página que adiciona um evento ou uma campanha se ele for uma ONG. Um pop-up será exibido caso o acesso não for liberado. |
 |RT-002| Todo o processo de adoção será tramitado diretamente entre quem está colocando o animal para adoção e o adotante. |
-|RT-003| A aplicação deve permitir que apenas ONGs promovam eventos, campanhas e possuam parcerias. | ALTA |
