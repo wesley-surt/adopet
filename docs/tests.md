@@ -36,11 +36,7 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 
 **Caso de Teste** | **CT001 - Cadastrar animal para adoção**
  :--------------: | ------------
-**Procedimento**  | 1) Estar logado na aplicação;
-2) Acessar a página de perfil;
-3) Clicar no botão: Adicionar animal;
-4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional);
-5) Clicar em salvar.
+**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão: Adicionar animal; <br> 4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional); <br>5) Clicar em salvar.
 **Requisitos associados** | RF-004:	Um aplicativo deve permitir o registro de animais para adoção.
 **Artefatos associados** | Aqui ficará todos os arquivos relacionados.
 **Resultado esperado** | O que se espera do teste. O resultado final.
