@@ -13,23 +13,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
 |RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno | profile.html, card-animal/style.css, responsive_components/card_animal/style.css, profileController.js, AnimalView.js |
-|RF-015|A aplicação deve exibir uma ficha com dados importantes de quem está colocando os animais para adoção.| ALTA | Wesley Bruno | advertiser_profile.html, advertiserProfileController.js, circle-photo-advertiser.css, form/style_2.css, field/style_2.css, field/style_4.css, button/style_2.css |
-|RF-006|A aplicação deve permitir registro de animais para adoção.| ALTA | Wesley Bruno | register_animal_adoption.html, animalController.js, style_register_animal_adoption.css |
-|RF-007|A aplicação deve permitir filtrar animais por região/Estado.| ALTA | Wesley Bruno | function filtrar() no arquivo animalsController.js |
-|RF-008|A aplicação deve conter uma página de perfil do usuário.| ALTA | Wesley Bruno | profile.html, style_profile.css, profileController.js |
-|RF-009|A aplicação deve permitir o CRUD do perfil do usuário.| ALTA | Wesley Bruno | edit_profile.html, style_edit_profile.css, editProfileController.js, register.html, style_register.css, registerController.js, UserEntities.js |
-|RF-010|A aplicação deve conter uma página inicial.| ALTA | Wesley Bruno | index.html, style_index.css |
-|RF-011|A aplicação deve conter uma página de login.| ALTA | Wesley Bruno | login.html, style_login.css, loginController.js |
-|RF-012|A aplicação deve permitir ao usuário adotante visualizar as informações do animal para adoção em uma página separada.| ALTA | Wesley Bruno | animal_profile.html, style_animal_profile.css, animalProfileController.css |
-|RF-013|A aplicação deve exibir as informações do tutelar do pet em uma página separada, caso o adotante queira saber quem é o responsável pelo animal.| ALTA | Wesley Bruno | advertiser_profile.html, style_advertiser_profile.css, advertiserProfileController.js |
+|RF-002|A aplicação deve permitir registro de animais para adoção.| ALTA | Wesley Bruno | register_animal_adoption.html, animalController.js, style_register_animal_adoption.css |
+|RF-003|A aplicação deve permitir filtrar animais por região/Estado.| ALTA | Wesley Bruno | function filtrar() no arquivo animalsController.js |
+|RF-004|A aplicação deve conter uma página de perfil do usuário.| ALTA | Wesley Bruno | profile.html, style_profile.css, profileController.js |
+|RF-005|A aplicação deve permitir o CRUD do perfil do usuário.| ALTA | Wesley Bruno | edit_profile.html, style_edit_profile.css, editProfileController.js, register.html, style_register.css, registerController.js, UserEntities.js |
+|RF-006|A aplicação deve conter uma página inicial.| ALTA | Wesley Bruno | index.html, style_index.css |
+|RF-007|A aplicação deve conter uma página de login.| ALTA | Wesley Bruno | login.html, style_login.css, loginController.js |
+|RF-008|A aplicação deve permitir que o usuário visualize as informações do animal que está para adoção em uma página separada.| ALTA | Wesley Bruno | animal_profile.html, style_animal_profile.css, animalProfileController.css |
+|RF-009|A aplicação deve exibir as informações do tutor do animal, que está para adoção.|ALTA| Wesley Bruno |  advertiser_profile.html, style_advertiser_profile.css, advertiserProfileController.js |
+|RF-010|A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.| ALTA | Wesley Bruno | ListaMensagens.js, ListaErros.js, ValidacaoHelper.js, ValidationForSelect.js, AlertaHelper.js |
 
 ### Requisitos não Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
-|RNF-001|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | dbConnect.js |
-|RNF-002|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | [adopet-api](https://github.com/wesley-surt/adopet-api) |
-|RNF-003|Deve ser criado criada uma api para lidar apenas com o salvamento e atualização das imagens cadastradas na aplicação.|ALTA| Wesley Bruno | save_images_project_adopet |
+|RNF-002|A aplicação deve persistir os dados no banco de dados MongoDB. |ALTA| Wesley Bruno | No backend: dbConnect.js |
+|RNF-003|A aplicação deve possuir um backend.|ALTA| Wesley Bruno | [adopet-api](https://github.com/wesley-surt/adopet-api) |
+|RNF-003|A aplicação deve criptografar as informações.|ALTA| Wesley Bruno | CryptographyService.js |
+|RNF-006|A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.|ALTA| Wesley Bruno | routeGuard.js |
 
 
 ## Descrição das estruturas:
@@ -65,30 +66,3 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | state          | String            | Evidencia o estado do animal              | MG                                             |
 | cep            | String            | Evidencia a região do animal              | 00111222                                       |
 | about          | String            | Descreve um pouco sobre o animal, suas caracteristicas e outros assuntos importantes | Este pet é carinhoso e dócil. Tomou todas as vacinas e está sendo bem cuidado. Espero que alguém tão cuidadoso quanto eu o adote. |
-
-
-## Interessado em parceria
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
-| userId         | Number            | Identificador único da pessoa interessada | sdf65s6f5a6sdf564g                             |
-
-
-## Evento
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
-| name           | String            | Nome do evento                            | Levana fundo para animais de rua               |
-| locale         | String            | Local do evento                           | Rua caringa 475, Betania - Contagem (MG)       |
-| date           | String            | Data do evento                            | 21/02/2024                                     |
-| photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
-
-
-## Campanha
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| id             | Number            | Identificador único do registro feito     | sdf65s6f5a6sdf564g                             |
-| ngoId          | Number            | Identificador único da ONG                | sdf65s6f5a6sdf564g                             |
-| photo          | String            | Imgagem para representar o evento         | https://imgur.api/idDaImagem                   |
