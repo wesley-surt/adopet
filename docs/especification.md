@@ -113,17 +113,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
 |RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno de Souza |
-|RF-002|A aplicação deve permitir registro de animais desaparecidos.|ALTA| Wesley Bruno de Souza |
-|RF-003|A aplicação deve permitir registro de animais encontrados.|ALTA| Wesley Bruno de Souza |
-|RF-004|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
-|RF-005|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
-|RF-006|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
-|RF-007|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
-|RF-008|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
-|RF-009|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
-|RF-010|A aplicação deve permitir ao usuário adotante visualizar as informações do animal para adoção em uma página separada.|ALTA| Wesley Bruno de Souza |
-|RF-011|A aplicação deve exibir as informações do tutelar do pet em uma página separada, caso o adotante queira saber quem é o responsável pelo animal.|ALTA| Wesley Bruno de Souza |
-|RF-012|A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.|ALTA| Wesley Bruno de Souza |
+|RF-002|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-003|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
+|RF-004|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-005|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
+|RF-006|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-007|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
+|RF-008|A aplicação deve permitir que o usuário visualize as informações do animal que está para adoção em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-009|A aplicação deve exibir as informações do tutor do animal, que está para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-010|A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.|ALTA| Wesley Bruno de Souza |
 
 
 ### Requisitos não Funcionais
