@@ -112,11 +112,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | |
-|RF-002|A aplicação deve promover eventos de adoção, campanhas para conscientização e possibilitar parcerias com potenciais adotantes.| ALTA | |
-|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.|ALTA| |
-|RF-004|A aplicação deve permitir registro de animais desaparecidos.|ALTA| |
-|RF-005|A aplicação deve permitir registro de animais encontrados.|ALTA| |
+|RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno de Souza |
+|RF-002|A aplicação deve permitir registro de animais para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-003|A aplicação deve permitir filtrar animais por região/Estado.|ALTA| Wesley Bruno de Souza |
+|RF-004|A aplicação deve conter uma página de perfil do usuário.|ALTA| Wesley Bruno de Souza |
+|RF-005|A aplicação deve permitir o CRUD do perfil do usuário|ALTA| Wesley Bruno de Souza |
+|RF-006|A aplicação deve conter uma página inicial.|ALTA| Wesley Bruno de Souza |
+|RF-007|A aplicação deve conter uma página de login.|ALTA| Wesley Bruno de Souza |
+|RF-008|A aplicação deve permitir que o usuário visualize as informações do animal que está para adoção em uma página separada.|ALTA| Wesley Bruno de Souza |
+|RF-009|A aplicação deve exibir as informações do tutor do animal, que está para adoção.|ALTA| Wesley Bruno de Souza |
+|RF-010|A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.|ALTA| Wesley Bruno de Souza |
+
 
 ### Requisitos não Funcionais
 
@@ -125,8 +131,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001|A aplicação deve ser desenvolvida em HTML, CSS e Java Script.|ALTA|
 |RNF-002|A aplicação deve persistir os dados no banco de dados MongoDB.|ALTA|
 |RNF-003|A aplicação deve possuir um backend. |ALTA|
-|RNF-004|A aplicação deve informar o usuário caso tente inserir algum dado inválido nos formulários.|ALTA|
-|RNF-005|A aplicação deve ser desenvolvida usando Kanban|ALTA|
+|RNF-004|A aplicação deve ser desenvolvida usando Kanban.|ALTA|
+|RNF-005|A aplicação deve criptografar as informações.|ALTA|
+|RNF-006|A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.|ALTA|
 
 ## Restrições
 
@@ -135,6 +142,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RT-001| O usuário só terá acesso à página que adiciona um evento ou uma campanha se ele for uma ONG. Um pop-up será exibido caso o acesso não for liberado. |
-|RT-002| Em relação ao requisito RF-003, as ONGs não terão seus perfis cadastrados na aplicação acessíveis para exibição por terceiros. |
-|RT-003| Todo o processo de adoção será tramitado diretamente entre quem está colocando o animal para adoção e o adotante. |
-|RT-004| A aplicação deve permitir que apenas ONGs promovam eventos, campanhas e possuam parcerias. | ALTA |
+|RT-002| Todo o processo de adoção será tramitado diretamente entre quem está colocando o animal para adoção e o adotante. |

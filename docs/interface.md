@@ -3,54 +3,34 @@
 A imagem a seguir representa o Fluxo de Usuário da aplicação, no qual são apresentados os diversos caminhos que os usuários podem percorrer para acessar os recursos disponíveis.
 
 ## Wireframes
-![User Flow](https://github.com/wesley-surt/adopet/assets/109616789/d0eb9b4a-013e-43e0-bcfc-a0bcdf6d4894)
+![User-flow](https://github.com/user-attachments/assets/baab47de-e8c3-4483-9eb2-6130e9fa9b13)
 
 ### Página inicial
 Esta tela inicial fornece informações iniciais importantes para o usuário se familiarizar com a aplicação.
-![Desktop - Inicio](https://github.com/wesley-surt/adopet/assets/109616789/04b88a5d-87ce-468b-844d-d250873fd9ba)
-
-### Inicio para logar
-![Desktop - Inicial Entrar](https://github.com/wesley-surt/adopet/assets/109616789/ad0f7934-8d50-4538-b36a-b904dfed751b)
+![Desktop - Inicio](https://github.com/user-attachments/assets/d4b086b3-11de-4300-b8a6-be11f5ea9d9b)
 
 ### Login
-![Desktop - Login](https://github.com/wesley-surt/adopet/assets/109616789/90de9570-6746-4b92-bd6a-73d859f2206f)
+![Desktop - Login](https://github.com/user-attachments/assets/3605be55-8fc0-4995-a187-76d1fdf783ec)
 
 ### Cadastro de usuário
-![Desktop - Cadastro](https://github.com/wesley-surt/adopet/assets/109616789/5f4c88af-57e5-44fc-bc7e-6038df7440fd)
+![Desktop - Cadastro](https://github.com/user-attachments/assets/9f26ced2-04f4-494a-b79f-09419e850699)
 
 ### Perfil do responsável pelo cadastro do animal
 Esta tela exibe uma ficha com todos os dados importantes de quem cadastrou o animal (encontrado, perdido ou adoção) (RF-003).
-![Desktop - Perfil Usuario Responsavel (1)](https://github.com/wesley-surt/adopet/assets/109616789/563074dd-9961-4cfc-9964-3c53ce9168d1)
+![Desktop - Perfil Usuario Responsavel](https://github.com/user-attachments/assets/5ee7c449-e1a2-4a3d-b758-60f94352e54b)
 
 ### Perfil de usuário/ONG
 Esta tela está reunindo todos os animais (encontrados, perdidos e adoções) registrados pelo usuário em um único local (RF-001).
-Além disso, a tela também possui um botão chamado "Interessados em parceira" que possibilita que as ONGs visualizem todas as pessoas interessadas em ser parceiras. Clicando em um dos mini-cards é redirecionado para a pagina de perfil do interessado(a) (RF-002).
-![Desktop - Perfil ONG (3)](https://github.com/wesley-surt/adopet/assets/109616789/2e44b2b6-ff59-4d0d-bb2d-aba6f4107f69)
+![Desktop - Perfil](https://github.com/user-attachments/assets/d791f1cf-e67f-4797-b70a-8a46d9037a0a)
 
 ### Editar/excluir perfil de usuário
 Esta tela permite o usuário ter um maior controle de suas informações. Ele pode alterar os dados ou excluir sua conta.
-![Desktop - Editar Perfil (1)](https://github.com/wesley-surt/adopet/assets/109616789/a32d6a91-d652-4240-8587-c696e6ef9d20)
+![Desktop - Editar Perfil](https://github.com/user-attachments/assets/a4e2f8bf-a106-418b-b3c5-1e18d21aff73)
 
 ### Perfil de animal
 Esta tela exibe uma ficha com todos os dados importantes do animal. Clicando no mini-card do responsável pelo cadastro é redirecionado para a tela que exibe todos os dados importantes do usuário (RF-003).
-![Desktop - Perfil Animal Adoções (1)](https://github.com/wesley-surt/adopet/assets/109616789/c5066d3e-b726-4437-841a-2e01e54dd5fe)
+![Desktop - Perfil Animal Adoções](https://github.com/user-attachments/assets/fcb01316-5a1d-4d86-8bf2-d9f5f35c5515)
 
-### Editar/excluir perfil de animal
+### Excluir perfil de animal
 Esta tela jé genérica para quem quer cadastrar animais para adoção, perdidos e encontrados (RF-004 e RF-005).
-![Desktop - Perfil Animal Adoção](https://github.com/wesley-surt/adopet/assets/109616789/46207a35-9b88-44c1-89c2-b97df2a0a847)
-
-### Animais para adoção, perdidos e encontrados
-Esta tela exibe todos os animais para adoção, perdidos ou encontrados, a depender do botão clicado pelo usuário na barra de navegação
-![Desktop - Animais Para Adoção](https://github.com/wesley-surt/adopet/assets/109616789/3e3cc2ab-f50d-4276-a975-bdfede8f4a8d)
-
-### ONGs/Protetores
-Esta tela possui um botão chamado "Ser parceiro" que expressa para a ONG o interesse deste usuário em se tornar um parceiro (RF-002).
-![Desktop - ONGs (1)](https://github.com/wesley-surt/adopet/assets/109616789/0cff422e-dc70-444a-b887-9cfd4e19690f)
-
-### Eventos/campanhas
-Esta tela exibe todos os eventos e campanhas promovidos por ONGs
-![Desktop - Eventos Campanhas](https://github.com/wesley-surt/adopet/assets/109616789/329bd5f8-1929-4531-a34d-d7128b83d891)
-
-### Adicionar evento/campanha
-Esta tela, a depender do botão clicado pelo usuário adiciona eventos ou campanhas (RF-002).
-![Desktop - Add Evento Campanha](https://github.com/wesley-surt/adopet/assets/109616789/74b81774-eada-4413-90b5-ae9c67f0c663)
+![Desktop - Perfil Animal Adoção](https://github.com/user-attachments/assets/65dee702-fce9-42c6-babb-cfecf88fc462)
