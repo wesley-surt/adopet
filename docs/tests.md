@@ -25,15 +25,6 @@ Nesta seção, apresentamos a documentação dos testes realizados pelo desenvol
 
 Para cada caso de teste (CT), associarei o requisito, seja funcional ou não funcional, que está sendo verificado. Além disso, indicaremos o artefato (página) onde o teste será executado, juntamente com sua descrição.
 
-**Caso de Teste** | **CT01 - Cadastrar animal perdido**
- :--------------: | ------------
-**Procedimento**  | 1) Aqui deverá ser descrito o passo a passo do que fazer para realizar o teste.
-**Requisitos associados** | Nesta linha vai ser descritos todos os requisitos associados a este caso de teste, incluindo sua numeração.
-**Artefatos associados** | Aqui ficará todos os arquivos relacionados.
-**Resultado esperado** | O que se espera do teste. O resultado final.
-**Dados de entrada** | As informações que devem ser inseridos.
-**Resultado obtido** | Sucesso.
-
 **Caso de Teste** | **CT001 - Cadastrar animal para adoção**
  :--------------: | ------------
 **Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão: Adicionar animal; <br> 4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional); <br>5) Clicar no botão Salvar.
@@ -52,13 +43,24 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 **Dados de entrada** | nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional).
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT00 - **
+**Caso de Teste** | **CT003 - Cadastrar usuário**
  :--------------: | ------------
-**Procedimento**  | ** |
-**Artefatos associados** | 
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Procedimento**  | 1) Clicar no botão Entrar; <br> 2) Clicar no link: Não possui uma conta? Cadastre-se; <br> 3) Preencher os campos: email, nome, senha, confirmar senha; <br> 4) Clicar no botão Salvar;
+**Requisitos associados** | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário.
+**Artefatos associados** | register.html, style_register.css, registerController.js
+**Resultado esperado** | Cadastrado realizado com sucesso.
+**Dados de entrada** | email, nome, senha e confirma senha.
 **Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT004 - Atualizar os dados do usuário**
+ :--------------: | ------------
+**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão Editar; <br> 4) Preencher ou alterar os dados dos campos: foto, nome, cep, sobre; <br> 5) Clicar no botão Salvar.
+**Requisitos associados** | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário.
+**Artefatos associados** | profile.html, style_profile.css, profileController.js
+**Resultado esperado** | Atualização realizada com sucesso.
+**Dados de entrada** | foto, nome, cep, sobre.
+**Resultado obtido** | Sucesso.
+
 
 ## Registro dos Testes de Software
 
