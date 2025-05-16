@@ -36,11 +36,28 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 
 **Caso de Teste** | **CT001 - Cadastrar animal para adoção**
  :--------------: | ------------
-**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão: Adicionar animal; <br> 4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional); <br>5) Clicar em salvar.
+**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão: Adicionar animal; <br> 4) Preencher os campos: nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional); <br>5) Clicar no botão Salvar.
 **Requisitos associados** | RF-004:	Um aplicativo deve permitir o registro de animais para adoção.
-**Artefatos associados** | Aqui ficará todos os arquivos relacionados.
-**Resultado esperado** | O que se espera do teste. O resultado final.
+**Artefatos associados** | register_animal_adoption.html, style_register_animal_adoption.css, animalController.js
+**Resultado esperado** | Exclusão bem sucedida.
+**Dados de entrada** |
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT002 - Deletar animal**
+ :--------------: | ------------
+**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar sobre o card do animal; <br> 4) Clicar no botão Excluir.
+**Requisitos associados** |
+**Artefatos associados** | animal.html, style_animal_profile.css, animalProfileController.js
+**Resultado esperado** | Cadastro bem sucedido.
 **Dados de entrada** | nome, idade/tempo de vida, porte do animal (grande, médio, pequeno), característica 1 do animal, característica 2 do animal, CEP, descrição adicional (opcional).
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT00 - **
+ :--------------: | ------------
+**Procedimento**  | ** |
+**Artefatos associados** | 
+**Resultado esperado** | 
+**Dados de entrada** | 
 **Resultado obtido** | Sucesso.
 
 ## Registro dos Testes de Software
