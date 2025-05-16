@@ -19,17 +19,6 @@ inputFileImg.addEventListener("change", function(e) {
 
         reader.readAsDataURL(file);
 
-    } else {
-        
-        StorageService.get('user').photo
-        ? ImageService.handleDisplay(
-            StorageService.get('user').photo,
-            document.getElementById("foto")
-        )
-        : document.getElementById("foto").setAttribute(
-            "src",
-            "../../image/Perfil.png"
-        );
     }
 });
 
@@ -54,6 +43,7 @@ function save(e) {
         document.getElementById("file") || '';
 
     if (selectsAreValid && inputsAreValid && file) {
+        
         const body = AnimalEntities.create();
 
         ImageService.save(file)
@@ -92,6 +82,12 @@ function searchCep() {
         .catch(console.log);
 }
 
+function handleAnimal(animalId) {
+    AnimalEntities.get(`${animalId}`).then((animal) => {
+        AnimalEntities.fillForm(animal);
+    });
+}
+
 function fillInAllFields() {
     if (StorageService.get("animalId")) {
         handleAnimal(StorageService.get("animalId"));
@@ -100,12 +96,6 @@ function fillInAllFields() {
         document
             .getElementById("foto")
             .setAttribute("src", "../../../adopet/image/Perfil.png");
-}
-
-function handleAnimal(animalId) {
-    AnimalEntities.get(`${animalId}`).then((animal) => {
-        AnimalEntities.fillForm(animal);
-    });
 }
 
 function handleValidationSelects() {

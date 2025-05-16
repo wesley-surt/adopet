@@ -44,7 +44,6 @@ function updateUser(body) {
         .then((user) => {
 
             StorageService.set("user", user);
-            console.log(StorageService.get("user").photo)
             window.location = "profile.html";
 
         })
@@ -67,7 +66,6 @@ function save(e) {
 
         const body = {
             user: {
-                photo: '',
                 name: document.getElementById("nome").value || "",
                 city: document.getElementById("cidade").value || "",
                 state: document.getElementById("uf").value || "",
@@ -80,7 +78,7 @@ function save(e) {
 
         const file = document.getElementById('file');
 
-        if(file) {
+        if(file.files[0]) {
 
             ImageService.save(file)
                 .then(res => res.json())
@@ -126,6 +124,18 @@ function exclusion() {
     ImageService.delete(user.photo);
 }
 
+function searchCep() {
+
+    CepAPIService.request(cep.value)
+        .then((data) => {
+
+            document.getElementById("cidade").value = data.localidade;
+            document.getElementById("uf").value = data.uf;
+            
+        })
+        .catch(console.log);
+}
+
 function handleUser(userStorage) {
 
     userStorage.photo
@@ -144,18 +154,6 @@ function handleUser(userStorage) {
     document.getElementById("uf").value = userStorage.state || "";
     document.getElementById("cep").value = userStorage.cep || "";
     document.getElementById("sobre").value = userStorage.about || "";
-}
-
-function searchCep() {
-
-    CepAPIService.request(cep.value)
-        .then((data) => {
-
-            document.getElementById("cidade").value = data.localidade;
-            document.getElementById("uf").value = data.uf;
-            
-        })
-        .catch(console.log);
 }
 
 handleUser(StorageService.get("user"));

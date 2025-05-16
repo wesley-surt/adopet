@@ -31,10 +31,10 @@ function handleAnimal(animal) {
     document
         .getElementById("comportamento2")
         .append(animal.characteristics2 || "");
-}
+};
 
 function handleUser(user) {
-    const img = document.getElementById("ellipse--anunciante")
+    const img = document.getElementById("ellipse--tutor")
 
     user.photo
         ?
@@ -42,20 +42,22 @@ function handleUser(user) {
         :
             img.setAttribute('src', '../../image/Perfil.png')
 
-    document.getElementById("nome_anunciante").append(`${user.name}`);
-}
+    document.getElementById("nome_tutor").append(`${user.name}`);
+};
 
 function searchUser(userId) {
     UserEntities.get(`${userId}`)
         .then((user) => {
             handleUser(user);
         });
-}
+};
 
 AnimalEntities.get(`${StorageService.get("animalId")}`)
     .then((animal) => {
+        
         handleAnimal(animal);
         searchUser(animal.userId);
+        StorageService.set('tutorId', animal.userId);
     });
 
 const dialogMenu = new Dialog(document.querySelector(".dialogo--menu"));

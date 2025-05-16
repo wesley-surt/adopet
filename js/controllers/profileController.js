@@ -3,27 +3,7 @@ import { AnimalEntities } from "../entities/AnimalEntities.js";
 import { AnimalView } from "../views/AnimalView.js";
 import { addEventsToCards } from "../helpers/addEventsToCards.js";
 import { ImageService } from "../services/external_apis/imageService.js";
-
-function handleUser(user) {
-
-    user.photo
-    ? ImageService.handleDisplay(
-        user.photo.replace('uploads\\', ''),
-        document.getElementById("foto")
-
-    )
-    : document.getElementById("foto").setAttribute(
-        "src",
-        "../../image/Perfil.png"
-    );
-    
-    document.getElementById("nome").innerHTML = user.name || "";
-    document.getElementById("telefone").innerHTML = user.telephone || "";
-    document.getElementById("cidade").innerHTML = user.city || "";
-    document.getElementById("uf").innerHTML = user.state || "";
-    document.getElementById("cep").innerHTML = user.cep || "";
-    document.getElementById("sobre").innerHTML = user.about || "";
-}
+import { UserEntities } from "../entities/UserEntities.js";
 
 const view = new AnimalView(
     document.getElementById("catalogo")
@@ -79,4 +59,4 @@ btnAdd.addEventListener("click", () => {
     window.location = "../../html/register_animal_adoption.html";
 });
 
-handleUser(StorageService.get("user"));
+UserEntities.handleUserDisplay(StorageService.get("user"));

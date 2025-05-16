@@ -17,18 +17,18 @@
 @import url("../generic/components/photo/style.css");
 @import url("../responsive_page/style_profile_message.css");
 
-.anunciante,
-.anunciante__foto {
+.tutor,
+.tutor__foto {
     display: flex;
     align-items: center;
 }
 
-.anunciante {
+.tutor {
     margin: 0 auto;
     column-gap: 0.6rem;
 }
 
-.anunciante__foto {
+.tutor__foto {
     border: 3px solid #36dad3;
     border-radius: 0.5rem;
     column-gap: 0.4rem;
@@ -37,7 +37,7 @@
     color: #505050;
 }
 
-.foto_perfil_anunciante {
+.foto_perfil_tutor {
     cursor: pointer;
     height: 40px;
     width: 40px;

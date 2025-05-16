@@ -13,7 +13,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável | Artefato Criado |
 |------|-----------------------------------------|----| ----|-----------------|
 |RF-001|A aplicação deve reunir todos os animais registrados para adoção, por um usuario, em um único local.| ALTA | Wesley Bruno | profile.html, card-animal/style.css, responsive_components/card_animal/style.css, profileController.js, AnimalView.js |
-|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.| ALTA | Wesley Bruno | profile.html, animal.html, animal_profile.html, advertiser_profile.html, profileController.js, animalController.js, animalProfileController.js, advertiserProfileController.js, style_profile.css, style_animal_profile.css, style_advertiser.css, style_animal.css form/style_2.css, field/style_2.css, field/style_4.css, button/style_green.css, button/style_2.css |
+|RF-003|A aplicação deve exibir uma ficha com dados importantes dos adotantes, de quem está colocando o animal para adoção e do próprio animal.| ALTA | Wesley Bruno | profile.html, animal.html, animal_profile.html, tutor_profile.html, profileController.js, animalController.js, animalProfileController.js, tutorProfileController.js, style_profile.css, style_animal_profile.css, style_tutor.css, style_animal.css form/style_2.css, field/style_2.css, field/style_4.css, button/style_green.css, button/style_2.css |
 
 ### Requisitos não Funcionais
 
