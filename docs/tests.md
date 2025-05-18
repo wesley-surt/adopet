@@ -47,7 +47,7 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
  :--------------: | ------------
 **Procedimento**  | 1) Clicar no botão Entrar; <br> 2) Clicar no link: Não possui uma conta? Cadastre-se; <br> 3) Preencher os campos: email, nome, senha, confirmar senha; <br> 4) Clicar no botão Salvar;
 **Requisitos associados** | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário.
-**Artefatos associados** | register.html, style_register.css, registerController.js
+**Artefatos associados** | register.html, style_register.css, style_register_login.css, registerController.js
 **Resultado esperado** | Cadastrado realizado com sucesso.
 **Dados de entrada** | email, nome, senha e confirma senha.
 **Resultado obtido** | Sucesso.
@@ -56,10 +56,37 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
  :--------------: | ------------
 **Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão Editar; <br> 4) Preencher ou alterar os dados dos campos: foto, nome, cep, sobre; <br> 5) Clicar no botão Salvar.
 **Requisitos associados** | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário.
-**Artefatos associados** | profile.html, style_profile.css, profileController.js
+**Artefatos associados** | edit_profile.html, style_edit_profile.css, editProfileController.js
 **Resultado esperado** | Atualização realizada com sucesso.
 **Dados de entrada** | foto, nome, cep, sobre.
 **Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT005 - Excluir o perfil do usuário**
+ :--------------: | ------------
+**Procedimento**  | 1) Estar logado na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Clicar no botão Editar; <br> 4) Clicar no botão Excluir.
+**Requisitos associados** | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário.
+**Artefatos associados** | edit_profile.html, style_edit_profile.css, editProfileController.js
+**Resultado esperado** | Exclusão realizada com sucesso.
+**Dados de entrada** |
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT006 - Filtrar animais, cadastrados para adoção, por região**
+ :--------------: | ------------
+**Procedimento**  | 1) Clicar no link do cabeçalho chamdo de Adotar; <br> 2) Clicar no campo de filtro; <br> 3) Selecionar o Estado desejado.
+**Requisitos associados** | RF-003:	A aplicação deve permitir filtrar animais por região/Estado.
+**Artefatos associados** | adopt_animals.html, style_adopt_animals.css, animalsController.js
+**Resultado esperado** | Exibição dos animais cadastrados pertencentes ao Estado escolhido.
+**Dados de entrada** | Nome do Estado.
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT007 - Validação de dados**
+ :--------------: | ------------
+**Procedimento**  | 1) Acessar a página de cadastro ou de editar perfil; <br> 2) Inserção de dado inválido no campo input.
+**Requisitos associados** | RF-010:	A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados.
+**Artefatos associados** | ListaMensagens.js, ListaErros.js, ValidacaoHelper.js, ValidationForSelect.js, AlertaHelper.js
+**Resultado esperado** | Exibição de mensagem de alerta de informação inválida.
+**Dados de entrada** | Informação inválida.
+**Resultado obtido** | Falha.
 
 
 ## Registro dos Testes de Software
