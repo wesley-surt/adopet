@@ -88,6 +88,24 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 **Dados de entrada** | Informação inválida.
 **Resultado obtido** | Falha.
 
+**Caso de Teste** | **CT008 - Criptografia dos dados**
+ :--------------: | ------------
+**Procedimento**  | 1) Logar na aplicação; <br> 2) Acessar a página de perfil; <br> 3) Abrir a aba do console do navegador; <br> 4) Clicar em aplicativo; <br> 5) Visualizar os dados criptografados.
+**Requisitos associados** | RNF-003:	A aplicação deve criptografar as informações.
+**Artefatos associados** | CryptographyService.js
+**Resultado esperado** | Visualizar os dados criptografados.
+**Dados de entrada** |
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT009 - Não permitir que o usuário acesse as páginas de perfil, edição de perfil e registro de animais se não estiver logado**
+ :--------------: | ------------
+**Procedimento**  | 1) Acessar a aplicação; <br> 2) Tentar acessar alguma das páginas: perfil, editar perfil, registrar animal.
+**Requisitos associados** | RNF-006:	A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado.
+**Artefatos associados** | routeGuard.js
+**Resultado esperado** | Redirecionar o usuário para a tela de login.
+**Dados de entrada** |
+**Resultado obtido** | Falha.
+
 
 ## Registro dos Testes de Software
 
