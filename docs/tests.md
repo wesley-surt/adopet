@@ -111,10 +111,50 @@ Para cada caso de teste (CT), associarei o requisito, seja funcional ou não fun
 
 Apresento, a seguir, o relatório contendo as evidências dos testes de software conduzidos no sistema, seguindo o plano de testes previamente definido. Cada caso de teste está documentado e é acompanhado por vídeos que validam o correto funcionamento das funcionalidades. A seguir, compartilho alguns exemplos.
 
-|*Caso de Teste*                                 |TC-01 - Cadastro de animal perdido                                   |
+|*Caso de Teste*                                 | CT001 - Cadastrar animal para adoção |
 |---|---|
-|Requisito Associado |Número e a descrição do(s) requisito(s) associado(s).|
-|Link do vídeo do teste realizado: | Aqui deve ficar o link do video | 
+|Requisito Associado | RF-004:	Um aplicativo deve permitir o registro de animais para adoção. |
+|Link do vídeo do teste realizado: | [Cadastrando animal para adoção](https://github.com/user-attachments/assets/97217f1e-f15d-47f1-8cbd-2c9626ace819) |
+
+|*Caso de Teste*                                 | CT002 - Deletar animal|
+|---|---|
+|Requisito Associado |  |
+|Link do vídeo do teste realizado: | [Deletando animal cadastrado](https://github.com/user-attachments/assets/4a661030-907a-4765-baf5-82f38f7f4050) | 
+
+|*Caso de Teste*                                 | CT-003 - Cadastrar usuário |
+|---|---|
+|Requisito Associado | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário. |
+|Link do vídeo do teste realizado: | [Cadastrando usuário](https://github.com/user-attachments/assets/76dc2d9c-b0a0-468c-9fa3-d6f1a1b9a8cf) |
+
+|*Caso de Teste*                                 | CT004 - Atualizar os dados do usuário |
+|---|---|
+|Requisito Associado | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário. |
+|Link do vídeo do teste realizado: | [Atualizando os dados do usuário](https://github.com/user-attachments/assets/405b827f-0bd5-480a-8a2c-a76e596dd2ea) |
+
+|*Caso de Teste*                                 | CT005 - Excluir o perfil do usuário |
+|---|---|
+|Requisito Associado | RF-005:	A aplicação deve permitir o CRUD do perfil do usuário. |
+|Link do vídeo do teste realizado: | [Excluindo o perfil do usuário](https://github.com/user-attachments/assets/d8d9ba7a-d4a0-4585-a0e5-4af50c19a74c) |
+
+|*Caso de Teste*                                 | CT-006 - Filtrar animais, cadastrados para adoção, por região |
+|---|---|
+|Requisito Associado | RF-003:	A aplicação deve permitir filtrar animais por região/Estado. |
+|Link do vídeo do teste realizado: | [Filtrando animais por região](https://github.com/user-attachments/assets/2c6b22e1-c5eb-425d-8516-3af80b022843) |
+
+|*Caso de Teste*                                 | CT-007 - Validação de dados |
+|---|---|
+|Requisito Associado | RF-010:	A aplicação deve exibir mensagens de erro se o usuário tentar inserir alguma informação inválida nos campos de entrada de dados. |
+|Link do vídeo do teste realizado: | [Validando os dados](https://github.com/user-attachments/assets/245b4a9f-8bfb-4379-a439-a4df56a7bdd5) |
+
+|*Caso de Teste*                                 | CT-008 - Criptografia dos dados |
+|---|---|
+|Requisito Associado | RNF-003:	A aplicação deve criptografar as informações. |
+|Link do vídeo do teste realizado: | [Criptografia dos dados, informações](https://github.com/user-attachments/assets/c3d7d913-6443-442e-b78f-aee415227ed2) |
+
+|*Caso de Teste*                                 | CT-009 - Não permitir que o usuário acesse as páginas de perfil, edição de perfil e registro de animais se não estiver logado |
+|---|---|
+|Requisito Associado | RNF-006:	A aplicação não deve permitir que o usuário acesse a página de perfil, registro de animais ou a página de edição de perfil caso não esteja logado. |
+|Link do vídeo do teste realizado: | [Barrando acesso às páginas protegidas](https://github.com/user-attachments/assets/c1bb6daf-cdcf-43c8-969e-925c46424027) |
 
 ## Avaliação dos Testes de Software
 
